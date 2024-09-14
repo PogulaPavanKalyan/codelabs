@@ -1,0 +1,21 @@
+header {
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+  * {
+    color: white;
+  }
+  nav {
+    ul {
+      li {
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:hover {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
