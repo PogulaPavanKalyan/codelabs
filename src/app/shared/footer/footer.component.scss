@@ -1,0 +1,52 @@
+footer {
+  background-color: black;
+}
+
+.foot-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 32px;
+  gap: 30px;
+}
+
+.foot-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  .items {
+    .foot-item-title {
+      font-weight: bold;
+      color: white;
+    }
+    .nav {
+      display: flex;
+      flex-direction: column;
+      color: white;
+      gap: 10px;
+      li {
+        font-weight: 300;
+        font-size: 14px;
+        cursor: pointer;
+        img {
+          height: 70px;
+          border-radius: 500%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+.hr {
+  height: 2px;
+  background-color: white;
+}
+
+.bottom-foot {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  p {
+    color: white;
+  }
+}
