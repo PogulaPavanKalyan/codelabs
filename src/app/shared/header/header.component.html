@@ -1,11 +1,8 @@
-<header>
+<header [style]="{'position':currentRouteName!=='/'?'sticky':'absolute'}">
     <nav class="navbar navbar-expand-md ">
         <div class="container-fluid">
             <div class="logo-div d-flex align-items-center">
-                <img src="../../../assets/images/logo.png" width="55" class="navbar-brand" alt="">
-                <h3>
-                    Parthu <br> Infotech
-                </h3>
+                <img src="../../../assets/images/landingpage/logo.svg" class="navbar-brand" alt="">
             </div>
             <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navlist">
@@ -13,11 +10,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navlist">
                 <ul class="navbar-nav d-flex align-items-center gap-md-5 m-auto">
-                    <li class="nav-item">Courses</li>
-                    <li class="nav-item">Services</li>
-                    <li class="nav-item">Placements</li>
-                    <li class="nav-item">Hire From Us</li>
-                    <li class="nav-item">Get In Touch</li>
+                    <li class="nav-item" routerLink="/courses" routerLinkActive="active">Courses</li>
+                    <li class="nav-item" routerLink="/services" routerLinkActive="active">Services</li>
+                    <li class="nav-item" routerLink="/placements" routerLinkActive="active">Placements</li>
+                    <li class="nav-item" routerLink="/hire=from-us" routerLinkActive="active">Hire From Us</li>
+                    <li class="nav-item" routerLink="/get-in-touch" routerLinkActive="active">Get In Touch</li>
                 </ul>
             </div>
         </div>
