@@ -1,22 +1,25 @@
-<header [style]="{'position':currentRouteName!=='/'?'sticky':'absolute'}">
-    <nav class="navbar navbar-expand-md ">
-        <div class="container-fluid">
-            <div class="logo-div d-flex align-items-center">
-                <img src="../../../assets/images/landingpage/logo.svg" class="navbar-brand" alt="">
+<div class="container-fluid track-con">
+    <header>
+        <nav class="navbar navbar-expand-md ">
+            <div class="container-fluid">
+                <div class="logo-div d-flex align-items-center">
+                    <img routerLink="/" src="../../../assets/images/landingpage/Parthu logo.svg" class="navbar-brand"
+                        alt="">
+                </div>
+                <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navlist">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navlist">
+                    <ul class="navbar-nav d-flex align-items-center gap-md-5 m-auto">
+                        <li class="nav-item" routerLink="/courses" routerLinkActive="active">Courses</li>
+                        <li class="nav-item" routerLink="/services" routerLinkActive="active">Services</li>
+                        <li class="nav-item" routerLink="/placements" routerLinkActive="active">Placements</li>
+                        <li class="nav-item" routerLink="/hire=from-us" routerLinkActive="active">Hire From Us</li>
+                        <li class="nav-item" routerLink="/get-in-touch" routerLinkActive="active">Get In Touch</li>
+                    </ul>
+                </div>
             </div>
-            <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navlist">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navlist">
-                <ul class="navbar-nav d-flex align-items-center gap-md-5 m-auto">
-                    <li class="nav-item" routerLink="/courses" routerLinkActive="active">Courses</li>
-                    <li class="nav-item" routerLink="/services" routerLinkActive="active">Services</li>
-                    <li class="nav-item" routerLink="/placements" routerLinkActive="active">Placements</li>
-                    <li class="nav-item" routerLink="/hire=from-us" routerLinkActive="active">Hire From Us</li>
-                    <li class="nav-item" routerLink="/get-in-touch" routerLinkActive="active">Get In Touch</li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
+</div>
