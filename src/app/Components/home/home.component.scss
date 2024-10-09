@@ -1,0 +1,188 @@
+.hero-sec {
+  background-image: url("../../../assets/images/landingpage/Hero\ image\ -\ parthu\ it.png");
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  height: 531px;
+  position: relative;
+  height: 500px;
+  * {
+    color: white;
+  }
+  .container {
+    position: absolute;
+    bottom: 54px;
+    left: 88px;
+  }
+}
+
+.courses {
+  .course-head {
+    // background: white;
+    // position: sticky;
+    // top: 88px;
+    // z-index: 100;
+    span.section-title {
+      font-size: 63px;
+    }
+  }
+  .left {
+    background-color: #ffffff;
+    border-radius: 5px;
+    position: sticky;
+    top: 88px;
+  }
+
+  .course-tabs {
+    ul {
+      li {
+        padding: 0px 20px;
+      }
+      li button {
+        color: #707070;
+        // background-color: #f2f6fb;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 0;
+      }
+      button.nav-link.active::before {
+        position: absolute;
+        content: "";
+        left: 0%;
+        top: 0px;
+        height: 100%;
+        width: 6px;
+        background-color: #707070;
+      }
+      li button {
+        i {
+          display: none;
+        }
+      }
+      li button.active {
+        background-color: #f5f5f5;
+        color: black;
+        font-weight: 600;
+        i {
+          display: block;
+        }
+      }
+    }
+  }
+  .cards {
+    .card {
+      .card-title {
+        font-size: 25px;
+        font-weight: 600;
+      }
+      .card-text {
+        // text-wrap: balance;
+        font-size: 11px;
+        font-weight: 500;
+        // color: #666;
+      }
+      .detail {
+        font-size: 10px;
+        i {
+          font-size: 16px;
+        }
+        span {
+          font-weight: 500;
+        }
+      }
+      .enroll-btn {
+        background-color: var(--blue);
+        color: white;
+        font-size: 10px;
+        font-weight: 600;
+        border-radius: 0px;
+      }
+    }
+  }
+}
+
+.view-more-btn {
+  color: #3a10e5;
+  font-size: 14px;
+  border: 1px solid #3a10e5;
+  border-radius: 3px;
+}
+
+.services {
+  .card {
+    box-shadow: 0px 3px 10px #00000029;
+    h3 {
+      font-size: 20px !important;
+    }
+  }
+}
+
+.our-student {
+  .card {
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      display: block;
+      border-radius: 100%;
+    }
+    .bottom-card {
+      position: absolute;
+      padding: 10px 30px;
+      left: 50%;
+      transform: translate(-50%, -10%);
+      bottom: -22%;
+      background: white;
+      min-width: 160px;
+      text-align: center;
+      height: 70px;
+    }
+
+    .bottom-card::before {
+      position: fixed;
+      content: "";
+      width: 5px;
+      height: 5px;
+      background-color: blue;
+      left: 0;
+      top: 51%;
+      transform: translate(0%, -50%);
+      border-radius: 50%;
+    }
+    .bottom-card::after {
+      position: fixed;
+      content: "";
+      width: 5px;
+      height: 5px;
+      background-color: blue;
+      right: 0;
+      top: 51%;
+      transform: translate(0%, -50%);
+      border-radius: 50%;
+    }
+  }
+}
+
+// .logos-div {
+//   .logos {
+//     display: grid;
+//     grid-template-columns: repeat(5, 1fr);
+//     gap: 30px;
+//     img {
+//       width: 100%;
+//       // max-height: 100px;
+//       object-fit: cover;
+//       border-radius: 10px;
+//       box-shadow: 2px 1px 6px #bfb9b9;
+//     }
+//   }
+// }
+
+@media (min-width: 1400px) and (min-width: 1024px) {
+  .bottom-card::before,
+  .bottom-card::after {
+    top: 54% !important;
+  }
+}
