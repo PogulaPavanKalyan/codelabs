@@ -10,9 +10,13 @@
     color: white;
   }
   .container {
-    position: absolute;
-    bottom: 54px;
-    left: 88px;
+    // position: absolute;
+    // bottom: 54px;
+    // left: 88px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
@@ -33,6 +37,11 @@
     top: 88px;
   }
 
+  .tab-content {
+    .card-body {
+      position: relative;
+    }
+  }
   .course-tabs {
     ul {
       li {
@@ -54,7 +63,7 @@
         top: 0px;
         height: 100%;
         width: 6px;
-        background-color: #707070;
+        background-color: var(--green);
       }
       li button {
         i {
@@ -62,8 +71,8 @@
         }
       }
       li button.active {
-        background-color: #f5f5f5;
-        color: black;
+        background-color: var(--blue);
+        color: white;
         font-weight: 600;
         i {
           display: block;
@@ -73,9 +82,15 @@
   }
   .cards {
     .card {
+      height: 100%;
       .card-title {
         font-size: 25px;
         font-weight: 600;
+      }
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
       }
       .card-text {
         // text-wrap: balance;
@@ -85,6 +100,7 @@
       }
       .detail {
         font-size: 10px;
+        font-weight: 700;
         i {
           font-size: 16px;
         }
@@ -98,6 +114,7 @@
         font-size: 10px;
         font-weight: 600;
         border-radius: 0px;
+        width: 100%;
       }
     }
   }
@@ -108,6 +125,7 @@
   font-size: 14px;
   border: 1px solid #3a10e5;
   border-radius: 3px;
+  background-color: white;
 }
 
 .services {
@@ -120,47 +138,74 @@
 }
 
 .our-student {
+  // .card {
+  //   img {
+  //     width: 100px;
+  //     height: 100px;
+  //     object-fit: cover;
+  //     display: block;
+  //     border-radius: 100%;
+  //   }
+  //   .bottom-card {
+  //     position: absolute;
+  //     padding: 10px 30px;
+  //     left: 50%;
+  //     transform: translate(-50%, -10%);
+  //     bottom: -22%;
+  //     background: white;
+  //     min-width: 160px;
+  //     text-align: center;
+  //     height: 70px;
+  //   }
+
+  //   .bottom-card::before {
+  //     position: fixed;
+  //     content: "";
+  //     width: 5px;
+  //     height: 5px;
+  //     background-color: blue;
+  //     left: 0;
+  //     top: 51%;
+  //     transform: translate(0%, -50%);
+  //     border-radius: 50%;
+  //   }
+  //   .bottom-card::after {
+  //     position: fixed;
+  //     content: "";
+  //     width: 5px;
+  //     height: 5px;
+  //     background-color: blue;
+  //     right: 0;
+  //     top: 51%;
+  //     transform: translate(0%, -50%);
+  //     border-radius: 50%;
+  //   }
+  // }
   .card {
-    img {
+    background-color: #f2fbf7;
+    .card-body {
+      text-align: center;
+    }
+    .profile {
       width: 100px;
       height: 100px;
       object-fit: cover;
-      display: block;
+      // display: block;
       border-radius: 100%;
+      margin-bottom: 10px;
     }
-    .bottom-card {
-      position: absolute;
-      padding: 10px 30px;
-      left: 50%;
-      transform: translate(-50%, -10%);
-      bottom: -22%;
-      background: white;
-      min-width: 160px;
-      text-align: center;
-      height: 70px;
-    }
-
-    .bottom-card::before {
-      position: fixed;
-      content: "";
-      width: 5px;
-      height: 5px;
-      background-color: blue;
-      left: 0;
-      top: 51%;
-      transform: translate(0%, -50%);
-      border-radius: 50%;
-    }
-    .bottom-card::after {
-      position: fixed;
-      content: "";
-      width: 5px;
-      height: 5px;
-      background-color: blue;
-      right: 0;
-      top: 51%;
-      transform: translate(0%, -50%);
-      border-radius: 50%;
+    .student {
+      margin-bottom: 10px;
+      .std-name {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .std-role {
+        font-size: 20px;
+      }
+      .std-comp {
+        object-fit: none;
+      }
     }
   }
 }
@@ -184,5 +229,47 @@
   .bottom-card::before,
   .bottom-card::after {
     top: 54% !important;
+  }
+}
+
+i.ri-rocket-fill {
+  rotate: 40deg;
+  color: blue;
+}
+
+.accor {
+  background-color: #78de80;
+  .accordion-div {
+    .accordion {
+      .accordion-button {
+        box-shadow: none;
+        background-color: transparent;
+        div {
+          i {
+            font-size: 24px;
+          }
+          display: flex;
+          gap: 20px;
+          align-items: center;
+          font-weight: bold;
+        }
+      }
+      .accordion-button:is(.collapsed)::after {
+        background-color: white;
+        mix-blend-mode: normal;
+        border-radius: 50vw;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M11 11V7H13V11H17V13H13V17H11V13H7V11H11ZM12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20Z'%3E%3C/path%3E%3C/svg%3E");
+      }
+      .accordion-button::after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M5 11V13H19V11H5Z'%3E%3C/path%3E%3C/svg%3E");
+      }
+    }
+    .accordion + span {
+      font-size: 16px;
+    }
+    .accordion-item {
+      background: transparent;
+      border: 1px solid;
+    }
   }
 }
