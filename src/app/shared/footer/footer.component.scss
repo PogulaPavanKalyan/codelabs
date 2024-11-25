@@ -8,13 +8,19 @@ footer {
   justify-content: center;
   color: white;
   font-size: 32px;
-  gap: 30px;
+  gap: 20px;
+  img {
+    max-width: 30px;
+  }
 }
 
 .foot-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   .items {
+    span {
+      font-size: 12px;
+    }
     .foot-item-title {
       font-weight: bold;
       color: white;

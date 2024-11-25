@@ -21,6 +21,7 @@
 }
 
 .courses {
+  padding: 0px 100px;
   .course-head {
     // background: white;
     // position: sticky;
@@ -210,20 +211,42 @@
   }
 }
 
-// .logos-div {
-//   .logos {
-//     display: grid;
-//     grid-template-columns: repeat(5, 1fr);
-//     gap: 30px;
-//     img {
-//       width: 100%;
-//       // max-height: 100px;
-//       object-fit: cover;
-//       border-radius: 10px;
-//       box-shadow: 2px 1px 6px #bfb9b9;
-//     }
-//   }
-// }
+.logos-div {
+  .logos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 4%;
+    align-items: center;
+    img {
+      width: 100%;
+      // max-height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    img:last-child {
+      scale: 0.7;
+    }
+  }
+}
+
+.learn-free {
+  background-color: var(--blue);
+  .peoples {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+  .people-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    .start-btn {
+      background-color: yellow;
+    }
+  }
+}
 
 @media (min-width: 1400px) and (min-width: 1024px) {
   .bottom-card::before,

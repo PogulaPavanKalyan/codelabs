@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="197" height="63" viewBox="0 0 197 63">
+  <g id="Group_167" data-name="Group 167" transform="translate(-30 -12)">
+    <text id="Parthu" transform="translate(108 42)" font-size="31" font-family="Montserrat-ExtraBold, Montserrat" font-weight="800"><tspan x="0" y="0">Parthu</tspan></text>
+    <text id="Infotech" transform="translate(108 68)" font-size="28" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="0" y="0">Infotech</tspan></text>
+    <g id="Group_88" data-name="Group 88">
+      <path id="Path_16" data-name="Path 16" d="M31,0A31,31,0,1,1,0,31,31,31,0,0,1,31,0Z" transform="translate(30 13)" fill="#1a47e6"/>
+      <g id="Group_86" data-name="Group 86" transform="translate(50 20.492)">
+        <path id="Path_24" data-name="Path 24" d="M12.7,45.9a2.92,2.92,0,0,0,.2-.9V35.3L0,41.8l10,5A2,2,0,0,0,12.7,45.9Z" fill="#fff"/>
+        <path id="Path_25" data-name="Path 25" d="M28.5,18.2l-.2-.2L13.7,1A3.066,3.066,0,0,0,9.6.6L0,7.9V41.8L27.7,22.4A3.048,3.048,0,0,0,28.5,18.2Z" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
