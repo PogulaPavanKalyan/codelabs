@@ -17,6 +17,7 @@ footer {
 .foot-list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  gap: 44px;
   .items {
     span {
       font-size: 12px;

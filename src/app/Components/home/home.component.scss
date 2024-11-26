@@ -1,27 +1,30 @@
 .hero-sec {
-  background-image: url("../../../assets/images/landingpage/Hero\ image\ -\ parthu\ it.png");
-  background-size: cover;
-  background-position: right;
-  background-repeat: no-repeat;
-  height: 531px;
+  // background: url("../../../assets/images/landingpage/Hero image - parthu it.png")
+  //   right no-repeat;
+  // background-size: cover;
   position: relative;
   height: 500px;
-  * {
-    color: white;
-  }
-  .container {
-    // position: absolute;
-    // bottom: 54px;
-    // left: 88px;
+  color: white;
+  background-color: var(--blue);
+  display: flex;
+  align-items: center;
+  padding: 0px 100px;
+  justify-content: space-between;
+  .hero-left {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
+  .hero-img {
+    img {
+      max-height: 401px;
+    }
+  }
 }
 
 .courses {
-  padding: 0px 100px;
+  padding: 0px 60px;
   .course-head {
     // background: white;
     // position: sticky;
@@ -84,6 +87,7 @@
   .cards {
     .card {
       height: 100%;
+
       .card-title {
         font-size: 25px;
         font-weight: 600;
@@ -92,10 +96,23 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        position: relative;
+        .price-pill {
+          background: #00ab66 0% 0% no-repeat padding-box;
+          border-radius: 3px;
+          text-align: left;
+          font-weight: bold;
+          color: white;
+          font-size: 11px;
+          padding: 4px 11px;
+          position: absolute;
+          right: 18px;
+          top: -5%;
+        }
       }
       .card-text {
         // text-wrap: balance;
-        font-size: 11px;
+        font-size: 10px;
         font-weight: 500;
         // color: #666;
       }
@@ -112,10 +129,11 @@
       .enroll-btn {
         background-color: var(--blue);
         color: white;
-        font-size: 10px;
+        font-size: 14px;
         font-weight: 600;
         border-radius: 0px;
         width: 100%;
+        height: 45px;
       }
     }
   }
@@ -268,13 +286,15 @@ i.ri-rocket-fill {
         box-shadow: none;
         background-color: transparent;
         div {
-          i {
-            font-size: 24px;
+          img {
+            width: 38px;
+            object-fit: cover;
           }
           display: flex;
           gap: 20px;
           align-items: center;
           font-weight: bold;
+          font-size: 20px;
         }
       }
       .accordion-button:is(.collapsed)::after {
