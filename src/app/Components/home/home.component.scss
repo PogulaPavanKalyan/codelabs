@@ -24,7 +24,7 @@
 }
 
 .courses {
-  padding: 0px 60px;
+  padding: 0px 70px;
   .course-head {
     // background: white;
     // position: sticky;
@@ -39,6 +39,7 @@
     border-radius: 5px;
     position: sticky;
     top: 88px;
+    width: min-content;
   }
 
   .tab-content {
@@ -59,6 +60,7 @@
         justify-content: space-between;
         align-items: center;
         border-radius: 0;
+        white-space: nowrap;
       }
       button.nav-link.active::before {
         position: absolute;
@@ -84,10 +86,18 @@
       }
     }
   }
-  .cards {
-    .card {
-      height: 100%;
 
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    // justify-content: center;
+
+    .card {
+      // max-width: 300px;
+      // height: 446px;
+      // flex: 0 1 calc(33.33% - 30px);
+      width: 300px;
       .card-title {
         font-size: 25px;
         font-weight: 600;
@@ -266,10 +276,18 @@
   }
 }
 
-@media (min-width: 1400px) and (min-width: 1024px) {
-  .bottom-card::before,
-  .bottom-card::after {
-    top: 54% !important;
+@media (max-width: 1400px) {
+  .cards .card {
+    max-width: 253px !important;
+    .card-body {
+      padding: 10px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .cards {
+    padding-left: 70px !important;
   }
 }
 
