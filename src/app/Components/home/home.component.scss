@@ -8,7 +8,7 @@
   background-color: var(--blue);
   display: flex;
   align-items: center;
-  padding: 0px 100px;
+  // padding: 0px 100px;
   justify-content: space-between;
   .hero-left {
     height: 100%;
@@ -24,12 +24,7 @@
 }
 
 .courses {
-  padding: 0px 70px;
   .course-head {
-    // background: white;
-    // position: sticky;
-    // top: 88px;
-    // z-index: 100;
     span.section-title {
       font-size: 63px;
     }
@@ -37,8 +32,6 @@
   .left {
     background-color: #ffffff;
     border-radius: 5px;
-    position: sticky;
-    top: 88px;
     width: min-content;
   }
 
@@ -48,6 +41,7 @@
     }
   }
   .course-tabs {
+    display: flex;
     ul {
       li {
         padding: 0px 20px;
@@ -88,6 +82,7 @@
   }
 
   .cards {
+    padding-left: 30px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -287,7 +282,7 @@
 
 @media (min-width: 1440px) {
   .cards {
-    padding-left: 70px !important;
+    // padding-left: 70px !important;
   }
 }
 
