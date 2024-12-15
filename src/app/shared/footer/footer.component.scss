@@ -43,6 +43,10 @@ footer {
       }
     }
   }
+
+  .items:nth-child(2) {
+    padding: 0px 0px 0px 39px;
+  }
 }
 
 .hr {
@@ -56,5 +60,11 @@ footer {
   p {
     color: white;
     font-size: 10px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .items:nth-child(2) {
+    padding: 0px 0px 0px 60px !important;
   }
 }
