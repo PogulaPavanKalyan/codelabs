@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="62" height="44" viewBox="0 0 62 44">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_4309" data-name="Rectangle 4309" width="62" height="44" transform="translate(-0.338 -0.4)"/>
+    </clipPath>
+  </defs>
+  <g id="Many_chat" data-name="Many chat" transform="translate(0.338 0.4)" clip-path="url(#clip-path)">
+    <path id="Path_4170" data-name="Path 4170" d="M51.967.011h-.424C39.018.011,32.93,18.431,32.93,18.431V4.3H0V43.143H13.161v-25.9h7.021v25.9H34.3S41.559,12.4,48.351,14.7c4.578,1.687-8.331,28.414-8.331,28.414H58.667s2.586-17.407,2.626-23.431C61.866,9.454,60.224,0,51.955,0" transform="translate(0.072 0.085)"/>
+  </g>
+</svg>

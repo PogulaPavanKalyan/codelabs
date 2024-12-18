@@ -1,0 +1,42 @@
+.card {
+  width: 24rem;
+  margin-left: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #27b67c;
+  border-radius: 10px;
+  .card-body {
+    color: white;
+  }
+}
+
+/* Custom styling for inputs */
+.form-control,
+.form-select {
+  height: 45px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: none;
+}
+
+.form-select {
+  border-right: none;
+  border-radius: 0px;
+}
+.form-select + .form-control {
+  border-left: none;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+/* Submit button styling */
+.btn-primary {
+  background-color: #202e8f;
+  color: #fff;
+  font-weight: bold;
+
+  height: 58px;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #4502aa;
+}

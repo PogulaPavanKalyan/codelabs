@@ -3,35 +3,17 @@
   .floating-div {
     padding: 70px 0px;
   }
-  background-image: url("../../../assets/images/landingpage/Course/Digital\ marketing.png");
+  // background-image: url("../../../assets/images/landingpage/Course/Digital\ marketing.png");
   background-position-x: right;
   background-position-y: bottom;
   background-repeat: no-repeat;
   background-size: cover;
+  background-size: cover;
+  background-color: blue;
+  // mix-blend-mode: difference;
   .hero-title,
   .hero-text {
-    color: #ff0000;
-  }
-
-  .price-sec {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  .divider {
-    width: 1px;
-    background: black;
-    height: 16vh;
-  }
-  .sec {
-    .label {
-      font-size: 17px;
-      font-weight: 500;
-    }
-    .label-name {
-      font-size: 23px;
-      font-weight: 600;
-    }
+    color: white;
   }
 }
 
@@ -72,114 +54,6 @@
     ul {
       padding-left: 20px;
     }
-
-    .contact-form {
-      .card {
-        width: 24rem;
-        margin-left: auto;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        background-color: #ffd300;
-        border-radius: 10px;
-      }
-
-      /* Custom styling for inputs */
-      .form-control,
-      .form-select {
-        height: 45px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        box-shadow: none;
-      }
-
-      .form-select {
-        border-right: none;
-        border-radius: 0px;
-      }
-      .form-select + .form-control {
-        border-left: none;
-        border-top-left-radius: 0px;
-        border-bottom-left-radius: 0px;
-      }
-      /* Submit button styling */
-      .btn-primary {
-        background-color: #3a10e5;
-        color: #fff;
-        font-weight: bold;
-        height: 58px;
-      }
-
-      .btn-primary:hover {
-        background-color: #4502aa;
-      }
-
-      /* Custom text styling */
-      .card-title {
-        color: #000;
-      }
-
-      .card-body p {
-        color: #000;
-      }
-    }
-  }
-}
-
-.career-services {
-  .service-card {
-    border-radius: 0px;
-    border-top-left-radius: 50px;
-    min-height: 462px;
-    background-color: #c32126;
-    .card-body {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      padding: 30px 40px;
-      img {
-        flex: 1;
-        object-fit: contain;
-        max-height: 250px;
-        background-color: transparent;
-        border: none;
-      }
-      h4 {
-        color: white;
-        font-size: 28px;
-      }
-    }
-  }
-
-  .blue {
-    background-color: #0573b6;
-  }
-  .purple {
-    background-color: #7713ae;
-  }
-  .yellow {
-    background-color: #f6bc2a;
-  }
-}
-
-.logos-div {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 30px;
-  img {
-    margin: auto;
-    max-width: 100%;
-    display: block;
-  }
-}
-
-.dont-wait {
-  background-color: #ffd300;
-  padding-right: 40px;
-  border-radius: 20px;
-  .img {
-    max-width: 234px;
-  }
-  .download {
-    max-width: 200px;
   }
 }
 
@@ -204,11 +78,5 @@
         }
       }
     }
-  }
-}
-
-@media (min-width: 1440px) {
-  .price-sec {
-    gap: 40px;
   }
 }
