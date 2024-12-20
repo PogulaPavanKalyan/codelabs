@@ -83,7 +83,7 @@ h3 {
 }
 
 .bg-gray {
-  background-color: #fbfaf9;
+  background-color: #f8f8f8;
 }
 
 .section-title {
@@ -91,6 +91,22 @@ h3 {
   font-weight: 700 !important;
 }
 
+.section-sub-title {
+  font-size: 24px;
+  font-weight: 600;
+}
+.section-text {
+  font-size: 22px;
+}
+
 .radious-0 {
   border-radius: 0px;
+}
+
+.btn-primary {
+  padding: 8px 20px;
+  font-size: 20px;
+  background-color: #3a10e5;
+  color: white;
+  border: none;
 }

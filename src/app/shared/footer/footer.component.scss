@@ -68,3 +68,29 @@ footer {
     padding: 0px 0px 0px 60px !important;
   }
 }
+a {
+  position: relative;
+  width: fit-content;
+  padding-bottom: 5px !important;
+}
+
+li a::before {
+  content: "";
+  width: 0%;
+  height: 1px;
+  transition: all 0.4s ease !important;
+}
+
+li a:hover::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  background-color: var(--blue);
+}
+
+li.last {
+  text-align: -webkit-center;
+}

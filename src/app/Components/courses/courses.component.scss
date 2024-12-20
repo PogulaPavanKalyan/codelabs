@@ -1,15 +1,16 @@
-.hero-sec {
-  padding-bottom: 70px;
-  .floating-div {
-    padding: 70px 0px;
-  }
-  // background-image: url("../../../assets/images/landingpage/Course/Digital\ marketing.png");
+.floating-div {
+  padding: 70px 0px;
+}
+.bg-blue {
+  background-color: blue;
+  background-image: url("../../../assets/images/course/course-hero.png");
   background-position-x: right;
   background-position-y: bottom;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-size: cover;
-  background-color: blue;
+  background-size: contain;
+}
+.hero-sec {
+  padding-bottom: 70px;
   // mix-blend-mode: difference;
   .hero-title,
   .hero-text {
@@ -45,6 +46,21 @@
       font-weight: normal;
       //   color: #6c757d;
     }
+    .accordion-button.collapsed {
+      i {
+        transition: 0.4s ease;
+        transform: rotate(360deg);
+      }
+    }
+
+    .accordion-button {
+      i {
+        transition: 0.4s ease;
+
+        transform: rotate(180deg);
+        scale: 1.4;
+      }
+    }
 
     .accordion-body {
       background-color: #f8f9fa;
@@ -78,5 +94,98 @@
         }
       }
     }
+  }
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(100px, 1fr));
+  gap: 20px 0px;
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    height: fit-content;
+    img {
+      background: #ffffff 0% 0% no-repeat padding-box;
+      box-shadow: 0px 0px 6px #00000029;
+      border: 0.25px solid #70707080;
+      border-radius: 15px;
+      width: 126px;
+      height: 126px;
+      object-fit: scale-down;
+    }
+    span {
+      font-weight: 600;
+      width: 126px;
+      text-wrap: wrap;
+    }
+  }
+}
+
+.hands-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  gap: 20px 0px;
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    img {
+      background: #ffffff 0% 0% no-repeat padding-box;
+      margin: auto;
+      width: 80px;
+      height: 80px;
+      object-fit: scale-down;
+    }
+    span {
+      font-weight: 600;
+    }
+  }
+}
+
+.Global-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.intern-con {
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  img {
+    max-width: 100%;
+    display: block;
+  }
+}
+
+.learner-con {
+  .student-grid {
+    .card {
+      overflow: hidden;
+    }
+    .std-des {
+      h6 {
+        font-size: clamp(14px, 1vw, 18px);
+        font-weight: 600;
+      }
+      span {
+        font-size: 10px;
+      }
+    }
+    .img {
+      position: relative;
+      left: -4%;
+      bottom: -11px;
+    }
+  }
+  .std-text {
+    font-size: clamp(12px, 1vw, 16px);
   }
 }
