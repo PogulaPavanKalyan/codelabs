@@ -94,3 +94,21 @@ li a:hover::before {
 li.last {
   text-align: -webkit-center;
 }
+
+@media (max-width: 1024px) {
+  .foot-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .foot-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 428px) {
+  .foot-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

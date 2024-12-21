@@ -1,0 +1,37 @@
+.hero-sec {
+  background-image: url("../../../assets/images/Hire/Hero.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  .container {
+    .hero-content {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+}
+.logo-con {
+  .logo-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 30px;
+    .first-grid,
+    .second-grid {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      img {
+        max-width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.form-card {
+  max-width: 428px;
+  margin-left: auto;
+}

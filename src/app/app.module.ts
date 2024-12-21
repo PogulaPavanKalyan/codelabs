@@ -9,6 +9,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { ContactUsComponent } from './Components/contact-us/contact-us.component';
 import { HomeComponent } from './Components/home/home.component';
 import { SharedModule } from './shared/shared.module';
+import { HireFromUsComponent } from './Components/hire-from-us/hire-from-us.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { SharedModule } from './shared/shared.module';
     FooterComponent,
     ContactUsComponent,
     HomeComponent,
+    HireFromUsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, SharedModule],
   providers: [],

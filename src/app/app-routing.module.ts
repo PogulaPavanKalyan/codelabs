@@ -3,23 +3,29 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './Components/home/home.component';
 import { CoursesComponent } from './Components/courses/courses.component';
 import { ContactUsComponent } from './Components/contact-us/contact-us.component';
+import { HireFromUsComponent } from './Components/hire-from-us/hire-from-us.component';
 
-const routes: Routes = [{
-  path: '',
-  component: HomeComponent
-},
-{
-  path: 'courses',
-  component: CoursesComponent
-}
-  , {
-  path: 'contact-us',
-  component: ContactUsComponent
-}
+const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent,
+  },
+  {
+    path: 'courses',
+    component: CoursesComponent,
+  },
+  {
+    path: 'contact-us',
+    component: ContactUsComponent,
+  },
+  {
+    path: 'hire-from-us',
+    component: HireFromUsComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
