@@ -1,0 +1,7 @@
+<svg id="Contact-page" xmlns="http://www.w3.org/2000/svg" width="131" height="131" viewBox="0 0 131 131">
+  <g id="Contact-hero-shapes-test">
+    <circle id="Oval" cx="44" cy="44" r="44" transform="translate(131 131) rotate(180)" fill="#ffe605"/>
+    <path id="Rectangle" d="M0,0H88V88H0Z" transform="translate(88 88) rotate(180)" fill="#00cfff"/>
+    <path id="Combined-Shape" d="M43-43A45,45,0,0,0,88-88H43Z" transform="translate(131) rotate(180)" fill="#27b67c" fill-rule="evenodd"/>
+  </g>
+</svg>
