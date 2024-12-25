@@ -1,0 +1,102 @@
+.hero-sec {
+  position: relative;
+  height: 500px;
+  color: white;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .hero-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .hero-text {
+      font-size: 18px;
+    }
+  }
+  .hero-img {
+    img {
+      max-height: 401px;
+    }
+  }
+}
+
+.career-div {
+  .card {
+    i {
+      color: white;
+      width: 70px;
+      height: 70px;
+      background: #07be00;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 40px;
+    }
+  }
+}
+
+table {
+  * {
+    font-size: 12px;
+  }
+}
+
+.img {
+  max-width: 100%;
+  max-height: 382px;
+  min-height: 382px;
+}
+table th {
+  background-color: transparent;
+  color: #343a40;
+  font-weight: 600;
+  border: none;
+}
+tbody tr {
+  border-radius: 8px !important; /* Rounded corners for rows */
+  overflow: hidden;
+}
+
+tr.bg-gray {
+  td {
+    background-color: #f9fafb;
+  }
+}
+tbody tr td {
+  border: none; /* Remove cell borders */
+}
+
+table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+table tr:nth-child(odd) {
+  td {
+    height: 62px;
+    background-color: white;
+  }
+  td:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    overflow: hidden;
+  }
+  td:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    overflow: hidden;
+    padding-left: 45px;
+  }
+}
+
+.btn-register {
+  height: 35px;
+  background-color: #07be00;
+  color: #fff;
+  align-content: center;
+}
+.btn-register:hover {
+  background-color: #12e90a;
+  color: #fff;
+}
