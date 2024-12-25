@@ -11,6 +11,7 @@ import { HomeComponent } from './Components/home/home.component';
 import { SharedModule } from './shared/shared.module';
 import { HireFromUsComponent } from './Components/hire-from-us/hire-from-us.component';
 import { LlocationDetailComponent } from './Components/contact-us/llocation-detail/llocation-detail.component';
+import { PlacementsComponent } from './Components/placements/placements.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { LlocationDetailComponent } from './Components/contact-us/llocation-deta
     HomeComponent,
     HireFromUsComponent,
     LlocationDetailComponent,
+    PlacementsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, SharedModule],
   providers: [],

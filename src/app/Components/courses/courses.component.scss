@@ -73,30 +73,6 @@
   }
 }
 
-.frequent {
-  .accordion {
-    .accordion-button {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      span {
-        i:first-child {
-          position: relative;
-          z-index: 2;
-          border-color: blueviolet;
-        }
-        i:last-child {
-          position: absolute;
-          left: 4px;
-          top: 4px;
-          z-index: 1;
-          color: blueviolet;
-        }
-      }
-    }
-  }
-}
-
 .tools-grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(100px, 1fr));
