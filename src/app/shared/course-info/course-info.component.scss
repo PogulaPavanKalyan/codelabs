@@ -3,6 +3,7 @@
   /* left: 50%; */
   bottom: -11%;
   max-height: 148px;
+
   // transform: translate(-50%);
   .price-sec {
     display: flex;
@@ -11,11 +12,13 @@
     text-align: center;
     padding: 25px 16px;
   }
+
   .divider {
     width: 2px;
     background: #2a305e;
     height: 60px;
   }
+
   .sec {
     .label {
       font-size: 22px;

@@ -1,6 +1,7 @@
 .floating-div {
   padding: 70px 0px;
 }
+
 .bg-blue {
   background-color: blue;
   background-image: url("../../../assets/images/course/course-hero.png");
@@ -9,8 +10,10 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
+
 .hero-sec {
   padding-bottom: 70px;
+
   // mix-blend-mode: difference;
   .hero-title,
   .hero-text {
@@ -28,6 +31,7 @@
       justify-content: space-between;
       border: 1px solid #dee2e6;
     }
+
     .more-div {
       cursor: pointer;
       border: 1px solid #dee2e6;
@@ -46,6 +50,7 @@
       font-weight: normal;
       //   color: #6c757d;
     }
+
     .accordion-button.collapsed {
       i {
         transition: 0.4s ease;
@@ -67,22 +72,73 @@
       padding: 20px;
       border-top: 1px solid #dee2e6;
     }
+
     ul {
       padding-left: 20px;
     }
   }
 }
 
+.std-text {
+  font: normal normal normal 14px/29px Poppins;
+  text-transform: capitalize;
+  width: 271px;
+  height: 211px;
+  font-size: larger;
+  color: #000000;
+  font-weight: 500;
+}
+
+.container-dont {
+  background-color: #27B67C;
+  color: white;
+
+  height: 192px;
+  margin-top: 37px;
+  font-size: 45px;
+}
+
+.container-dont img {
+  height: 205px;
+  width: 234px;
+  margin-left: 84px;
+  margin-top: -13px;
+
+}
+
+.container-dont h2 {
+  text-align: center;
+  margin-left: 0%;
+  margin-top: -15%;
+  font-size: 45px;
+  padding-top: 37px;
+}
+
+.container-dont .img1 {
+  margin-left: 80%;
+  margin-top: -14%;
+  height: 150px;
+  width: 180px;
+}
+
+
+.bg-gray {
+  background-color: #F8F8F8;
+}
+
 .tools-grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(100px, 1fr));
+  margin-left: -35px;
   gap: 20px 0px;
+
   .grid {
     display: flex;
     flex-direction: column;
     gap: 10px;
     text-align: center;
     height: fit-content;
+
     img {
       background: #ffffff 0% 0% no-repeat padding-box;
       box-shadow: 0px 0px 6px #00000029;
@@ -92,6 +148,7 @@
       height: 126px;
       object-fit: scale-down;
     }
+
     span {
       font-weight: 600;
       width: 126px;
@@ -104,11 +161,13 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(100px, 1fr));
   gap: 20px 0px;
+
   .grid {
     display: flex;
     flex-direction: column;
     gap: 10px;
     text-align: center;
+
     img {
       background: #ffffff 0% 0% no-repeat padding-box;
       margin: auto;
@@ -116,6 +175,7 @@
       height: 80px;
       object-fit: scale-down;
     }
+
     span {
       font-weight: 600;
     }
@@ -135,6 +195,7 @@
     flex-direction: column;
     justify-content: center;
   }
+
   img {
     max-width: 100%;
     display: block;
@@ -146,21 +207,25 @@
     .card {
       overflow: hidden;
     }
+
     .std-des {
       h6 {
         font-size: clamp(14px, 1vw, 18px);
         font-weight: 600;
       }
+
       span {
         font-size: 10px;
       }
     }
+
     .img {
       position: relative;
       left: -4%;
       bottom: -11px;
     }
   }
+
   .std-text {
     font-size: clamp(12px, 1vw, 16px);
   }

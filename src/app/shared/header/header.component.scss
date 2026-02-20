@@ -1,85 +1,93 @@
 header {
-  height: 75px;
+    height: 75px;
 }
 
 .track-con {
-  animation: navbar linear forwards;
-  animation-timeline: view();
-  animation-range: 100dvh 180dvh;
-  position: sticky;
-  top: -10rem;
-  z-index: 1000;
-  background-color: white;
+    animation: navbar linear forwards;
+    animation-timeline: view();
+    animation-range: 100dvh 180dvh;
+    position: sticky;
+    top: -10rem;
+    z-index: 1000;
+    background-color: white;
 }
+
 .navbar-brand {
-  cursor: pointer;
+    cursor: pointer;
 }
+
 .logo-div {
-  img {
-    scale: 0.9;
-  }
+    img {
+        scale: 0.9;
+    }
 }
+
 nav {
-  ul {
-    li {
-      position: relative;
-      font-weight: 600;
-      cursor: pointer;
-      font-size: 16px;
-      a:hover {
-        font-weight: 700;
-        color: var(--blue);
-      }
-      a.active {
-        position: relative;
-        color: var(--blue);
-        font-weight: 700;
-      }
-      a {
-        position: relative;
-      }
-    }
+    ul {
+        li {
+            position: relative;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 16px;
 
-    li a::before {
-      content: "";
-      width: 0%;
-      height: 1px;
-      transition: all 0.4s ease !important;
-    }
+            a:hover {
+                font-weight: 700;
+                color: var(--blue);
+            }
 
-    li a.active::before {
-      content: "";
-      width: 100%;
-      height: 2px;
-      position: absolute;
-      height: 1px;
-      width: 100%;
-      bottom: 0px;
-      left: 0px;
-      background-color: var(--blue);
-      transition: all 0.4s ease !important;
-    }
+            a.active {
+                position: relative;
+                color: var(--blue);
+                font-weight: 700;
+            }
 
-    li a:hover::before {
-      content: "";
-      position: absolute;
-      height: 2px;
-      width: 100%;
-      bottom: 0px;
-      left: 0px;
-      background-color: var(--blue);
+            a {
+                position: relative;
+            }
+        }
+
+        li a::before {
+            content: "";
+            width: 0%;
+            height: 1px;
+            transition: all 0.4s ease !important;
+        }
+
+        li a.active::before {
+            content: "";
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            bottom: 0px;
+            left: 0px;
+            background-color: var(--blue);
+            transition: all 0.4s ease !important;
+        }
+
+        li a:hover::before {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            bottom: 0px;
+            left: 0px;
+            background-color: var(--blue);
+        }
     }
-  }
 }
 
 @keyframes navbar {
-  0%,
-  100% {
-    padding: 0px 30px;
-    backdrop-filter: blur(0.3rem);
-    background-color: rgb(255 255 255 / 80%);
-  }
-  100% {
-    top: -1px;
-  }
+
+    0%,
+    100% {
+        padding: 0px 30px;
+        backdrop-filter: blur(0.3rem);
+        background-color: rgb(255 255 255 / 80%);
+    }
+
+    100% {
+        top: -1px;
+    }
 }

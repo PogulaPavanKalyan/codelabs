@@ -1,106 +1,122 @@
 .hero-bg {
-  position: relative;
-  background-color: var(--blue);
-  color: white;
-  .hero-sec {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .hero-content {
-    display: flex;
-    height: -webkit-fill-available;
-    flex-direction: column;
-    justify-content: center;
-    flex: 1;
-    align-items: start;
-    text-align: left;
-  }
-  .hero-img {
-    flex: 1;
-    height: 100%;
-    height: -webkit-fill-available;
-    display: flex;
-    align-items: end;
-    justify-content: center;
-    img:first-child {
-      max-width: 100%;
-      display: block;
-    }
-    .round-img {
-      position: absolute;
-      right: 0;
-      bottom: -18%;
-    }
-  }
+    position: relative;
+    background-color: var(--blue);
+    color: white;
 
-  .contact-title {
-    font-size: clamp(45px, 5vw, 55px);
-    font-weight: bold;
-  }
-  .contact-text {
-    font-size: clamp(16px, 5vw, 18px);
-  }
+    .hero-sec {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hero-content {
+        display: flex;
+        height: -webkit-fill-available;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+        align-items: start;
+        text-align: left;
+    }
+
+    .hero-img {
+        flex: 1;
+        height: 100%;
+        height: -webkit-fill-available;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+
+        img:first-child {
+            max-width: 100%;
+            display: block;
+        }
+
+        .round-img {
+            position: absolute;
+            right: 0;
+            bottom: -18%;
+        }
+    }
+
+    .contact-title {
+        font-size: clamp(45px, 5vw, 55px);
+        font-weight: bold;
+        margin-left: 107px;
+    }
+
+    .contact-text {
+        font-size: clamp(16px, 5vw, 18px);
+        margin-left: 107px;
+        font: normal normal 300 18px/30px Poppins;
+    }
 }
 
 .hero-bg::before {
-  content: "";
-  max-width: 316px;
-  position: absolute;
-  left: 0;
-  bottom: -2%;
-  width: 316px;
-  height: 25px;
-  background-color: #00cfff;
+    content: "";
+    max-width: 316px;
+    position: absolute;
+    left: 0;
+    bottom: -2%;
+    width: 316px;
+    height: 25px;
+    background-color: #00cfff;
 }
 
 .detail {
-  display: flex;
-  align-items: start;
-  gap: 15px;
-  i {
-    color: #1a47e6;
-    font-size: 25px;
-  }
-  i.round {
-    outline: 2px solid #1a47e6;
-    border-radius: 50vw;
-    width: 36px;
-    height: 36px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .right {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    .det-title {
-      font-size: 17px;
+    align-items: start;
+    gap: 15px;
+
+    i {
+        color: #1a47e6;
+        font-size: 25px;
     }
-    .det-text {
-      font-size: 13px;
+
+    i.round {
+        outline: 2px solid #1a47e6;
+        border-radius: 50vw;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-  }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .det-title {
+            font-size: 17px;
+        }
+
+        .det-text {
+            font-size: 13px;
+        }
+    }
 }
 
 .form-container {
-  max-width: 492px;
-  margin: 0 auto;
-  padding: 28px 70px;
-  background: #fff;
-  border-radius: 8px;
-  border: 0.25px solid #707070;
-  //   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  .form-footer {
-    font-size: 12px;
-    color: #666;
-  }
-  .form-title {
-    font-size: 40px;
-  }
+    max-width: 492px;
+    margin: 0 auto;
+    padding: 28px 70px;
+    background: #fff;
+    border-radius: 8px;
+    border: 0.25px solid #707070;
 
-  .form-footer a {
-    color: #54595f;
-  }
+    //   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    .form-footer {
+        font-size: 12px;
+        color: #666;
+    }
+
+    .form-title {
+        font-size: 40px;
+    }
+
+    .form-footer a {
+        color: #54595f;
+    }
 }

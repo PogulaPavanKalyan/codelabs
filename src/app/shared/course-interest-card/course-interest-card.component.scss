@@ -2,10 +2,16 @@
   width: 24rem;
   margin-left: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #27b67c;
+  background-color: #00f0ff;
   border-radius: 10px;
+
   .card-body {
     color: white;
+  }
+
+  .card-title {
+    color: black;
+    text-align: center;
   }
 }
 
@@ -22,11 +28,13 @@
   border-right: none;
   border-radius: 0px;
 }
-.form-select + .form-control {
+
+.form-select+.form-control {
   border-left: none;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
 }
+
 /* Submit button styling */
 .btn-primary {
   background-color: #202e8f;

@@ -17,187 +17,105 @@
     <div class="container">
       <div class="course-head mb-3">
         <span class="section-title fw-medium">Popular Courses</span>
-        <p class="fs-4">Select a courses that match your goals</p>
+        <div class="row">
+          <div class="col-5">
+            <p class="text">Discover our courses — Explore a new career path</p>
+          </div>
+          <div class="col-4 ">
+            <input type="search" class="form-control width-50" placeholder="Search">
+          </div>
+          <div class="col-3">
+            <a class="btn btn-primary" routerLink="#">Trending Courses</a>
+          </div>
+        </div>
       </div>
       <div class="course-tabs">
         <!-- <div class="container"> -->
         <!-- <div class="row">
                     <div class="col-3 col-xxl-2 ps-0"> -->
         <div class="left py-3">
-          <h5 class="m-0 px-3 mb-3 fw-bold">Categories</h5>
-          <ul
-            class="nav nav-pills d-flex flex-column justify-content-end gap-3 mb-4"
-            id="pills-tab"
-          >
+          <div class="input-wrapper">
+            <input type="text" class="form-control1" placeholder="Browse By Category">
+            <span class="history-icon">⟲</span>
+          </div>
+
+          <ul class="nav nav-pills d-flex flex-column justify-content-end gap-3 mt-4 mb-4" id="pills-tab">
             <li class="nav-item" role="presentation">
-              <button
-                class="w-100 nav-link active"
-                id="pills-Datascience-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-Datascience"
-                type="button"
-                role="tab"
-                aria-controls="pills-Datascience"
-                aria-selected="true"
-              >
+              <button class="w-100 nav-link active" id="pills-Datascience-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-Datascience" type="button" role="tab" aria-controls="pills-Datascience"
+                aria-selected="true">
                 Data Science <i class="ri-arrow-right-wide-line fs-5"></i>
               </button>
             </li>
             <li class="nav-item" role="presentation">
-              <button
-                class="w-100 nav-link text-start"
-                id="pills-web-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-web"
-                type="button"
-                role="tab"
-                aria-controls="pills-web"
-                aria-selected="false"
-              >
+              <button class="w-100 nav-link text-start" id="pills-web-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-web" type="button" role="tab" aria-controls="pills-web" aria-selected="false">
                 Web Devlopment <i class="ri-arrow-right-wide-line fs-5"></i>
               </button>
             </li>
             <li class="nav-item" role="presentation">
-              <button
-                class="w-100 nav-link text-start"
-                id="pills-Business-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-Business"
-                type="button"
-                role="tab"
-                aria-controls="pills-Business"
-                aria-selected="false"
-              >
+              <button class="w-100 nav-link text-start" id="pills-Business-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-Business" type="button" role="tab" aria-controls="pills-Business"
+                aria-selected="false">
                 Business Analysis <i class="ri-arrow-right-wide-line fs-5"></i>
               </button>
             </li>
             <li class="nav-item" role="presentation">
-              <button
-                class="w-100 nav-link text-start"
-                id="pills-Artificial-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-Artificial"
-                type="button"
-                role="tab"
-                aria-controls="pills-Artificial"
-                aria-selected="false"
-              >
+              <button class="w-100 nav-link text-start" id="pills-Artificial-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-Artificial" type="button" role="tab" aria-controls="pills-Artificial"
+                aria-selected="false">
                 Artificial Intelligence
                 <i class="ri-arrow-right-wide-line fs-5"></i>
               </button>
             </li>
             <li class="nav-item" role="presentation">
-              <button
-                class="w-100 nav-link text-start"
-                id="pills-Data-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-Data"
-                type="button"
-                role="tab"
-                aria-controls="pills-Data"
-                aria-selected="false"
-              >
+              <button class="w-100 nav-link text-start" id="pills-Data-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-Data" type="button" role="tab" aria-controls="pills-Data" aria-selected="false">
                 UX/UI Design<i class="ri-arrow-right-wide-line fs-5"></i>
               </button>
             </li>
 
             <li class="nav-item" role="presentation">
-              <button
-                class="w-100 nav-link text-start"
-                id="pills-Data-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-Data"
-                type="button"
-                role="tab"
-                aria-controls="pills-Data"
-                aria-selected="false"
-              >
+              <button class="w-100 nav-link text-start" id="pills-Data-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-Data" type="button" role="tab" aria-controls="pills-Data" aria-selected="false">
                 App Devlopment <i class="ri-arrow-right-wide-line fs-5"></i>
               </button>
             </li>
             <li class="nav-item" role="presentation">
-              <button
-                class="w-100 nav-link text-start"
-                id="pills-Data-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-Data"
-                type="button"
-                role="tab"
-                aria-controls="pills-Data"
-                aria-selected="false"
-              >
+              <button class="w-100 nav-link text-start" id="pills-Data-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-Data" type="button" role="tab" aria-controls="pills-Data" aria-selected="false">
                 Digital Marketing <i class="ri-arrow-right-wide-line fs-5"></i>
               </button>
             </li>
             <li class="nav-item" role="presentation">
-              <button
-                class="w-100 nav-link text-start"
-                id="pills-Data-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-Data"
-                type="button"
-                role="tab"
-                aria-controls="pills-Data"
-                aria-selected="false"
-              >
+              <button class="w-100 nav-link text-start" id="pills-Data-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-Data" type="button" role="tab" aria-controls="pills-Data" aria-selected="false">
                 Cybersecurity <i class="ri-arrow-right-wide-line fs-5"></i>
               </button>
             </li>
             <li class="nav-item" role="presentation">
-              <button
-                class="w-100 nav-link text-start"
-                id="pills-Data-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-Data"
-                type="button"
-                role="tab"
-                aria-controls="pills-Data"
-                aria-selected="false"
-              >
+              <button class="w-100 nav-link text-start" id="pills-Data-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-Data" type="button" role="tab" aria-controls="pills-Data" aria-selected="false">
                 Cloud Engineer/Architect
                 <i class="ri-arrow-right-wide-line fs-5"></i>
               </button>
             </li>
             <li class="nav-item" role="presentation">
-              <button
-                class="w-100 nav-link text-start"
-                id="pills-Data-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-Data"
-                type="button"
-                role="tab"
-                aria-controls="pills-Data"
-                aria-selected="false"
-              >
+              <button class="w-100 nav-link text-start" id="pills-Data-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-Data" type="button" role="tab" aria-controls="pills-Data" aria-selected="false">
                 Blockchain Engineer
                 <i class="ri-arrow-right-wide-line fs-5"></i>
               </button>
             </li>
             <li class="nav-item" role="presentation">
-              <button
-                class="w-100 nav-link text-start"
-                id="pills-Data-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-Data"
-                type="button"
-                role="tab"
-                aria-controls="pills-Data"
-                aria-selected="false"
-              >
+              <button class="w-100 nav-link text-start" id="pills-Data-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-Data" type="button" role="tab" aria-controls="pills-Data" aria-selected="false">
                 Mulesoft <i class="ri-arrow-right-wide-line fs-5"></i>
               </button>
             </li>
             <li class="nav-item" role="presentation">
-              <button
-                class="w-100 nav-link text-start"
-                id="pills-Data-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-Data"
-                type="button"
-                role="tab"
-                aria-controls="pills-Data"
-                aria-selected="false"
-              >
+              <button class="w-100 nav-link text-start" id="pills-Data-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-Data" type="button" role="tab" aria-controls="pills-Data" aria-selected="false">
                 SAP FICO <i class="ri-arrow-right-wide-line fs-5"></i>
               </button>
             </li>
@@ -206,23 +124,13 @@
         <!-- </div> -->
         <!-- <div class="col-9 col-xxl-10 p-0"> -->
         <div class="tab-content" id="pills-tabContent">
-          <div
-            class="tab-pane fade show active"
-            id="pills-UX/UI"
-            role="tabpanel"
-            aria-labelledby="pills-UX/UI-tab"
-            tabindex="0"
-          >
+          <div class="tab-pane fade show active" id="pills-UX/UI" role="tabpanel" aria-labelledby="pills-UX/UI-tab"
+            tabindex="0">
             <div class="cards container-fluid">
               <!-- <div class="row"> -->
               <!-- <div class="col-lg-4 mb-4 col-xxl-3 "> -->
               <div class="card">
-                <img
-                  alt="home images"
-                  src="../../../assets/images/python.png"
-                  class="card-img-top"
-                  alt="home images"
-                />
+                <img alt="home images" src="../../../assets/images/python.png" class="card-img-top" alt="home images" />
                 <div class="card-body py-3">
                   <span class="price-pill">₹ 12000</span>
                   <div class="card-head mb-2">
@@ -230,38 +138,25 @@
                   </div>
                   <div>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Mode of Training.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Mode of Training.svg"
+                        alt="Mode of Training.svg" />
                       Mode of Training :<span> Classroom </span>
                     </p>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Duration.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Duration.svg" alt="Mode of Training.svg" />
                       Duration :<span> 04 Month | 1.5hrs/day </span>
                     </p>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Start From.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Start From.svg" alt="Mode of Training.svg" />
                       Start From :<span> 25 Apr,2023 </span>
                     </p>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Lecture Videos.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Lecture Videos.svg" alt="Mode of Training.svg" />
                       Lecture videos :<span> Yes </span>
                     </p>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Real & Live Projects.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Real & Live Projects.svg"
+                        alt="Mode of Training.svg" />
                       Real & Live Projects
                     </p>
                   </div>
@@ -276,12 +171,8 @@
               <!-- </div> -->
               <!-- <div class="col-lg-4 mb-4 col-xxl-3 "> -->
               <div class="card">
-                <img
-                  alt="home images"
-                  src="../../../assets/images/landingpage/Course/UI Technologies.png"
-                  class="card-img-top"
-                  alt="home images"
-                />
+                <img alt="home images" src="../../../assets/images/landingpage/Course/UI Technologies.png"
+                  class="card-img-top" alt="home images" />
                 <div class="card-body py-3">
                   <span class="price-pill">₹ 10000</span>
 
@@ -290,38 +181,25 @@
                   </div>
                   <div>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Mode of Training.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Mode of Training.svg"
+                        alt="Mode of Training.svg" />
                       Mode of Training :<span> Classroom </span>
                     </p>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Duration.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Duration.svg" alt="Mode of Training.svg" />
                       Duration :<span> 04 Month | 1.5hrs/day </span>
                     </p>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Start From.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Start From.svg" alt="Mode of Training.svg" />
                       Start From :<span> 25 Apr,2023 </span>
                     </p>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Lecture Videos.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Lecture Videos.svg" alt="Mode of Training.svg" />
                       Lecture videos :<span> Yes </span>
                     </p>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Real & Live Projects.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Real & Live Projects.svg"
+                        alt="Mode of Training.svg" />
                       Real & Live Projects
                     </p>
                   </div>
@@ -333,12 +211,8 @@
               <!-- </div> -->
               <!-- <div class="col-lg-4 mb-4 col-xxl-3 "> -->
               <div class="card">
-                <img
-                  alt="home images"
-                  src="../../../assets/images/landingpage/Course/Selenium.png"
-                  class="card-img-top"
-                  alt="home images"
-                />
+                <img alt="home images" src="../../../assets/images/landingpage/Course/Selenium.png" class="card-img-top"
+                  alt="home images" />
                 <div class="card-body py-3">
                   <span class="price-pill">₹ 6500</span>
 
@@ -347,38 +221,25 @@
                   </div>
                   <div>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Mode of Training.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Mode of Training.svg"
+                        alt="Mode of Training.svg" />
                       Mode of Training :<span> Classroom </span>
                     </p>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Duration.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Duration.svg" alt="Mode of Training.svg" />
                       Duration :<span> 04 Month | 1.5hrs/day </span>
                     </p>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Start From.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Start From.svg" alt="Mode of Training.svg" />
                       Start From :<span> 25 Apr,2023 </span>
                     </p>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Lecture Videos.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Lecture Videos.svg" alt="Mode of Training.svg" />
                       Lecture videos :<span> Yes </span>
                     </p>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Real & Live Projects.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Real & Live Projects.svg"
+                        alt="Mode of Training.svg" />
                       Real & Live Projects
                     </p>
                   </div>
@@ -390,12 +251,8 @@
               <!-- </div> -->
               <!-- <div class="col-lg-4 mb-4 col-xxl-3 "> -->
               <div class="card">
-                <img
-                  alt="home images"
-                  src="../../../assets/images/landingpage/Course/Android Native.png"
-                  class="card-img-top"
-                  alt="home images"
-                />
+                <img alt="home images" src="../../../assets/images/landingpage/Course/Android Native.png"
+                  class="card-img-top" alt="home images" />
                 <div class="card-body py-3">
                   <span class="price-pill">₹ 25000</span>
 
@@ -404,38 +261,25 @@
                   </div>
                   <div>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Mode of Training.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Mode of Training.svg"
+                        alt="Mode of Training.svg" />
                       Mode of Training :<span> Classroom </span>
                     </p>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Duration.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Duration.svg" alt="Mode of Training.svg" />
                       Duration :<span> 04 Month | 1.5hrs/day </span>
                     </p>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Start From.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Start From.svg" alt="Mode of Training.svg" />
                       Start From :<span> 25 Apr,2023 </span>
                     </p>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Lecture Videos.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Lecture Videos.svg" alt="Mode of Training.svg" />
                       Lecture videos :<span> Yes </span>
                     </p>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Real & Live Projects.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Real & Live Projects.svg"
+                        alt="Mode of Training.svg" />
                       Real & Live Projects
                     </p>
                   </div>
@@ -447,12 +291,8 @@
               <!-- </div> -->
               <!-- <div class="col-lg-4 mb-4 col-xxl-3 "> -->
               <div class="card">
-                <img
-                  alt="home images"
-                  src="../../../assets/images/landingpage/Course/Mac Native Swift.png"
-                  class="card-img-top"
-                  alt="home images"
-                />
+                <img alt="home images" src="../../../assets/images/landingpage/Course/Mac Native Swift.png"
+                  class="card-img-top" alt="home images" />
                 <div class="card-body py-3">
                   <span class="price-pill">₹ 25000</span>
 
@@ -461,38 +301,25 @@
                   </div>
                   <div>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Mode of Training.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Mode of Training.svg"
+                        alt="Mode of Training.svg" />
                       Mode of Training :<span> Classroom </span>
                     </p>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Duration.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Duration.svg" alt="Mode of Training.svg" />
                       Duration :<span> 04 Month | 1.5hrs/day </span>
                     </p>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Start From.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Start From.svg" alt="Mode of Training.svg" />
                       Start From :<span> 25 Apr,2023 </span>
                     </p>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Lecture Videos.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Lecture Videos.svg" alt="Mode of Training.svg" />
                       Lecture videos :<span> Yes </span>
                     </p>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Real & Live Projects.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Real & Live Projects.svg"
+                        alt="Mode of Training.svg" />
                       Real & Live Projects
                     </p>
                   </div>
@@ -504,12 +331,8 @@
               <!-- </div> -->
               <!-- <div class="col-lg-4 mb-4 col-xxl-3 "> -->
               <div class="card">
-                <img
-                  alt="home images"
-                  src="../../../assets/images/landingpage/Course/Flutter.png"
-                  class="card-img-top"
-                  alt="home images"
-                />
+                <img alt="home images" src="../../../assets/images/landingpage/Course/Flutter.png" class="card-img-top"
+                  alt="home images" />
                 <div class="card-body py-3">
                   <span class="price-pill">₹ 25000</span>
 
@@ -518,38 +341,25 @@
                   </div>
                   <div>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Mode of Training.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Mode of Training.svg"
+                        alt="Mode of Training.svg" />
                       Mode of Training :<span> Classroom </span>
                     </p>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Duration.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Duration.svg" alt="Mode of Training.svg" />
                       Duration :<span> 04 Month | 1.5hrs/day </span>
                     </p>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Start From.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Start From.svg" alt="Mode of Training.svg" />
                       Start From :<span> 25 Apr,2023 </span>
                     </p>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Lecture Videos.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Lecture Videos.svg" alt="Mode of Training.svg" />
                       Lecture videos :<span> Yes </span>
                     </p>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img
-                        src="../../../assets/images/PopularCourses/Real & Live Projects.svg"
-                        alt="Mode of Training.svg"
-                      />
+                      <img src="../../../assets/images/PopularCourses/Real & Live Projects.svg"
+                        alt="Mode of Training.svg" />
                       Real & Live Projects
                     </p>
                   </div>
@@ -562,40 +372,18 @@
               <!-- </div> -->
             </div>
           </div>
-          <div
-            class="tab-pane fade"
-            id="pills-web"
-            role="tabpanel"
-            aria-labelledby="pills-web-tab"
-            tabindex="0"
-          >
+          <div class="tab-pane fade" id="pills-web" role="tabpanel" aria-labelledby="pills-web-tab" tabindex="0">
             ...
           </div>
-          <div
-            class="tab-pane fade"
-            id="pills-Business"
-            role="tabpanel"
-            aria-labelledby="pills-Business-tab"
-            tabindex="0"
-          >
+          <div class="tab-pane fade" id="pills-Business" role="tabpanel" aria-labelledby="pills-Business-tab"
+            tabindex="0">
             ...
           </div>
-          <div
-            class="tab-pane fade"
-            id="pills-Artificial"
-            role="tabpanel"
-            aria-labelledby="pills-Artificial-tab"
-            tabindex="0"
-          >
+          <div class="tab-pane fade" id="pills-Artificial" role="tabpanel" aria-labelledby="pills-Artificial-tab"
+            tabindex="0">
             ...
           </div>
-          <div
-            class="tab-pane fade"
-            id="pills-Data"
-            role="tabpanel"
-            aria-labelledby="pills-Data-tab"
-            tabindex="0"
-          >
+          <div class="tab-pane fade" id="pills-Data" role="tabpanel" aria-labelledby="pills-Data-tab" tabindex="0">
             ...
           </div>
         </div>
@@ -605,222 +393,198 @@
         <!-- </div> -->
       </div>
       <div class="d-flex justify-content-center py-5">
-        <button class="btn view-more-btn">View more courses</button>
+        <button class="btn view-more-btn">Explore more courses</button>
       </div>
     </div>
   </div>
   <!-- <div class="container-fluid bg-gray pt-5">
-        <div class="container services">
-            <h2 class="section-title mb-4 text-center">Our Services</h2>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="card">
-                            <img alt="home images"
-                                src="../../../assets/images/landingpage/Our Services/Classroom Training.png"
-                                alt="home images" class="card-img-top">
-                            <div class="card-body">
-                                <h3 class="text-center mb-0">Classroom Training</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="card">
-                            <img alt="home images"
-                                src="../../../assets/images/landingpage/Our Services/Online Training.png"
-                                alt="home images" class="card-img-top">
-                            <div class="card-body">
-                                <h3 class="text-center mb-0">Online Training</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="card">
-                            <img alt="home images"
-                                src="../../../assets/images/landingpage/Our Services/On-Campus Training.png"
-                                alt="home images" class="card-img-top">
-                            <div class="card-body">
-                                <h3 class="text-center mb-0">On-Campus Training</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="card">
-                            <img alt="home images"
-                                src="../../../assets/images/landingpage/Our Services/Corporate Training.png"
-                                alt="home images" class="card-img-top">
-                            <div class="card-body">
-                                <h3 class="text-center mb-0">Corporate Training</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="container services">
+      <h2 class="section-title mb-4 text-center">Our Services</h2>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="card">
+              <img alt="home images" src="../../../assets/images/landingpage/Our Services/Classroom Training.png"
+                alt="home images" class="card-img-top">
+              <div class="card-body">
+                <h3 class="text-center mb-0">Classroom Training</h3>
+              </div>
             </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card">
+              <img alt="home images" src="../../../assets/images/landingpage/Our Services/Online Training.png"
+                alt="home images" class="card-img-top">
+              <div class="card-body">
+                <h3 class="text-center mb-0">Online Training</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card">
+              <img alt="home images" src="../../../assets/images/landingpage/Our Services/On-Campus Training.png"
+                alt="home images" class="card-img-top">
+              <div class="card-body">
+                <h3 class="text-center mb-0">On-Campus Training</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="card">
+              <img alt="home images" src="../../../assets/images/landingpage/Our Services/Corporate Training.png"
+                alt="home images" class="card-img-top">
+              <div class="card-body">
+                <h3 class="text-center mb-0">Corporate Training</h3>
+              </div>
+            </div>
+          </div>
         </div>
-    </div> -->
-  <div class="container py-5 our-student">
-    <h2 class="section-title mb-4 text-center">
+      </div>
+    </div>
+  </div> -->
+  <div class="container w-100 py-5 our-student">
+    <h2 class="section-title mb-1 text-center">
       Placement Offers from Leading Companies
     </h2>
+    <p class="text-center fw-bold ">Our students have secured top roles across global organizations Lets - Learn Build.
+      Get Hired</p>
     <div class="container-fluid">
-      <div class="row row-cols-5">
+      <div class="row row-cols-5 m-0">
         <div class="col mb-3">
           <div class="card h-100 border-0">
             <div class="card-body">
-              <img
-                src="../../../assets/images/PlacementOffersfromLeadingCompanies/Mithun.png"
-                class="profile"
-                alt="student-images"
-              />
+              <img src="../../../assets/images/PlacementOffersfromLeadingCompanies/Mithun.png" class="profile"
+                alt="student-images" />
               <div class="student">
                 <h6 class="m-0 std-name">Mithun</h6>
                 <p class="m-0 std-role">Tracking Analyst</p>
               </div>
-              <img
-                class="std-comp"
-                src="../../../assets/images/PlacementOffersfromLeadingCompanies/Flipkart.svg"
-                alt=""
-              />
+              <img class="std-comp" src="../../../assets/images/PlacementOffersfromLeadingCompanies/Flipkart.svg"
+                alt="" />
             </div>
           </div>
         </div>
         <div class="col mb-3">
           <div class="card h-100 border-0">
             <div class="card-body">
-              <img
-                src="../../../assets/images/PlacementOffersfromLeadingCompanies/Neha Panday.png"
-                class="profile"
-                alt="student-images"
-              />
+              <img src="../../../assets/images/PlacementOffersfromLeadingCompanies/Neha Panday.png" class="profile"
+                alt="student-images" />
               <div class="student">
                 <h6 class="m-0 std-name">Neha Panday</h6>
                 <p class="m-0 std-role">Systems analyst</p>
               </div>
-              <img
-                class="std-comp"
-                src="../../../assets/images/PlacementOffersfromLeadingCompanies/Flipkart.svg"
-                alt=""
-              />
+              <img class="std-comp" src="../../../assets/images/PlacementOffersfromLeadingCompanies/Flipkart.svg"
+                alt="" />
             </div>
           </div>
         </div>
         <div class="col mb-3">
           <div class="card h-100 border-0">
             <div class="card-body">
-              <img
-                src="../../../assets/images/PlacementOffersfromLeadingCompanies/Rama Krishna.png"
-                class="profile"
-                alt="student-images"
-              />
+              <img src="../../../assets/images/PlacementOffersfromLeadingCompanies/Rama Krishna.png" class="profile"
+                alt="student-images" />
               <div class="student">
                 <h6 class="m-0 std-name">Rama Krishna</h6>
                 <p class="m-0 std-role">Data analyst</p>
               </div>
-              <img
-                class="std-comp"
-                src="../../../assets/images/PlacementOffersfromLeadingCompanies/Qualcomm.svg"
-                alt=""
-              />
+              <img class="std-comp" src="../../../assets/images/PlacementOffersfromLeadingCompanies/Qualcomm.svg"
+                alt="" />
             </div>
           </div>
         </div>
         <div class="col mb-3">
           <div class="card h-100 border-0">
             <div class="card-body">
-              <img
-                src="../../../assets/images/PlacementOffersfromLeadingCompanies/Aadya.png"
-                class="profile"
-                alt="student-images"
-              />
+              <img src="../../../assets/images/PlacementOffersfromLeadingCompanies/Aadya.png" class="profile"
+                alt="student-images" />
               <div class="student">
                 <h6 class="m-0 std-name">Aadya</h6>
                 <p class="m-0 std-role">Data scientist</p>
               </div>
-              <img
-                class="std-comp"
-                src="../../../assets/images/PlacementOffersfromLeadingCompanies/EY.svg"
-                alt=""
-              />
+              <img class="std-comp" src="../../../assets/images/PlacementOffersfromLeadingCompanies/EY.svg" alt="" />
             </div>
           </div>
         </div>
         <div class="col mb-3">
           <div class="card h-100 border-0">
             <div class="card-body">
-              <img
-                src="../../../assets/images/PlacementOffersfromLeadingCompanies/Sravani.png"
-                class="profile"
-                alt="student-images"
-              />
+              <img src="../../../assets/images/PlacementOffersfromLeadingCompanies/Sravani.png" class="profile"
+                alt="student-images" />
               <div class="student">
                 <h6 class="m-0 std-name">Sravani</h6>
                 <p class="m-0 std-role">System administrator</p>
               </div>
-              <img
-                class="std-comp"
-                src="../../../assets/images/PlacementOffersfromLeadingCompanies/Group 77358.svg"
-                alt=""
-              />
+              <img class="std-comp" src="../../../assets/images/PlacementOffersfromLeadingCompanies/Group 77358.svg"
+                alt="" />
             </div>
           </div>
         </div>
         <div class="col mb-3">
           <div class="card h-100 border-0">
             <div class="card-body">
-              <img
-                src="../../../assets/images/PlacementOffersfromLeadingCompanies/Nagarjuna.png"
-                class="profile"
-                alt="student-images"
-              />
+              <img src="../../../assets/images/PlacementOffersfromLeadingCompanies/Nagarjuna.png" class="profile"
+                alt="student-images" />
               <div class="student">
                 <h6 class="m-0 std-name">Nagarjuna</h6>
                 <p class="m-0 std-role">Network engineer</p>
               </div>
-              <img
-                class="std-comp"
-                src="../../../assets/images/PlacementOffersfromLeadingCompanies/Cognizant.svg"
-                alt=""
-              />
+              <img class="std-comp" src="../../../assets/images/PlacementOffersfromLeadingCompanies/Cognizant.svg"
+                alt="" />
             </div>
           </div>
         </div>
         <div class="col mb-3">
           <div class="card h-100 border-0">
             <div class="card-body">
-              <img
-                src="../../../assets/images/PlacementOffersfromLeadingCompanies/Sai Divya.png"
-                class="profile"
-                alt="student-images"
-              />
+              <img src="../../../assets/images/PlacementOffersfromLeadingCompanies/Sai Divya.png" class="profile"
+                alt="student-images" />
               <div class="student">
                 <h6 class="m-0 std-name">Sai Divya</h6>
                 <p class="m-0 std-role">Database administrator</p>
               </div>
-              <img
-                class="std-comp"
-                src="../../../assets/images/PlacementOffersfromLeadingCompanies/Facebook.svg"
-                alt=""
-              />
+              <img class="std-comp" src="../../../assets/images/PlacementOffersfromLeadingCompanies/Facebook.svg"
+                alt="" />
             </div>
           </div>
         </div>
         <div class="col mb-3">
           <div class="card h-100 border-0">
             <div class="card-body">
-              <img
-                src="../../../assets/images/PlacementOffersfromLeadingCompanies/Priya Rao.svg"
-                class="profile"
-                alt="student-images"
-              />
+              <img src="../../../assets/images/PlacementOffersfromLeadingCompanies/Priya Rao.svg" class="profile"
+                alt="student-images" />
               <div class="student">
                 <h6 class="m-0 std-name">Priya Rao</h6>
                 <p class="m-0 std-role">Tracking Analyst</p>
               </div>
-              <img
-                class="std-comp"
-                src="../../../assets/images/PlacementOffersfromLeadingCompanies/Accenture.svg"
-                alt=""
-              />
+              <img class="std-comp" src="../../../assets/images/PlacementOffersfromLeadingCompanies/Accenture.svg"
+                alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="col mb-3">
+          <div class="card h-100 border-0">
+            <div class="card-body">
+              <img src="../../../assets/images/PlacementOffersfromLeadingCompanies/saikishore.png" class="profile"
+                alt="student-images" />
+              <div class="student">
+                <h6 class="m-0 std-name">Sai Kishore</h6>
+                <p class="m-0 std-role">Digital Marketing</p>
+              </div>
+              <img class="std-comp" src="../../../assets/images/PlacementOffersfromLeadingCompanies/tcs.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="col mb-3">
+          <div class="card h-100 border-0">
+            <div class="card-body">
+              <img src="../../../assets/images/PlacementOffersfromLeadingCompanies/Priya Rao.svg" class="profile"
+                alt="student-images" />
+              <div class="student">
+                <h6 class="m-0 std-name">Priya Rao</h6>
+                <p class="m-0 std-role">Tracking Analyst</p>
+              </div>
+              <img class="std-comp" src="../../../assets/images/PlacementOffersfromLeadingCompanies/Accenture.svg"
+                alt="" />
             </div>
           </div>
         </div>
@@ -832,38 +596,21 @@
       <h2 class="section-title fw-bold mb-4">Why Learn with Parthu it ?</h2>
       <div class="row">
         <div class="col-6">
-          <img
-            src="../../../assets/images/WhyLearnwithParthuit/cert-bg-m.svg"
-            class="img-fluid"
-            alt=""
-          />
+          <img src="../../../assets/images/WhyLearnwithParthuit/cert-bg-m.svg" class="img-fluid" alt="" />
         </div>
         <div class="col-6">
           <div class="accordion" id="accordionExample">
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseOne"
-                  aria-expanded="true"
-                  aria-controls="collapseOne"
-                >
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                   <div>
-                    <img
-                      src="../../../assets/images/WhyLearnwithParthuit/Group 2598.svg"
-                      alt=""
-                    />
+                    <img src="../../../assets/images/WhyLearnwithParthuit/Group 2598.svg" alt="" />
                     Practical Experience
                   </div>
                 </button>
               </h2>
-              <div
-                id="collapseOne"
-                class="accordion-collapse collapse"
-                data-bs-parent="#accordionExample"
-              >
+              <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <strong>This is the first item's accordion body.</strong> It
                   is shown by default, until the collapse plugin adds the
@@ -879,28 +626,15 @@
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseTwo"
-                  aria-expanded="false"
-                  aria-controls="collapseTwo"
-                >
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                   <div>
-                    <img
-                      src="../../../assets/images/WhyLearnwithParthuit/Group 2647.svg"
-                      alt=""
-                    />
+                    <img src="../../../assets/images/WhyLearnwithParthuit/Group 2647.svg" alt="" />
                     Real & Live Projects
                   </div>
                 </button>
               </h2>
-              <div
-                id="collapseTwo"
-                class="accordion-collapse collapse"
-                data-bs-parent="#accordionExample"
-              >
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <strong>This is the second item's accordion body.</strong> It
                   is hidden by default, until the collapse plugin adds the
@@ -916,28 +650,15 @@
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseThree"
-                  aria-expanded="false"
-                  aria-controls="collapseThree"
-                >
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                   <div>
-                    <img
-                      src="../../../assets/images/WhyLearnwithParthuit/Group 2649.svg"
-                      alt=""
-                    />
+                    <img src="../../../assets/images/WhyLearnwithParthuit/Group 2649.svg" alt="" />
                     Learn from anywhere
                   </div>
                 </button>
               </h2>
-              <div
-                id="collapseThree"
-                class="accordion-collapse collapse"
-                data-bs-parent="#accordionExample"
-              >
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <strong>This is the third item's accordion body.</strong> It
                   is hidden by default, until the collapse plugin adds the
@@ -953,28 +674,15 @@
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseFour"
-                  aria-expanded="false"
-                  aria-controls="collapseFour"
-                >
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                   <div>
-                    <img
-                      src="../../../assets/images/WhyLearnwithParthuit/noun-curriculum-6758149.svg"
-                      alt=""
-                    />
+                    <img src="../../../assets/images/WhyLearnwithParthuit/noun-curriculum-6758149.svg" alt="" />
                     World-Class Cirriculum
                   </div>
                 </button>
               </h2>
-              <div
-                id="collapseFour"
-                class="accordion-collapse collapse"
-                data-bs-parent="#accordionExample"
-              >
+              <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <strong>This is the third item's accordion body.</strong> It
                   is hidden by default, until the collapse plugin adds the
@@ -990,28 +698,15 @@
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseFive"
-                  aria-expanded="false"
-                  aria-controls="collapseFive"
-                >
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                   <div>
-                    <img
-                      src="../../../assets/images/WhyLearnwithParthuit/Group 2652.svg"
-                      alt=""
-                    />
+                    <img src="../../../assets/images/WhyLearnwithParthuit/Group 2652.svg" alt="" />
                     1:1 Mentoring & Support
                   </div>
                 </button>
               </h2>
-              <div
-                id="collapseFive"
-                class="accordion-collapse collapse"
-                data-bs-parent="#accordionExample"
-              >
+              <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <strong>This is the third item's accordion body.</strong> It
                   is hidden by default, until the collapse plugin adds the
@@ -1027,28 +722,16 @@
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseSix"
-                  aria-expanded="false"
-                  aria-controls="collapseSix"
-                >
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                   <div>
-                    <img
-                      src="../../../assets/images/WhyLearnwithParthuit/noun-certification-7271292.svg"
-                      alt="Global Certification"
-                    />
+                    <img src="../../../assets/images/WhyLearnwithParthuit/noun-certification-7271292.svg"
+                      alt="Global Certification" />
                     Global Certification
                   </div>
                 </button>
               </h2>
-              <div
-                id="collapseSix"
-                class="accordion-collapse collapse"
-                data-bs-parent="#accordionExample"
-              >
+              <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <strong>This is the third item's accordion body.</strong> It
                   is hidden by default, until the collapse plugin adds the
@@ -1064,28 +747,16 @@
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseSeven"
-                  aria-expanded="false"
-                  aria-controls="collapseSeven"
-                >
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
                   <div>
-                    <img
-                      src="../../../assets/images/WhyLearnwithParthuit/noun-career-7316785.svg"
-                      alt="Carrer advice"
-                    />
+                    <img src="../../../assets/images/WhyLearnwithParthuit/noun-career-7316785.svg"
+                      alt="Carrer advice" />
                     Carrer advice
                   </div>
                 </button>
               </h2>
-              <div
-                id="collapseSeven"
-                class="accordion-collapse collapse"
-                data-bs-parent="#accordionExample"
-              >
+              <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <strong>This is the third item's accordion body.</strong> It
                   is hidden by default, until the collapse plugin adds the
@@ -1100,10 +771,75 @@
               </div>
             </div>
           </div>
-          <span
-            >Parthu isn’t just a training Institute We’re a diverse digital
-            community with a mission to change lives for the better.</span
-          >
+          <span>Parthu isn’t just a training Institute We’re a diverse digital
+            community with a mission to change lives for the better.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid key-services py-5">
+    <div class="container">
+      <h2 class="section-title fw-bold mb-5">Key Services We Offer</h2>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="service-card h-100">
+            <div class="card-header bg-purple text-white p-4">
+              <h3 class="m-0 fw-bold">Consulting</h3>
+            </div>
+            <div class="card-body bg-white p-4 d-flex flex-column justify-content-between">
+              <p class="mb-4 text-dark">
+                We'll guide your business from end-to-end with consultation and
+                scoping through to practical implementation such as in-person
+                coaching.
+              </p>
+              <button class="btn learn-more-btn">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="service-card h-100">
+            <div class="card-header bg-teal text-white p-4">
+              <h3 class="m-0 fw-bold">Skill Diagnostics</h3>
+            </div>
+            <div class="card-body bg-white p-4 d-flex flex-column justify-content-between">
+              <p class="mb-4 text-dark">
+                Skills Dx is a data-driven diagnostic tool that eliminates the
+                guesswork, uncovering the strengths and gaps for tailored growth
+                plans.
+              </p>
+              <button class="btn learn-more-btn">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="service-card h-100">
+            <div class="card-header bg-cyan text-white p-4">
+              <h3 class="m-0 fw-bold">Training</h3>
+            </div>
+            <div class="card-body bg-white p-4 d-flex flex-column justify-content-between">
+              <p class="mb-4 text-dark">
+                With our suite of world-class courses, we'll give your people
+                the training they need to meaningfully grow and create
+                measurable improvements for your business.
+              </p>
+              <button class="btn learn-more-btn">Learn more</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="service-card h-100">
+            <div class="card-header bg-green text-white p-4">
+              <h3 class="m-0 fw-bold">Certifications</h3>
+            </div>
+            <div class="card-body bg-white p-4 d-flex flex-column justify-content-between">
+              <p class="mb-4 text-dark">
+                Whether your people want to reframe their careers, upskill or
+                reskill, they'll earn credentials that are recognised globally.
+              </p>
+              <button class="btn learn-more-btn">Learn more</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1114,30 +850,12 @@
       Our Learners are Working with
     </h2>
     <div class="logos">
-      <img
-        src="../../../assets/images/OurLearnersareWorkingwith/Cognizant.svg"
-        alt=""
-      />
-      <img
-        src="../../../assets/images/OurLearnersareWorkingwith/HCL.svg"
-        alt=""
-      />
-      <img
-        src="../../../assets/images/OurLearnersareWorkingwith/Freshworks-vector-logo.svg"
-        alt=""
-      />
-      <img
-        src="../../../assets/images/OurLearnersareWorkingwith/Group 77369.svg"
-        alt=""
-      />
-      <img
-        src="../../../assets/images/OurLearnersareWorkingwith/Capgemini.svg"
-        alt=""
-      />
-      <img
-        src="../../../assets/images/OurLearnersareWorkingwith/EY.svg"
-        alt=""
-      />
+      <img src="../../../assets/images/OurLearnersareWorkingwith/Cognizant.svg" alt="" />
+      <img src="../../../assets/images/OurLearnersareWorkingwith/HCL.svg" alt="" />
+      <img src="../../../assets/images/OurLearnersareWorkingwith/Freshworks-vector-logo.svg" alt="" />
+      <img src="../../../assets/images/OurLearnersareWorkingwith/Group 77369.svg" alt="" />
+      <img src="../../../assets/images/OurLearnersareWorkingwith/Capgemini.svg" alt="" />
+      <img src="../../../assets/images/OurLearnersareWorkingwith/EY.svg" alt="" />
     </div>
   </div>
   <div class="container-fluid learn-free py-5">
@@ -1145,16 +863,10 @@
       <div class="row">
         <div class="col-6">
           <div class="peoples">
-            <img
-              src="../../../assets/images/Learnforfree&Parthufooter/Rectangle 4229.png"
-              class="img-fluid"
-              alt="service image"
-            />
-            <img
-              src="../../../assets/images/Learnforfree&Parthufooter/Ellipse 22.png"
-              class="img-fluid"
-              alt="service image"
-            />
+            <img src="../../../assets/images/Learnforfree&Parthufooter/Rectangle 4229.png" class="img-fluid"
+              alt="service image" />
+            <img src="../../../assets/images/Learnforfree&Parthufooter/Ellipse 22.png" class="img-fluid"
+              alt="service image" />
           </div>
         </div>
         <div class="col-6 pe-0">
@@ -1168,15 +880,11 @@
               Impressed by what you've read? Take the first step <br />
               towards achieving your goals—sign up today!
             </span> -->
-            <span class="d-flex align-items-center gap-2"
-              >Join our Industry Focused Career Ready Courses .
-              <button
-                style="max-width: fit-content"
-                class="shadow-none btn start-btn"
-              >
-                Get Started
-              </button></span
-            >
+            <p class="d-flex align-items-center gap-2 learn-text">Learn. Build. Innovate. Succeed.
+              <button style="max-width: fit-content" class="shadow-none btn start-btn">
+                Talk to Advisor!
+              </button>
+            </p>
           </div>
         </div>
       </div>
