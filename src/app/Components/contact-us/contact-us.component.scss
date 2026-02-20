@@ -120,3 +120,73 @@
         color: #54595f;
     }
 }
+
+/* Comprehensive Mobile Cleanup */
+@media (max-width: 768px) {
+    .hero-bg {
+        .hero-sec {
+            flex-direction: column;
+            text-align: center;
+            padding-top: 40px;
+            gap: 30px;
+        }
+
+        .hero-content {
+            align-items: center;
+            text-align: center;
+        }
+
+        .contact-title {
+            margin-left: 0;
+            font-size: clamp(32px, 8vw, 45px);
+        }
+
+        .contact-text {
+            margin-left: 0;
+            font-size: 15px;
+            padding: 0 15px;
+        }
+
+        .hero-img {
+            align-items: center;
+            margin-bottom: 40px;
+
+            img:first-child {
+                max-width: 85%;
+                margin: 0 auto;
+            }
+
+            .round-img {
+                max-width: 120px;
+                bottom: -10%;
+                right: 5%;
+            }
+        }
+    }
+
+    .form-container {
+        padding: 24px 20px;
+
+        .form-title {
+            font-size: 30px;
+        }
+    }
+
+    .detail {
+        align-items: flex-start;
+        padding-right: 15px;
+
+        .right {
+            word-break: break-word;
+            /* Prevent long email addresses from breaking mobile layout */
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-bg {
+        .hero-img .round-img {
+            max-width: 90px;
+        }
+    }
+}
