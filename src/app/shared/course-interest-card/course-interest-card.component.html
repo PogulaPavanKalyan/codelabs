@@ -4,63 +4,57 @@
     <p class="">Learn from the Real-Time Experts</p>
 
     <!-- Form Starts Here -->
-    <form novalidate>
+    <form (ngSubmit)="enrollForm.form.valid && onSubmit()" #enrollForm="ngForm" novalidate>
       <!-- Full Name Input -->
       <div class="mb-3">
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Full Name *"
-          required
-        />
+        <input type="text" class="form-control" placeholder="Full Name *" name="fullName"
+          [(ngModel)]="contactData.fullName" required />
       </div>
 
       <!-- Email Input -->
       <div class="mb-3">
-        <input
-          type="email"
-          class="form-control"
-          placeholder="Email *"
-          required
-        />
+        <input type="email" class="form-control" placeholder="Email *" name="email" [(ngModel)]="contactData.email"
+          required email />
       </div>
 
       <!-- Mobile Number Input -->
       <div class="mb-3">
         <div class="input-group">
-          <select class="form-select" style="max-width: 102px">
+          <select class="form-select" style="max-width: 102px" name="countryCode" [(ngModel)]="contactData.countryCode">
             <option value="+91" selected>+91 IN</option>
             <option value="+1">+1 US</option>
             <option value="+44">+44 UK</option>
             <!-- Add more country codes if needed -->
           </select>
-          <input
-            type="tel"
-            class="form-control"
-            placeholder="Mobile Number *"
-            required
-          />
+          <input type="tel" class="form-control" placeholder="Mobile Number *" name="mobileNumber"
+            [(ngModel)]="contactData.mobileNumber" required />
         </div>
       </div>
 
-      <!-- Work Experience Input -->
+      <!-- Batches Input -->
       <div class="mb-3">
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Work Experience"
-          required
-        />
+        <input type="text" class="form-control" placeholder="Batches" name="batches" [(ngModel)]="contactData.batches"
+          required />
       </div>
 
       <!-- City Input -->
       <div class="mb-3">
-        <input type="text" class="form-control" placeholder="City" required />
+        <input type="text" class="form-control" placeholder="City" name="city" [(ngModel)]="contactData.city"
+          required />
+      </div>
+
+      <div *ngIf="submitSuccess" class="alert alert-success py-1 mt-2 mb-2" style="font-size: 0.8rem">
+        Success! We'll contact you soon.
+      </div>
+      <div *ngIf="submitError" class="alert alert-danger py-1 mt-2 mb-2" style="font-size: 0.8rem">
+        Error. Please try again.
       </div>
 
       <!-- Submit Button -->
       <div class="d-grid">
-        <button type="submit" class="btn btn-primary">Enroll Now</button>
+        <button type="submit" class="btn btn-primary" [disabled]="!enrollForm.form.valid || isSubmitting">
+          {{ isSubmitting ? 'Processing...' : 'Enroll Now' }}
+        </button>
       </div>
     </form>
 
