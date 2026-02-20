@@ -13,8 +13,8 @@
 
     .hero-title {
         margin-left: 50px;
-        height: 91px;
-        width: 554px;
+        height: auto;
+        max-width: 554px;
         font: normal normal bold 65px/80px Poppins;
         letter-spacing: 0px;
         color: #FFFFFF;
@@ -25,7 +25,7 @@
         margin-left: 50px;
         max-width: 600px;
         line-height: 1.3;
-        height: 91px;
+        height: auto;
         font: normal normal normal 33px/48px Poppins;
         color: #FFFFFF;
         opacity: 1;
@@ -61,8 +61,8 @@
         span.section-title {
             font-size: 55px;
             margin-left: 20px;
-            width: 465px;
-            height: 77px;
+            width: auto;
+            height: auto;
         }
     }
 
@@ -130,13 +130,15 @@
     }
 
     .form-control {
-        width: 333px;
+        width: 100%;
+        max-width: 333px;
         height: 45px;
-        margin-left: 74px;
+        // margin-left: 74px;
     }
 
     .form-control1 {
-        width: 270px;
+        width: 100%;
+        max-width: 270px;
         height: 45px;
         margin-left: 20px;
         border: 1px solid #707070;
@@ -476,10 +478,14 @@
         .hero-title {
             font-size: 32px !important;
             text-align: center;
+            margin-left: 0 !important;
+            width: 100% !important;
         }
 
         .hero-text {
             text-align: center;
+            margin-left: 0 !important;
+            width: 100% !important;
         }
     }
 
@@ -508,9 +514,13 @@
             }
         }
 
+        .tab-content {
+            margin-left: 0 !important;
+        }
+
         .course-tabs {
             flex-direction: column;
-            background-color: #20c997;
+            background-color: transparent;
 
             .left {
                 width: 100%;
@@ -620,79 +630,123 @@ i.ri-rocket-fill {
 
 
 .key-services {
-    font: normal normal normal 13px/21px Poppins;
-    font-weight: 500;
-
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
 
     .service-card {
-        border-radius: 10px;
+        border-radius: 12px;
         overflow: hidden;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
         border: none;
+        background: #fff;
 
         &:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
         }
 
         .card-header {
-            height: 200px; // Increased height as per design
+            height: 220px;
+            position: relative;
+            background-size: cover;
+            background-position: center;
             display: flex;
-            align-items: flex-end; // Align text to bottom
-            justify-content: flex-start; // Left align text
-            padding: 0 0 30px 30px !important; // Add spacing from left and bottom
-            border-bottom: none;
+            align-items: flex-end;
+            padding: 30px !important;
+            border: none;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
 
             h3 {
-                font-size: 28px;
+                position: relative;
+                z-index: 2;
+                color: #fff;
+                font-size: 26px;
                 font-weight: 700;
-                text-align: left;
+                margin: 0;
+            }
+
+            &.consulting {
+                background-image: url("../../../assets/images/landingpage/Services/4.jpg");
+
+                &::after {
+                    background: rgba(103, 58, 183, 0.65);
+                }
+
+                // Purple
+            }
+
+            &.diagnostics {
+                background-image: url("../../../assets/images/landingpage/Services/1.jpg");
+
+                &::after {
+                    background: rgba(0, 188, 212, 0.65);
+                }
+
+                // Teal
+            }
+
+            &.training {
+                background-image: url("../../../assets/images/landingpage/Services/2.jpg");
+
+                &::after {
+                    background: rgba(33, 150, 243, 0.65);
+                }
+
+                // Blue
+            }
+
+            &.certifications {
+                background-image: url("../../../assets/images/landingpage/Services/3.jpg");
+
+                &::after {
+                    background: rgba(139, 195, 74, 0.65);
+                }
+
+                // Green
             }
         }
 
         .card-body {
             padding: 30px;
-            min-height: 250px; // Ensure consistent height for body
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 220px;
 
             p {
-                font-size: 14px;
-                line-height: 1.6;
-                color: #585858;
+                font-size: 14.5px;
+                line-height: 1.7;
+                color: #555;
+                margin-bottom: 25px;
             }
         }
     }
 
-    .bg-purple {
-        background-color: #5654b0; // Approximate purple from design
-    }
-
-    .bg-teal {
-        background-color: #17a2b8; // Teal
-    }
-
-    .bg-cyan {
-        background-color: #28aadc; // Light blue/cyan
-    }
-
-    .bg-green {
-        background-color: #8cc63f; // Lime green
-    }
-
     .learn-more-btn {
-        border: 1px solid #c4c4c4;
+        border: 1px solid #e0e0e0;
         border-radius: 50px;
-        padding: 10px 30px;
+        padding: 8px 25px;
         font-size: 14px;
-        font-weight: 700;
-        color: #000;
+        font-weight: 600;
+        color: #333;
         transition: all 0.3s ease;
-        background-color: white;
+        background-color: transparent;
         width: fit-content;
 
         &:hover {
-            background-color: var(--blue);
-            color: white;
-            border-color: var(--blue);
+            background-color: #f8f8f8;
+            border-color: #cacaca;
+            color: #000;
         }
     }
 }

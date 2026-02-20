@@ -122,3 +122,216 @@ table tr:nth-child(odd) {
     background-color: #12e90a;
     color: #fff;
 }
+
+/* ===============================
+   GET READY FOR TAKE OFF SECTION
+================================= */
+
+.getready-section {
+    background: #FFE600;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+
+    .row {
+        margin: 0;
+    }
+}
+
+.getready-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.getready-title-box {
+
+    padding: 10px 15px;
+    margin-bottom: 30px;
+    width: fit-content;
+
+    .getready-title {
+        font-size: 52px;
+        font-weight: 800;
+        color: #000;
+        margin: 0;
+        line-height: 1;
+        letter-spacing: -1px;
+    }
+}
+
+.getready-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    max-width: 480px;
+}
+
+.getready-line {
+    width: 250px;
+    height: 4px;
+    background: #22C55E;
+    margin: 20px 0 40px 0;
+}
+
+.getready-footer {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.getready-partner {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.partner-badge-container {
+    position: relative;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.partner-badge {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #FF00CC;
+    border-radius: 50%;
+    /* Full Circle Curves (Scalloped Circle) - High density for smoothness */
+    clip-path: polygon(
+    50% 0%, 60% 5%, 70% 0%, 80% 8%, 90% 5%, 100% 15%,
+    95% 25%, 100% 35%, 95% 45%, 100% 55%, 95% 65%,
+    100% 75%, 90% 85%, 80% 92%, 70% 100%, 60% 95%,
+    50% 100%, 40% 95%, 30% 100%, 20% 92%, 10% 85%,
+    0% 75%, 5% 65%, 0% 55%, 5% 45%, 0% 35%, 5% 25%,
+    0% 15%, 10% 5%, 20% 8%, 30% 0%, 40% 5%
+  );
+}
+
+.badge-text {
+    position: relative;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 800;
+    z-index: 1;
+}
+
+.partner-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.partner-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #000;
+    margin: 0;
+}
+
+.partner-subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    margin: 0;
+}
+
+.btn-getready {
+    background: #00C800;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    text-decoration: none;
+    transition: 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-getready:hover {
+    background: #00B100;
+    color: #fff;
+}
+
+.getready-img-col {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.getready-img {
+    max-width: 110%;
+    height: auto;
+    margin-bottom: -24px;
+    /* Avoid tiny gaps */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .getready-title-box .getready-title {
+        font-size: 44px;
+    }
+}
+
+@media (max-width: 991px) {
+    .getready-img-col {
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .getready-img {
+        max-width: 90%;
+    }
+
+    .getready-content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .getready-line {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .getready-footer {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .getready-title-box {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .getready-title-box .getready-title {
+        font-size: 32px;
+    }
+
+    .getready-partner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .badge-text {
+        font-size: 18px;
+    }
+
+    .partner-badge-container {
+        width: 65px;
+        height: 65px;
+    }
+
+    .partner-title {
+        font-size: 18px;
+    }
+}

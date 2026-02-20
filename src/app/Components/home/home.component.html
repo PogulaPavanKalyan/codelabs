@@ -15,18 +15,22 @@
   </div>
   <div class="container-fluid courses bg-gray pt-4">
     <div class="container">
-      <div class="course-head mb-3">
-        <span class="section-title fw-medium">Popular Courses</span>
-        <div class="row">
-          <div class="col-5">
-            <p class="text">Discover our courses — Explore a new career path</p>
+      <div class="course-head mb-5 d-flex justify-content-between align-items-end flex-wrap gap-3">
+        <div class="left-content">
+          <h2 class="section-title fw-bold mb-0" style="font-size: 55px;">Popular Courses</h2>
+          <p class="text m-0" style="font-size: 18px;">Discover our courses — Explore a new career path</p>
+        </div>
+        <div class="right-content d-flex align-items-center gap-3">
+          <div class="search-box position-relative">
+            <i class="ri-search-line position-absolute text-muted"
+              style="left: 15px; top: 50%; transform: translateY(-50%);"></i>
+            <input type="search" class="form-control"
+              style="padding-left: 40px; min-width: 320px; height: 45px; border: 1px solid #ced4da; border-radius: 4px;"
+              placeholder="Looking for your course ?">
           </div>
-          <div class="col-4 ">
-            <input type="search" class="form-control width-50" placeholder="Search">
-          </div>
-          <div class="col-3">
-            <a class="btn btn-primary" routerLink="#">Trending Courses</a>
-          </div>
+          <button class="btn text-white"
+            style="height: 45px; border-radius: 4px; background-color: #2b24ff; border: none; white-space: nowrap; font-weight: 600; padding: 0 24px;">Trending
+            Courses</button>
         </div>
       </div>
       <div class="course-tabs">
@@ -34,9 +38,11 @@
         <!-- <div class="row">
                     <div class="col-3 col-xxl-2 ps-0"> -->
         <div class="left py-3">
-          <div class="input-wrapper">
-            <input type="text" class="form-control1" placeholder="Browse By Category">
-            <span class="history-icon">⟲</span>
+          <div class="input-wrapper position-relative" style="width: 270px; margin-left: 20px; margin-bottom: 20px;">
+            <input style="margin-left: -10px;" type="text" class="form-control browse-category-input shadow-none"
+              placeholder="Browse By Category">
+            <i class="ri-history-line position-absolute"
+              style="right: 15px; top: 50%; transform: translateY(-50%); font-size: 18px; color: #a0a0a0;"></i>
           </div>
 
           <ul class="nav nav-pills d-flex flex-column justify-content-end gap-3 mt-4 mb-4" id="pills-tab">
@@ -449,7 +455,7 @@
     <p class="text-center fw-bold ">Our students have secured top roles across global organizations Lets - Learn Build.
       Get Hired</p>
     <div class="container-fluid">
-      <div class="row row-cols-5 m-0">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 m-0 gy-3">
         <div class="col mb-3">
           <div class="card h-100 border-0">
             <div class="card-body">
@@ -594,11 +600,11 @@
   <div class="container-fluid accor">
     <div class="container py-5 accordion-div">
       <h2 class="section-title fw-bold mb-4">Why Learn with Parthu it ?</h2>
-      <div class="row">
-        <div class="col-6">
+      <div class="row gy-4">
+        <div class="col-12 col-lg-6">
           <img src="../../../assets/images/WhyLearnwithParthuit/cert-bg-m.svg" class="img-fluid" alt="" />
         </div>
-        <div class="col-6">
+        <div class="col-12 col-lg-6">
           <div class="accordion" id="accordionExample">
             <div class="accordion-item">
               <h2 class="accordion-header">
@@ -782,13 +788,14 @@
     <div class="container">
       <h2 class="section-title fw-bold mb-5">Key Services We Offer</h2>
       <div class="row">
+        <!-- Consulting -->
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="service-card h-100">
-            <div class="card-header bg-purple text-white p-4">
-              <h3 class="m-0 fw-bold">Consulting</h3>
+            <div class="card-header consulting">
+              <h3 class="m-0">Consulting</h3>
             </div>
-            <div class="card-body bg-white p-4 d-flex flex-column justify-content-between">
-              <p class="mb-4 text-dark">
+            <div class="card-body">
+              <p>
                 We'll guide your business from end-to-end with consultation and
                 scoping through to practical implementation such as in-person
                 coaching.
@@ -797,13 +804,15 @@
             </div>
           </div>
         </div>
+
+        <!-- Skill Diagnostics -->
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="service-card h-100">
-            <div class="card-header bg-teal text-white p-4">
-              <h3 class="m-0 fw-bold">Skill Diagnostics</h3>
+            <div class="card-header diagnostics">
+              <h3 class="m-0">Skill Diagnostics</h3>
             </div>
-            <div class="card-body bg-white p-4 d-flex flex-column justify-content-between">
-              <p class="mb-4 text-dark">
+            <div class="card-body">
+              <p>
                 Skills Dx is a data-driven diagnostic tool that eliminates the
                 guesswork, uncovering the strengths and gaps for tailored growth
                 plans.
@@ -812,13 +821,15 @@
             </div>
           </div>
         </div>
+
+        <!-- Training -->
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="service-card h-100">
-            <div class="card-header bg-cyan text-white p-4">
-              <h3 class="m-0 fw-bold">Training</h3>
+            <div class="card-header training">
+              <h3 class="m-0">Training</h3>
             </div>
-            <div class="card-body bg-white p-4 d-flex flex-column justify-content-between">
-              <p class="mb-4 text-dark">
+            <div class="card-body">
+              <p>
                 With our suite of world-class courses, we'll give your people
                 the training they need to meaningfully grow and create
                 measurable improvements for your business.
@@ -827,13 +838,15 @@
             </div>
           </div>
         </div>
+
+        <!-- Certifications -->
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="service-card h-100">
-            <div class="card-header bg-green text-white p-4">
-              <h3 class="m-0 fw-bold">Certifications</h3>
+            <div class="card-header certifications">
+              <h3 class="m-0">Certifications</h3>
             </div>
-            <div class="card-body bg-white p-4 d-flex flex-column justify-content-between">
-              <p class="mb-4 text-dark">
+            <div class="card-body">
+              <p>
                 Whether your people want to reframe their careers, upskill or
                 reskill, they'll earn credentials that are recognised globally.
               </p>
@@ -860,8 +873,8 @@
   </div>
   <div class="container-fluid learn-free py-5">
     <div class="container">
-      <div class="row">
-        <div class="col-6">
+      <div class="row align-items-center gy-4">
+        <div class="col-12 col-md-6 mb-4">
           <div class="peoples">
             <img src="../../../assets/images/Learnforfree&Parthufooter/Rectangle 4229.png" class="img-fluid"
               alt="service image" />
@@ -869,7 +882,7 @@
               alt="service image" />
           </div>
         </div>
-        <div class="col-6 pe-0">
+        <div class="col-12 col-md-6 pe-0">
           <div class="people-text h-100">
             <h3 class="m-0 fw-bold" style="line-height: 50px">
               Are you future ready? <br />

@@ -12,6 +12,8 @@ import { SharedModule } from './shared/shared.module';
 import { HireFromUsComponent } from './Components/hire-from-us/hire-from-us.component';
 import { LlocationDetailComponent } from './Components/contact-us/llocation-detail/llocation-detail.component';
 import { PlacementsComponent } from './Components/placements/placements.component';
+import { CertificationsComponent } from './certifications/certifications.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { PlacementsComponent } from './Components/placements/placements.componen
     HireFromUsComponent,
     LlocationDetailComponent,
     PlacementsComponent,
+    CertificationsComponent,
+    AboutusComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, SharedModule],
   providers: [],

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 
@@ -9,7 +9,21 @@ import { filter } from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
   currentRouteName: string = '';
+  isScrolled: boolean = false;
+  isSticky: boolean = false;
+
   constructor(private activatedRoute: ActivatedRoute, private router: Router) {
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollOffset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+    // Hide navbar after 100px
+    this.isScrolled = scrollOffset > 100;
+
+    // Show sticky navbar after 400px
+    this.isSticky = scrollOffset > 400;
   }
 
   ngOnInit(): void {

@@ -5,6 +5,8 @@ import { CoursesComponent } from './Components/courses/courses.component';
 import { ContactUsComponent } from './Components/contact-us/contact-us.component';
 import { HireFromUsComponent } from './Components/hire-from-us/hire-from-us.component';
 import { PlacementsComponent } from './Components/placements/placements.component';
+import { CertificationsComponent } from './certifications/certifications.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 const routes: Routes = [
   {
@@ -16,8 +18,18 @@ const routes: Routes = [
     component: CoursesComponent,
   },
   {
+    path: 'certifications',
+    component: CertificationsComponent
+
+  },
+  {
     path: 'contact-us',
     component: ContactUsComponent,
+  },
+
+  {
+    path: 'aboutus',
+    component: AboutusComponent,
   },
   {
     path: 'hire-from-us',

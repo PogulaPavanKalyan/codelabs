@@ -3,22 +3,49 @@ header {
 }
 
 .track-con {
-    animation: navbar linear forwards;
-    animation-timeline: view();
-    animation-range: 100dvh 180dvh;
-    position: sticky;
-    top: -10rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
-    background-color: white;
+    background-color: transparent;
+    transition: transform 0.4s ease, background-color 0.4s ease, padding 0.4s ease;
+    padding: 20px 0;
+
+    // Hide while scrolling initially
+    &.is-scrolled {
+        transform: translateY(-100%);
+        background-color: rgba(255, 255, 255, 0.98);
+    }
+
+    // Slide down smoothly after threshold
+    &.is-sticky {
+        transform: translateY(0);
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        padding: 10px 0;
+        background-color: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+        .logo-div img {
+            scale: 0.85;
+        }
+
+        nav ul li a {
+            color: #333;
+        }
+    }
 }
 
 .navbar-brand {
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .logo-div {
     img {
-        scale: 0.9;
+        max-width: 220px;
+        transition: all 0.3s ease;
     }
 }
 
@@ -30,64 +57,130 @@ nav {
             cursor: pointer;
             font-size: 16px;
 
-            a:hover {
-                font-weight: 700;
-                color: var(--blue);
-            }
-
-            a.active {
-                position: relative;
-                color: var(--blue);
-                font-weight: 700;
-            }
-
             a {
-                position: relative;
+                color: #555;
+                transition: color 0.3s ease;
+                padding: 10px 0;
+
+                &:hover {
+                    color: var(--blue);
+                }
+
+                &.active {
+                    color: var(--blue);
+                }
             }
         }
 
-        li a::before {
+        li a::after {
             content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
             width: 0%;
-            height: 1px;
-            transition: all 0.4s ease !important;
+            height: 2px;
+            background-color: var(--blue);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
         }
 
-        li a.active::before {
-            content: "";
+        li a.active::after,
+        li a:hover::after {
             width: 100%;
-            height: 2px;
-            position: absolute;
-            height: 1px;
-            width: 100%;
-            bottom: 0px;
-            left: 0px;
-            background-color: var(--blue);
-            transition: all 0.4s ease !important;
-        }
-
-        li a:hover::before {
-            content: "";
-            position: absolute;
-            height: 2px;
-            width: 100%;
-            bottom: 0px;
-            left: 0px;
-            background-color: var(--blue);
         }
     }
 }
 
-@keyframes navbar {
-
-    0%,
-    100% {
-        padding: 0px 30px;
-        backdrop-filter: blur(0.3rem);
-        background-color: rgb(255 255 255 / 80%);
+@media (max-width: 1024px) {
+    .track-con {
+        padding: 15px 0;
     }
 
-    100% {
-        top: -1px;
+    nav ul {
+        gap: 2rem !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .track-con {
+        background-color: white;
+        padding: 12px 0;
+
+        &.is-scrolled {
+            padding: 8px 0;
+        }
+    }
+
+    .logo-div {
+        img {
+            max-width: 180px;
+        }
+    }
+
+    .navbar-toggler {
+        border: none;
+        padding: 0;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    nav {
+        .navbar-collapse {
+            background: white;
+            padding: 25px;
+            position: absolute;
+            width: 100%;
+            top: 100%;
+            left: 0;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-bottom: 3px solid var(--blue);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        ul {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 20px !important;
+
+            li {
+                width: 100%;
+
+                a {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    padding: 12px 0;
+                    border-bottom: 1px solid #f0f0f0;
+
+                    &::after {
+                        display: none; // Hide underline on mobile
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-div img {
+        max-width: 160px;
+    }
+
+    .track-con {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 320px) {
+    .logo-div img {
+        max-width: 140px;
+    }
+
+    .navbar {
+        padding: 5px 0 !important;
     }
 }
