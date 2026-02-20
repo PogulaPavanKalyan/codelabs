@@ -1,43 +1,74 @@
-<div class="container-fluid track-con pt-3" [class.is-scrolled]="isScrolled" [class.is-sticky]="isSticky">
-  <div class="p-0">
+<div class="navbar-wrapper" [class.is-scrolled]="isScrolled" [class.is-sticky]="isSticky">
+  <div class="container-xl p-0">
     <header>
-      <nav class="navbar navbar-expand-lg p-0">
-        <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg custom-navbar p-0">
+        <div class="container-fluid pe-0">
           <div class="logo-div d-flex align-items-center">
             <img routerLink="/" src="../../../assets/images/landingpage/codelabs logo.svg" class="navbar-brand"
-              alt="" />
+              alt="CodeLabs Logo" />
           </div>
-          <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navlist">
-            <span class="navbar-toggler-icon"></span>
+
+          <button class="navbar-toggler shadow-none custom-toggler" type="button" (click)="toggleMobileMenu()"
+            [attr.aria-expanded]="isMobileMenuOpen" data-bs-toggle="collapse" data-bs-target="#navlist"
+            aria-controls="navlist" aria-label="Toggle navigation">
+            <span class="toggler-bars"></span>
+            <span class="toggler-bars"></span>
+            <span class="toggler-bars"></span>
           </button>
+
           <div class="collapse navbar-collapse" id="navlist">
-            <ul class="navbar-nav d-flex align-items-center gap-md-5 m-auto">
-              <li class="nav-item dropdown">
-                <a class="nav-link" href="#" id="coursesDropdown" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Courses <i class="fa-solid fa-angle-down ms-1"></i>
+            <ul class="navbar-nav d-flex align-items-center gap-md-4 ms-auto">
+              <!-- Courses Dropdown -->
+              <li class="nav-item custom-dropdown">
+                <a class="nav-link dropdown-toggle-link" tabindex="0">
+                  Courses <i class="fa-solid fa-chevron-down ms-1 small-icon"></i>
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
-                  <li><a class="dropdown-item" routerLink="/courses" routerLinkActive="active">All Courses</a></li>
+                <ul class="custom-dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" routerLink="/courses" routerLinkActive="active">
+                      <div class="dropdown-item-content">
+                        <i class="fa-solid fa-book-open text-primary me-2"></i>
+                        <span>All Courses</span>
+                      </div>
+                    </a>
+                  </li>
                 </ul>
               </li>
+
               <li class="nav-item">
-                <a routerLink="/certifications" routerLinkActive="active" class="nav-link">Certifications</a>
+                <a routerLink="/certifications" routerLinkActive="active"
+                  class="nav-link hover-underline">Certifications</a>
               </li>
               <li class="nav-item">
-                <a routerLink="/placements" routerLinkActive="active" class="nav-link">Placements</a>
+                <a routerLink="/placements" routerLinkActive="active" class="nav-link hover-underline">Placements</a>
               </li>
               <li class="nav-item">
-                <a routerLink="/hire-from-us" routerLinkActive="active" class="nav-link">Hire From Us</a>
+                <a routerLink="/hire-from-us" routerLinkActive="active" class="nav-link hover-underline">Hire From
+                  us</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link" href="#" id="getInTouchDropdown" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Institute <i class="fa-solid fa-angle-down ms-1"></i>
+
+              <!-- Institute Dropdown -->
+              <li class="nav-item custom-dropdown">
+                <a class="nav-link dropdown-toggle-link" tabindex="0">
+                  Institute <i class="fa-solid fa-chevron-down ms-1 small-icon"></i>
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="getInTouchDropdown">
-                  <li><a class="dropdown-item" routerLink="/aboutus" routerLinkActive="active">About Us</a></li>
-                  <li><a class="dropdown-item" routerLink="/contact-us" routerLinkActive="active">Contact Us</a></li>
+                <ul class="custom-dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" routerLink="/aboutus" routerLinkActive="active">
+                      <div class="dropdown-item-content">
+                        <i class="fa-solid fa-info-circle text-primary me-2"></i>
+                        <span>About Us</span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" routerLink="/contact-us" routerLinkActive="active">
+                      <div class="dropdown-item-content">
+                        <i class="fa-solid fa-envelope text-primary me-2"></i>
+                        <span>Contact Us</span>
+                      </div>
+                    </a>
+                  </li>
                 </ul>
               </li>
             </ul>

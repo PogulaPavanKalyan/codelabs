@@ -356,26 +356,17 @@
     .carousel-wrapper {
         position: relative;
         width: 100%;
-        overflow: hidden;
         padding: 20px 0;
 
         .carousel-container {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
             gap: 20px;
-            padding-bottom: 10px;
-            width: 100%;
-            overflow-x: auto;
-            scroll-behavior: smooth;
-            padding-left: 20px;
-
-            &:hover {
-                animation-play-state: paused;
-            }
+            padding: 0 20px;
+            max-height: 600px;
 
             .carousel-card {
-                flex: 0 0 auto;
-                width: 280px;
-                min-width: 280px;
+                width: 100%;
                 height: auto;
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
 
@@ -516,6 +507,17 @@
 }
 
 @media (max-width: 1024px) {
+    .our-student {
+        .carousel-wrapper {
+            .carousel-container {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
+                padding: 0 15px;
+                max-height: 700px;
+            }
+        }
+    }
+
     .courses {
         margin-left: 0px !important;
 
@@ -611,13 +613,22 @@
         .carousel-wrapper {
             padding: 10px 0;
             margin: 0 -10px;
+            overflow: hidden;
 
             .carousel-container {
+                display: flex;
                 gap: 12px;
                 padding: 0 10px;
                 animation: autoScroll 30s linear infinite;
+                width: fit-content;
+                overflow-x: auto;
+
+                &:hover {
+                    animation-play-state: paused;
+                }
 
                 .carousel-card {
+                    flex: 0 0 auto;
                     width: 200px;
                     min-width: 200px;
 
