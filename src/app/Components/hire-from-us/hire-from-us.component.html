@@ -1,112 +1,116 @@
-<div class="container-fluid p-0">
-  <div class="container-fluid p-0 hero-sec py-5">
-    <div class="container position-relative h-100">
-      <div class="hero-content text-white">
-        <h1 class="hero-title display-1">
-          HIRE OUR <br />
-          TOP TALENTS !
-        </h1>
-        <p class="hero-text display-Passion6">Connect. Collaborate. Excel.</p>
+<div class="container-fluid p-0 hire-from-us-page">
+  <!-- Hero Section -->
+  <div class="container-fluid hero-sec d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-8 hero-content text-lg-start text-center">
+          <h1 class="hero-title fw-bold text-white mb-3">
+            HIRE OUR <br class="d-none d-lg-block" />
+            TOP TALENTS !
+          </h1>
+          <p class="hero-text fs-4 text-white opacity-75">Connect. Collaborate. Excel.</p>
+        </div>
       </div>
     </div>
   </div>
-  <div class="container form-con py-5">
-    <div class="row">
-      <div class="col-12 col-md-6 col-lg-7 mb-4">
-        <h6 class="section-title-1 mb-3">
+
+  <!-- Content & Form Section -->
+  <div class="container py-5">
+    <div class="row g-5 align-items-start">
+      <div class="col-12 col-lg-7 content-side text-center text-lg-start">
+        <h2 class="section-title-1 mb-4 fw-bold">
           Hire Fresh Talent Directly From Us.
-        </h6>
-        <p class="mb-0 fs-4 mb-3">
-          Anything’s Possible When You Have The Talent Explore our pool of dynamic designers ready to drive innovation
-          and success for your team!
-        </p>
-        <p class="mb-0 fs-4 mb-4">
-          Explore our pool of dynamic designers <br />
-          ready to drive innovation and success <br />
-          for your team!
-        </p>
-        <span class="fs-5">
-          Discover the Next Generation of Creative Minds, Fresh from Leading
-          Institutes, Offering Exceptional Value for Your Investment. Whether
-          You Need Remote, Hybrid, or On-Site Talent, We Have the Perfect Fit
-          for Your Needs. Benefit from Flexibility and Expertise, Wherever You
-          Are. <br />
-          <b>Get Started Today!</b>
-        </span>
+        </h2>
+        <div class="main-text mb-4">
+          <p class="fs-4 text-dark mb-3">
+            Anything’s Possible When You Have The Talent. Explore our pool of dynamic experts ready to drive innovation
+            and success for your team!
+          </p>
+          <p class="fs-5 text-muted">
+            Discover the Next Generation of Creative Minds, Fresh from Leading
+            Institutes, Offering Exceptional Value for Your Investment. Whether
+            You Need Remote, Hybrid, or On-Site Talent, We Have the Perfect Fit
+            for Your Needs. Benefit from Flexibility and Expertise, Wherever You
+            Are.
+          </p>
+        </div>
+        <div class="cta-box py-3 px-4 bg-light rounded-3 d-inline-block">
+          <span class="fs-4 fw-bold text-primary">Get Started Today!</span>
+        </div>
       </div>
-      <div class="col-12 col-md-6 col-lg-5">
-        <div class="card form-card">
-          <div class="card-body">
-            <div class="mb-3">
-              <h1 class="form-title fs-5 mb-0 fw-bold">
+
+      <div class="col-12 col-lg-5">
+        <div class="card form-card shadow-lg border-0 rounded-4 mx-auto">
+          <div class="card-body p-4 p-md-5">
+            <div class="mb-4 text-center text-lg-start">
+              <h3 class="form-title fs-4 mb-2 fw-bold">
                 Connect and hire with us!
-              </h1>
+              </h3>
               <small class="text-danger">* All fields are mandatory</small>
             </div>
-            <form (ngSubmit)="hireForm.form.valid && onSubmit()" #hireForm="ngForm">
+
+            <form (ngSubmit)="hireForm.form.valid && onSubmit()" #hireForm="ngForm" novalidate>
               <!-- First Name and Last Name -->
-              <div class="row mb-3">
+              <div class="row g-3 mb-3">
                 <div class="col-md-6">
-                  <label for="firstName" class="form-label fs-12 fw-bold mb-0">First Name</label>
-                  <input type="text" class="form-control" id="firstName" name="firstName"
-                    [(ngModel)]="contactData.firstName" required />
+                  <label for="firstName" class="form-label small fw-bold mb-1">First Name</label>
+                  <input type="text" class="form-control form-control-lg fs-6" id="firstName" name="firstName"
+                    [(ngModel)]="contactData.firstName" required placeholder="John" />
                 </div>
                 <div class="col-md-6">
-                  <label for="lastName" class="form-label fs-12 fw-bold mb-0">Last Name</label>
-                  <input type="text" class="form-control" id="lastName" name="lastName"
-                    [(ngModel)]="contactData.lastName" required />
+                  <label for="lastName" class="form-label small fw-bold mb-1">Last Name</label>
+                  <input type="text" class="form-control form-control-lg fs-6" id="lastName" name="lastName"
+                    [(ngModel)]="contactData.lastName" required placeholder="Doe" />
                 </div>
               </div>
 
               <!-- Company Name -->
               <div class="mb-3">
-                <label for="companyName" class="form-label fs-12 fw-bold mb-0">Company Name</label>
-                <input type="text" class="form-control" id="companyName" name="companyName"
-                  [(ngModel)]="contactData.companyName" required />
+                <label for="companyName" class="form-label small fw-bold mb-1">Company Name</label>
+                <input type="text" class="form-control form-control-lg fs-6" id="companyName" name="companyName"
+                  [(ngModel)]="contactData.companyName" required placeholder="Tech Corp" />
               </div>
 
-              <!-- Your Designation -->
+              <!-- Designation -->
               <div class="mb-3">
-                <label for="designation" class="form-label fs-12 fw-bold mb-0">Your Designation</label>
-                <input type="text" class="form-control" id="designation" name="designation"
-                  [(ngModel)]="contactData.designation" required />
+                <label for="designation" class="form-label small fw-bold mb-1">Your Designation</label>
+                <input type="text" class="form-control form-control-lg fs-6" id="designation" name="designation"
+                  [(ngModel)]="contactData.designation" required placeholder="HR Manager" />
               </div>
 
-              <!-- Work Email Address -->
+              <!-- Email -->
               <div class="mb-3">
-                <label for="email" class="form-label fs-12 fw-bold mb-0">Work Email Address</label>
-                <input type="email" class="form-control" id="email" name="email" [(ngModel)]="contactData.email"
-                  required email />
+                <label for="email" class="form-label small fw-bold mb-1">Work Email Address</label>
+                <input type="email" class="form-control form-control-lg fs-6" id="email" name="email"
+                  [(ngModel)]="contactData.email" required email placeholder="john@company.com" />
               </div>
 
-              <!-- Phone Number -->
-              <div class="mb-3">
-                <label for="phoneNumber" class="form-label fs-12 fw-bold mb-0">Phone Number <small>(no dashes or
-                    spaces)</small></label>
-                <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber"
-                  [(ngModel)]="contactData.phoneNumber" required />
+              <!-- Phone -->
+              <div class="mb-4">
+                <label for="phoneNumber" class="form-label small fw-bold mb-1">Phone Number</label>
+                <input type="tel" class="form-control form-control-lg fs-6" id="phoneNumber" name="phoneNumber"
+                  [(ngModel)]="contactData.phoneNumber" required placeholder="1234567890" />
               </div>
 
-              <!-- Terms and Conditions -->
+              <!-- Terms -->
               <div class="form-check mb-4">
                 <input class="form-check-input" type="checkbox" id="terms" name="terms" [(ngModel)]="contactData.terms"
                   required />
-                <label class="form-check-label checkbox-label" for="terms">
-                  I have read, and I agree to the Terms of Service and Privacy
-                  Policy
+                <label class="form-check-label small text-muted" for="terms">
+                  I have read, and I agree to the Terms of Service and Privacy Policy
                 </label>
               </div>
 
-              <div *ngIf="submitSuccess" class="alert alert-success mb-3">
-               Thank you for Submiting your request,we will contact you shortly.
+              <div *ngIf="submitSuccess" class="alert alert-success small mb-3">
+                Thank you! Your request has been submitted successfully.
               </div>
-              <div *ngIf="submitError" class="alert alert-danger mb-3">
+              <div *ngIf="submitError" class="alert alert-danger small mb-3">
                 Failed to send inquiry. Please check your connection and try again.
               </div>
 
-              <!-- Submit Button -->
-              <button type="submit" class="btn btn-primary w-100" [disabled]="!hireForm.form.valid || isSubmitting">
-                {{ isSubmitting ? 'Sending...' : 'Submit' }}
+              <button type="submit" class="btn btn-primary btn-lg w-100 py-3 fw-bold"
+                [disabled]="!hireForm.form.valid || isSubmitting">
+                {{ isSubmitting ? 'Sending...' : 'Submit Request' }}
               </button>
             </form>
           </div>
@@ -114,21 +118,21 @@
       </div>
     </div>
   </div>
-  <div class="container logo-con py-5">
-    <h6 class="fs-4 mb-5 text-center">Trusted by Top Companies</h6>
-    <div class="logo-grid">
-      <div class="first-grid">
-        <img src="../../../assets/images/Hire/Amazon.svg" alt="" />
-        <img src="../../../assets/images/Hire/Flipkart.svg" alt="" />
-        <img src="../../../assets/images/Hire/Cognizant.svg" alt="" />
-        <img src="../../../assets/images/Hire/Facebook.svg" alt="" />
-        <img src="../../../assets/images/Hire/Accenture.svg" alt="" />
-      </div>
-      <div class="second-grid">
-        <img src="../../../assets/images/Hire/Group 76788.svg" alt="" />
-        <img src="../../../assets/images/Hire/Indigo.svg" alt="" />
-        <img src="../../../assets/images/Hire/Qualcomm.svg" alt="" />
-        <img src="../../../assets/images/Hire/EY.svg" alt="" />
+
+  <!-- Trusted By Section -->
+  <div class="container logo-section py-5">
+    <h2 class="fs-3 fw-bold mb-5 text-center">Trusted by Top Companies</h2>
+    <div class="logo-wrapper">
+      <div class="logo-grid d-flex flex-wrap justify-content-center align-items-center gap-4 gap-md-5">
+        <img src="../../../assets/images/Hire/Amazon.svg" alt="Amazon" />
+        <img src="../../../assets/images/Hire/Flipkart.svg" alt="Flipkart" />
+        <img src="../../../assets/images/Hire/Cognizant.svg" alt="Cognizant" />
+        <img src="../../../assets/images/Hire/Facebook.svg" alt="Facebook" />
+        <img src="../../../assets/images/Hire/Accenture.svg" alt="Accenture" />
+        <img src="../../../assets/images/Hire/Group 76788.svg" alt="Company Logo" />
+        <img src="../../../assets/images/Hire/Indigo.svg" alt="Indigo" />
+        <img src="../../../assets/images/Hire/Qualcomm.svg" alt="Qualcomm" />
+        <img src="../../../assets/images/Hire/EY.svg" alt="EY" />
       </div>
     </div>
   </div>

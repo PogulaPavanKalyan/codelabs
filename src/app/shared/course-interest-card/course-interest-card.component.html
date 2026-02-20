@@ -7,22 +7,15 @@
     <form (ngSubmit)="enrollForm.form.valid && onSubmit()" #enrollForm="ngForm" novalidate>
       <!-- Full Name Input -->
       <div class="mb-3">
-<<<<<<< HEAD
-        <input type="text" class="form-control" placeholder="Full Name *" required />
-=======
         <input type="text" class="form-control" placeholder="Full Name *" name="fullName"
           [(ngModel)]="contactData.fullName" required />
->>>>>>> 0ee6176f26f64d1e68c347d5abba201e14caa297
       </div>
 
       <!-- Email Input -->
       <div class="mb-3">
-<<<<<<< HEAD
-        <input type="email" class="form-control" placeholder="Email *" required />
-=======
         <input type="email" class="form-control" placeholder="Email *" name="email" [(ngModel)]="contactData.email"
           required email />
->>>>>>> 0ee6176f26f64d1e68c347d5abba201e14caa297
+
       </div>
 
       <!-- Mobile Number Input -->
@@ -34,23 +27,15 @@
             <option value="+44">+44 UK</option>
             <!-- Add more country codes if needed -->
           </select>
-<<<<<<< HEAD
-          <input type="tel" class="form-control" placeholder="Mobile Number *" required />
-=======
           <input type="tel" class="form-control" placeholder="Mobile Number *" name="mobileNumber"
             [(ngModel)]="contactData.mobileNumber" required />
->>>>>>> 0ee6176f26f64d1e68c347d5abba201e14caa297
         </div>
       </div>
 
       <!-- Batches Input -->
       <div class="mb-3">
-<<<<<<< HEAD
-        <input type="text" class="form-control" placeholder="Work Experience" required />
-=======
         <input type="text" class="form-control" placeholder="Batches" name="batches" [(ngModel)]="contactData.batches"
           required />
->>>>>>> 0ee6176f26f64d1e68c347d5abba201e14caa297
       </div>
 
       <!-- City Input -->

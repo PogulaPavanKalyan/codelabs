@@ -205,14 +205,26 @@
     }
 
     .cards {
-        padding-left: 20px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 27px;
-        justify-content: flex-start;
+        display: grid;
+        gap: 24px;
+        padding: 0 15px;
+        grid-template-columns: 1fr; // Mobile default
+
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(2, 1fr); // Tablet
+        }
+
+        @media (min-width: 1024px) {
+            grid-template-columns: repeat(3, 1fr); // 1024px screens
+        }
+
+        @media (min-width: 1440px) {
+            grid-template-columns: repeat(4, 1fr); // Large desktop
+        }
 
         .card {
-            width: 303px;
+            width: 100%;
+            max-width: none;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
 
@@ -425,9 +437,15 @@
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-100%);
     }
+}
+
+@keyframes logosScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
 }
 
 .logos-div {
@@ -485,7 +503,7 @@
 @media (max-width: 1400px) {
     .cards .card {
         width: 280px;
-        
+
         .card-body {
             padding: 12px;
         }
@@ -510,10 +528,25 @@
     .our-student {
         .carousel-wrapper {
             .carousel-container {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(5, minmax(0, 1fr));
+                grid-template-rows: repeat(2, auto);
                 gap: 15px;
                 padding: 0 15px;
-                max-height: 700px;
+                max-height: 500px;
+                align-items: start;
+
+                .carousel-card {
+                    .card {
+                        .card-body {
+                            padding: 14px;
+                        }
+
+                        img.profile {
+                            width: 80px;
+                            height: 80px;
+                        }
+                    }
+                }
             }
         }
     }
@@ -523,10 +556,8 @@
 
         .course-head {
             span.section-title {
-                font-size: 30px !important;
+                font-size: clamp(28px, 5vw, 40px) !important;
                 margin-left: 0px !important;
-                width: auto !important;
-                height: auto !important;
             }
 
             .right-content {
@@ -534,29 +565,14 @@
                 gap: 15px;
 
                 .search-box {
-                    width: 100%;
                     flex: 1;
-                }
-
-                .btn-trending {
-                    width: auto;
-                    flex-shrink: 0;
                 }
             }
         }
 
-        .form-control {
-            width: 100% !important;
-            margin-left: 0px !important;
-        }
-
-        .form-control1 {
-            width: 100% !important;
-            margin-left: 0px !important;
-        }
-
-        .text {
-            margin-left: 0px !important;
+        .cards {
+            padding: 0;
+            // Grid columns are handled by global media queries for stability
         }
     }
 
@@ -657,9 +673,34 @@
         }
     }
 
+    .logos-div {
+        overflow: hidden;
+    }
+
     .logos-div .logos {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 15px;
+            display: flex;
+            gap: 12px;
+            padding: 0 10px;
+            overflow: hidden;
+
+            /* make the inner images not shrink so they form a horizontal row */
+            img {
+                flex: 0 0 auto;
+                width: 140px;
+                height: auto;
+                object-fit: contain;
+                border-radius: 6px;
+            }
+
+            /* layout should be intrinsic width so animation can translate by percentage */
+            width: max-content;
+
+            /* auto-scroll only on mobile: use a -50% translate and duplicated images for seamless loop */
+            animation: logosScroll 18s linear infinite;
+
+            &:hover {
+                animation-play-state: paused;
+            }
     }
 
     .key-services .service-card {
@@ -672,60 +713,13 @@
 
     .courses {
         .cards {
-            padding-left: 10px;
-            padding-right: 10px;
-            gap: 15px;
-            justify-content: center;
+            grid-template-columns: 1fr;
+            padding: 0;
+            gap: 20px;
 
             .card {
-                width: 100%;
-                max-width: 100%;
-                min-width: 280px;
+                max-width: 400px;
                 margin: 0 auto;
-
-                img.card-img-top {
-                    height: 160px;
-                }
-
-                .card-body {
-                    padding: 12px;
-
-                    .price-pill {
-                        font-size: 10px;
-                        padding: 3px 8px;
-                        right: 12px;
-                        top: -3%;
-                    }
-                }
-
-                .card-title {
-                    font-size: 16px;
-                    margin-bottom: 8px;
-                }
-
-                .detail {
-                    font-size: 10px;
-                    margin-bottom: 3px !important;
-
-                    img {
-                        width: 12px;
-                        height: 12px;
-                    }
-
-                    span {
-                        font-size: 9px;
-                    }
-                }
-
-                .enroll-btn {
-                    font-size: 11px;
-                    height: 38px;
-                    margin-top: 10px;
-
-                    i {
-                        margin-left: 4px;
-                    }
-                }
             }
         }
 
@@ -768,6 +762,22 @@
             }
         }
 
+        /* Ensure search and trending button match widths on mobile */
+        .course-head .right-content {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 10px !important;
+            align-items: stretch !important;
+        }
+
+        .course-head .right-content .search-box,
+        .course-head .right-content .btn-trending {
+            width: 100% !important;
+            box-sizing: border-box !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
         .tab-content {
             margin-left: 0 !important;
         }
@@ -797,6 +807,11 @@
     .hero-sec {
         height: auto !important;
         padding: 20px !important;
+        background-color: var(--blue);
+        background-image: linear-gradient(90deg, rgba(43,36,255,0.9) 0%, rgba(43,36,255,0.45) 30%, rgba(43,36,255,0.08) 55%), url("../../../assets/images/Parthu it - hero image.png");
+        background-repeat: no-repeat;
+        background-size: 60% auto;
+        background-position: right top;
 
         .hero-title {
             font-size: 24px !important;
