@@ -64,6 +64,63 @@
             width: auto;
             height: auto;
         }
+
+        .right-content {
+            .search-box {
+                position: relative;
+                width: 320px;
+
+                i.ri-search-line {
+                    position: absolute;
+                    left: 15px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-size: 18px;
+                    color: #a0a0a0;
+                    z-index: 5;
+                }
+
+                .search-input {
+                    width: 100%;
+                    height: 45px;
+                    padding-left: 40px;
+                    border: 1px solid #ced4da;
+                    border-radius: 4px;
+                    font-size: 14px;
+
+                    &::placeholder {
+                        color: #a0a0a0;
+                    }
+
+                    &:focus {
+                        border-color: #2b24ff;
+                        outline: none;
+                        box-shadow: 0 0 0 0.2rem rgba(43, 36, 255, 0.25);
+                    }
+                }
+            }
+
+            .btn-trending {
+                width: 320px;
+                height: 45px;
+                background-color: #2b24ff;
+                border: none;
+                border-radius: 4px;
+                font-weight: 600;
+                font-size: 14px;
+                white-space: nowrap;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: #1f1fb5;
+                    color: white;
+                }
+
+                &:active {
+                    background-color: #1a1a99;
+                }
+            }
+        }
     }
 
     .left {
@@ -152,17 +209,27 @@
         display: flex;
         flex-wrap: wrap;
         gap: 27px;
-        // justify-content: center;
+        justify-content: flex-start;
 
         .card {
-            // max-width: 300px;
-            // height: 446px;
-            // flex: 0 1 calc(33.33% - 30px);
             width: 303px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            &:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            }
+
+            img.card-img-top {
+                height: 200px;
+                object-fit: cover;
+            }
 
             .card-title {
                 font-size: 25px;
                 font-weight: 700;
+                line-height: 1.3;
             }
 
             .card-body {
@@ -170,6 +237,8 @@
                 flex-direction: column;
                 justify-content: space-between;
                 position: relative;
+                padding: 15px;
+                min-height: 280px;
 
                 .price-pill {
                     background: #00ab66 0% 0% no-repeat padding-box;
@@ -182,26 +251,29 @@
                     position: absolute;
                     right: 18px;
                     top: -4%;
+                    z-index: 10;
                 }
             }
 
             .card-text {
-                // text-wrap: balance;
                 font-size: 12px;
                 font-weight: 400;
-                // color: #666;
             }
 
             .detail {
                 font-size: 12px;
-                font-weight: 700;
+                font-weight: 600;
+                color: #333;
+                line-height: 1.5;
 
-                i {
-                    font-size: 16px;
+                img {
+                    width: 16px;
+                    height: 16px;
                 }
 
                 span {
                     font-weight: 500;
+                    color: #666;
                 }
             }
 
@@ -213,6 +285,17 @@
                 border-radius: 0px;
                 width: 100%;
                 height: 45px;
+                border: none;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: #1f1fb5;
+                }
+
+                i {
+                    margin-left: 8px;
+                }
             }
         }
     }
@@ -270,63 +353,51 @@
 .our-student {
     background-color: whitesmoke;
 
-    // .card {
-    //   img {
-    //     width: 100px;
-    //     height: 100px;
-    //     object-fit: cover;
-    //     display: block;
-    //     border-radius: 100%;
-    //   }
-    //   .bottom-card {
-    //     position: absolute;
-    //     padding: 10px 30px;
-    //     left: 50%;
-    //     transform: translate(-50%, -10%);
-    //     bottom: -22%;
-    //     background: white;
-    //     min-width: 160px;
-    //     text-align: center;
-    //     height: 70px;
-    //   }
+    .carousel-wrapper {
+        position: relative;
+        width: 100%;
+        padding: 20px 0;
 
-    //   .bottom-card::before {
-    //     position: fixed;
-    //     content: "";
-    //     width: 5px;
-    //     height: 5px;
-    //     background-color: blue;
-    //     left: 0;
-    //     top: 51%;
-    //     transform: translate(0%, -50%);
-    //     border-radius: 50%;
-    //   }
-    //   .bottom-card::after {
-    //     position: fixed;
-    //     content: "";
-    //     width: 5px;
-    //     height: 5px;
-    //     background-color: blue;
-    //     right: 0;
-    //     top: 51%;
-    //     transform: translate(0%, -50%);
-    //     border-radius: 50%;
-    //   }
-    // }
+        .carousel-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            padding: 0 20px;
+            max-height: 600px;
+
+            .carousel-card {
+                width: 100%;
+                height: auto;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+                &:hover {
+                    transform: translateY(-8px);
+
+                    .card {
+                        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+                    }
+                }
+            }
+        }
+    }
+
     .card {
         background: #FFFFFF 0% 0% no-repeat padding-box;
         border-radius: 12px;
         opacity: 1;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+        height: 100%;
 
         .card-body {
             text-align: center;
+            padding: 20px;
         }
 
         .profile {
             width: 100px;
             height: 100px;
             object-fit: cover;
-            // display: block;
             border-radius: 100%;
             margin-bottom: 10px;
         }
@@ -347,6 +418,15 @@
                 object-fit: none;
             }
         }
+    }
+}
+
+@keyframes autoScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
     }
 }
 
@@ -404,10 +484,18 @@
 
 @media (max-width: 1400px) {
     .cards .card {
-        max-width: 253px !important;
-
+        width: 280px;
+        
         .card-body {
-            padding: 10px;
+            padding: 12px;
+        }
+
+        .card-title {
+            font-size: 20px;
+        }
+
+        .detail {
+            font-size: 11px;
         }
     }
 }
@@ -419,14 +507,42 @@
 }
 
 @media (max-width: 1024px) {
+    .our-student {
+        .carousel-wrapper {
+            .carousel-container {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
+                padding: 0 15px;
+                max-height: 700px;
+            }
+        }
+    }
+
     .courses {
         margin-left: 0px !important;
 
-        .course-head span.section-title {
-            font-size: 30px !important;
-            margin-left: 0px !important;
-            width: auto !important;
-            height: auto !important;
+        .course-head {
+            span.section-title {
+                font-size: 30px !important;
+                margin-left: 0px !important;
+                width: auto !important;
+                height: auto !important;
+            }
+
+            .right-content {
+                width: 100%;
+                gap: 15px;
+
+                .search-box {
+                    width: 100%;
+                    flex: 1;
+                }
+
+                .btn-trending {
+                    width: auto;
+                    flex-shrink: 0;
+                }
+            }
         }
 
         .form-control {
@@ -488,29 +604,167 @@
             width: 100% !important;
         }
     }
+}
+
+@media (max-width: 576px) {
+    .our-student {
+        padding: 20px 10px;
+
+        .carousel-wrapper {
+            padding: 10px 0;
+            margin: 0 -10px;
+            overflow: hidden;
+
+            .carousel-container {
+                display: flex;
+                gap: 12px;
+                padding: 0 10px;
+                animation: autoScroll 30s linear infinite;
+                width: fit-content;
+                overflow-x: auto;
+
+                &:hover {
+                    animation-play-state: paused;
+                }
+
+                .carousel-card {
+                    flex: 0 0 auto;
+                    width: 200px;
+                    min-width: 200px;
+
+                    .card {
+                        .card-body {
+                            padding: 12px;
+                        }
+
+                        .profile {
+                            width: 70px;
+                            height: 70px;
+                        }
+
+                        .student {
+                            .std-name {
+                                font-size: 14px;
+                            }
+
+                            .std-role {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .logos-div .logos {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px;
+    }
+
+    .key-services .service-card {
+        margin-bottom: 20px;
+    }
+
+    .accor .accordion-div .accordion .accordion-button div {
+        font-size: 16px;
+    }
 
     .courses {
+        .cards {
+            padding-left: 10px;
+            padding-right: 10px;
+            gap: 15px;
+            justify-content: center;
+
+            .card {
+                width: 100%;
+                max-width: 100%;
+                min-width: 280px;
+                margin: 0 auto;
+
+                img.card-img-top {
+                    height: 160px;
+                }
+
+                .card-body {
+                    padding: 12px;
+
+                    .price-pill {
+                        font-size: 10px;
+                        padding: 3px 8px;
+                        right: 12px;
+                        top: -3%;
+                    }
+                }
+
+                .card-title {
+                    font-size: 16px;
+                    margin-bottom: 8px;
+                }
+
+                .detail {
+                    font-size: 10px;
+                    margin-bottom: 3px !important;
+
+                    img {
+                        width: 12px;
+                        height: 12px;
+                    }
+
+                    span {
+                        font-size: 9px;
+                    }
+                }
+
+                .enroll-btn {
+                    font-size: 11px;
+                    height: 38px;
+                    margin-top: 10px;
+
+                    i {
+                        margin-left: 4px;
+                    }
+                }
+            }
+        }
+
         .course-head {
+            flex-direction: column !important;
+            gap: 15px !important;
 
-            // Force columns to stack
-            .row {
-                display: flex;
-                flex-direction: column;
-                gap: 15px;
+            .left-content {
+                width: 100%;
 
-                >div {
-                    width: 100% !important; // Override col-* classes
-                    max-width: 100% !important;
-                    padding: 0;
+                .section-title {
+                    font-size: 28px !important;
                 }
             }
 
-            .text {
-                margin-bottom: 10px;
-            }
-
-            .btn {
+            .right-content {
                 width: 100%;
+                flex-direction: column !important;
+                gap: 10px !important;
+
+                .search-box {
+                    width: 100%;
+
+                    .search-input {
+                        width: 100%;
+                        height: 42px;
+                        font-size: 12px;
+                    }
+
+                    i.ri-search-line {
+                        left: 12px;
+                    }
+                }
+
+                .btn-trending {
+                    width: 100%;
+                    height: 42px;
+                    font-size: 13px;
+                }
             }
         }
 
@@ -525,6 +779,7 @@
             .left {
                 width: 100%;
                 margin-bottom: 20px;
+                padding-left: 15px !important;
             }
 
             ul {
@@ -537,31 +792,25 @@
                 }
             }
         }
+    }
 
-        .cards {
-            padding-left: 0;
-            justify-content: center;
+    .hero-sec {
+        height: auto !important;
+        padding: 20px !important;
 
-            .card {
-                width: 100%; // Full width on mobile/tablet
-                max-width: 350px; // But limited for aesthetics
-            }
+        .hero-title {
+            font-size: 24px !important;
+            margin-left: 0 !important;
         }
-    }
-}
 
-@media (max-width: 576px) {
-    .logos-div .logos {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 15px;
-    }
+        .hero-text {
+            font-size: 14px !important;
+            margin-left: 0 !important;
+        }
 
-    .key-services .service-card {
-        margin-bottom: 20px;
-    }
-
-    .accor .accordion-div .accordion .accordion-button div {
-        font-size: 16px;
+        .hero-img {
+            display: none !important;
+        }
     }
 }
 
