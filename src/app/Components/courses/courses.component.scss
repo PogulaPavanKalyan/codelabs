@@ -4,7 +4,7 @@
 
 .bg-blue {
   background-color: blue;
-  background-image: url("../../../assets/images/course/course-hero.png");
+  background-image: url("../../../assets/images/course/hero.png");
   background-position-x: right;
   background-position-y: bottom;
   background-repeat: no-repeat;
@@ -170,59 +170,82 @@
 .container-dont {
   background-color: #27B67C;
   color: white;
+  width: 111%;
+  margin-left: -6.5%;
   min-height: 180px;
   margin-top: 50px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 30px 20px;
-  border-radius: 20px;
+  justify-content: space-between;
+  padding: 0 40px;
+  border-radius: 0; // Exactly like image, it looks like a full-width flat banner or very slightly rounded, image shows flat
   position: relative;
-  flex-wrap: wrap;
-  text-align: center;
-  gap: 20px;
+  overflow: visible;
 
   @media (max-width: 991px) {
     flex-direction: column;
     padding: 30px 15px;
     height: auto;
+    text-align: center;
+    border-radius: 15px;
   }
 
-  h2 {
-    font-size: clamp(20px, 4vw, 32px);
+  .girl-img-sec {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+
+    .girl-img {
+      height: 240px; // Pops out of the top
+      width: auto;
+      margin-top: -35px;
+      z-index: 5;
+
+      @media (max-width: 1200px) {
+        height: 200px;
+        margin-top: -40px;
+      }
+
+      @media (max-width: 991px) {
+        display: none; // Hide girl on mobile to keep it clean
+      }
+    }
+  }
+
+  .banner-title {
+    font-size: clamp(20px, 3.5vw, 38px);
     margin: 0;
-    line-height: 1.3;
-    z-index: 2;
+    line-height: 1.2;
+    font-weight: 700;
+    flex: 1;
+    text-align: center;
+    padding: 0 20px;
 
     @media (max-width: 991px) {
+      margin-bottom: 20px;
+
       br {
         display: none;
       }
     }
   }
 
-  img {
-    height: 160px;
-    width: auto;
-    max-width: 100%;
+  .brochure-sec {
+    .brochure-img {
+      height: 90px;
+      width: auto;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
 
-    &.d-none {
-      display: none !important;
-    }
-
-    @media (min-width: 992px) {
-      &.d-lg-block {
-        display: block !important;
+      &:hover {
+        transform: scale(1.05);
       }
-    }
-  }
 
-  .img1 {
-    height: 100px;
-    width: auto;
-
-    @media (max-width: 991px) {
-      height: 80px;
+      @media (max-width: 991px) {
+        height: 70px;
+      }
     }
   }
 }
@@ -322,6 +345,8 @@
 
   @media (max-width: 768px) {
     gap: 20px;
+
+
   }
 
   .grid {
@@ -377,30 +402,225 @@
 }
 
 .learner-con {
-  .student-grid {
-    .card {
-      overflow: hidden;
+  background: white;
+  padding: 80px 0;
+
+  .section-sub-title {
+    display: inline-block;
+    color: #333;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .section-title {
+    color: #000;
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: 480px) {
+    .section-title {
+      font-size: clamp(28px, 5vw, 42px);
+      margin-left: 10px;
     }
 
-    .std-des {
-      h6 {
-        font-size: clamp(14px, 1vw, 18px);
-        font-weight: 600;
-      }
-
-      span {
-        font-size: 10px;
-      }
-    }
-
-    .img {
-      position: relative;
-      left: -4%;
-      bottom: -11px;
+    .section-sub-title {
+      margin-left: 10px;
     }
   }
 
-  .std-text {
-    font-size: clamp(12px, 1vw, 16px);
+
+
+  .student-grid {
+    .card {
+      background: #FFFFFF;
+      border: 1px solid #E5E5E5 !important;
+      border-radius: 12px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: visible;
+
+      @media (max-width: 768px) {
+        width: 95%;
+        margin: 0 auto;
+      }
+
+      &:hover {
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08) !important;
+        transform: translateY(-5px);
+        border-color: #D1D1D1 !important;
+      }
+
+      /* ... rest of card styles ... */
+      .card-body {
+        padding: 30px;
+        flex-grow: 1;
+
+        i {
+          color: #000;
+          font-size: 28px;
+          margin-bottom: 20px;
+          display: block;
+        }
+
+        .std-text {
+          font-size: 14px;
+          line-height: 1.65;
+          color: #444;
+          font-weight: 500;
+          margin: 0;
+        }
+      }
+
+      .card-footer {
+        padding: 0 30px 30px;
+        background: transparent;
+
+        .footer-content {
+          display: flex;
+          align-items: flex-end;
+          gap: 15px;
+          position: relative;
+
+          .img {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-left: -15px;
+            margin-bottom: -10px;
+            flex-shrink: 0;
+            background: #fff;
+          }
+
+          .std-des {
+            flex-grow: 1;
+            padding-bottom: 5px;
+
+            .std-name {
+              font-size: 18px;
+              font-weight: 800;
+              color: #000;
+              margin: 0 0 2px 0;
+            }
+
+            .role-logo {
+              display: flex;
+              flex-direction: column;
+              gap: 4px;
+
+              .std-role {
+                font-size: 12px;
+                color: #666;
+                font-weight: 600;
+              }
+
+              .comp-logo {
+                height: 18px;
+                width: auto;
+                object-fit: contain;
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Mobile specific adjustments: center hero image, title and ensure any card price sections align */
+@media (max-width: 768px) {
+  .bg-blue {
+    background-position: center bottom !important;
+    background-size: cover !important;
+    padding-bottom: 420px !important; // Increased to ensure the illustration is visible below the info card
+  }
+
+  .hero-sec {
+    padding-bottom: 80px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+
+    .floating-div {
+      padding: 60px 15px 40px !important;
+      text-align: center;
+      position: relative !important;
+      width: 100% !important;
+      margin: 0 !important;
+    }
+
+    .hero-text {
+      text-align: center !important;
+      margin-left: 0 !important;
+      width: 100% !important;
+      font-size: 18px !important;
+      margin-bottom: 15px !important;
+      color: white !important;
+    }
+
+    .hero-title {
+      text-align: center !important;
+      margin-left: 0 !important;
+      width: 100% !important;
+      font-size: 32px !important;
+      font-weight: 800 !important;
+      line-height: 1.1 !important;
+      color: white !important;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  /* Force app-course-info card to stack correctly */
+  app-course-info {
+    width: 100% !important;
+    display: block !important;
+    position: relative !important;
+    margin-top: 20px !important;
+    z-index: 10 !important;
+
+    ::ng-deep .card {
+      position: relative !important;
+      bottom: 0 !important;
+      width: 92% !important;
+      margin: 0 auto !important;
+      max-height: none !important;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2) !important;
+      border-radius: 15px !important;
+      background: white !important;
+      right: auto !important;
+      left: auto !important;
+      transform: none !important;
+    }
+
+    ::ng-deep .price-sec {
+      flex-direction: column !important;
+      gap: 15px !important;
+      padding: 25px 15px !important;
+    }
+
+    ::ng-deep .divider {
+      width: 80% !important;
+      height: 1px !important;
+      margin: 5px auto !important;
+    }
+  }
+
+  /* Section Title Spacing */
+  .learner-con .section-title,
+  .learner-con .section-sub-title {
+    margin-left: 0 !important;
+    text-align: center !important;
+    width: 100% !important;
   }
 }

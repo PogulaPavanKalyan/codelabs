@@ -102,6 +102,45 @@ div {
 /* 1440px VERSION */
 
 
+
+/* 1440px VERSION */
+@media (min-width: 1440px) {
+  .hero {
+    width: 100%;
+    height: 600px;
+    /* slightly increased height */
+    background: url("../../assets/images/About us/Hero image.png") no-repeat center center/cover;
+  }
+
+  .top-box {
+    top: 40px;
+    left: 60px;
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  .heading-box {
+    top: 300px;
+    left: 60px;
+  }
+
+  .heading-box h1 {
+    font-size: 76px;
+    line-height: 82px;
+  }
+
+  .desc-box {
+    bottom: 50px;
+    left: 60px;
+  }
+
+  .desc-box p {
+    font-size: 24px;
+    line-height: 1.7;
+  }
+}
+
+
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
 
@@ -309,7 +348,7 @@ div {
   font-weight: 150;
   margin-left: 30px;
   color: #000000;
-  font: normal normal normal 13px/18px Sen;
+  font: normal normal normal 14px/18px Poppins;
 }
 
 
@@ -520,69 +559,97 @@ div {
   color: #000;
 }
 
-/* ===== Image Row ===== */
-.life-gallery {
+/* ===== Life at Code Labs Carousel & Gallery ===== */
+.life-gallery-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+}
+
+.life-gallery-track {
   display: flex;
   gap: 30px;
-  justify-content: flex-end;
-  margin: 30px 1%;
-  width: 100%;
-  height: 100%;
+  width: max-content;
 }
 
-.life-gallery img {
+.life-gallery-track img {
   width: 32%;
   border-radius: 6px;
+  flex-shrink: 0;
+  object-fit: cover;
 }
 
+.mobile-duplicate {
+  display: none;
+}
 
-/* MOBILE RESPONSIVE */
-@media (max-width: 768px) {
-
-  .life-section {
-    padding: 50px 20px;
-  }
-
-  /* Top Line */
-  .top-line {
-    gap: 10px;
-  }
-
-  .top-line span {
-    width: 60px;
-    /* smaller line */
-  }
-
-  .top-line p {
-    font-size: 14px;
-    line-height: 20px;
-  }
-
-  /* Heading */
-  .life-section h1 {
-    font-size: 28px;
-    line-height: 34px;
-    margin-bottom: 15px;
-  }
-
-  /* Subtitle */
-  .subtitle {
-    font-size: 14px;
-    line-height: 22px;
-    margin-bottom: 30px;
-  }
-
-  /* Image Gallery */
-  .life-gallery {
-    flex-direction: column;
-    /* stack images */
-    gap: 15px;
-    margin: 20px 0;
-  }
-
-  .life-gallery img {
+/* Desktop Grid Layout (Default) */
+@media (min-width: 769px) {
+  .life-gallery-track {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     width: 100%;
-    /* full width */
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  /* Since we combined them in HTML, we can split them visually if needed, 
+     but a 3-column grid for all 6 active images works well too. */
+  .life-gallery-track img {
+    width: 100%;
+  }
+}
+
+/* MOBILE RESPONSIVE CAROUSEL */
+@media (max-width: 768px) {
+  .life-section {
+    padding: 50px 0; // Remove side padding to let carousel span full width
+
+    h1,
+    .subtitle,
+    .top-line {
+      padding: 0 20px;
+    }
+  }
+
+  .life-gallery-wrapper {
+    padding: 10px 0;
+  }
+
+  .life-gallery-track {
+    display: flex;
+    gap: 15px;
+    animation: scroll 25s linear infinite;
+    padding-left: 15px; // Initial offset
+  }
+
+  .life-gallery-track img {
+    width: 250px; // Consistent size for mobile cards
+    height: 180px;
+    border-radius: 8px;
+  }
+
+  .mobile-duplicate {
+    display: block; // Show duplicates only on mobile for infinite loop
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(calc(-250px * 6 - 15px * 6)); // Move by width of 6 images + gaps
+    }
+  }
+
+  /* Pause on touch/hover if desired */
+  .life-gallery-wrapper:active .life-gallery-track {
+    animation-play-state: paused;
   }
 }
 
