@@ -211,20 +211,24 @@ li.last {
 }
 
 /* Tablets (max 991px) */
-@media (max-width: 991px) and (min-width: 769px) {
+@media (max-width: 991px) and (min-width: 768px) {
     .foot-list {
         grid-template-columns: 1fr 1fr;
         gap: 40px 30px;
+
+        >.items:nth-child(1) {
+            grid-column: 1 / -1;
+        }
     }
 
     .cloud-partners-item {
-        grid-column: 2;
-        grid-row: 3;
+        grid-column: 1;
+        grid-row: auto;
     }
 }
 
-/* Phones & Small Tablets (max 768px) */
-@media (max-width: 768px) {
+/* Phones & Small Tablets (max 767px) */
+@media (max-width: 767px) {
     .foot-list {
         grid-template-columns: 1fr 1fr;
         gap: 35px 15px;
