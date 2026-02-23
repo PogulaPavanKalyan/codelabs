@@ -173,6 +173,18 @@
                     0% 15%, 10% 5%, 20% 8%, 30% 0%, 40% 5%);
         }
 
+        .badge-text {
+            position: relative;
+            z-index: 1;
+            color: #fff;
+            font-weight: 800;
+            font-size: 1.25rem;
+
+            sup {
+                font-size: 0.75rem;
+            }
+        }
+
         .btn-getready {
             background: #00C800;
             color: #fff;
