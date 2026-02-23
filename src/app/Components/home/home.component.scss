@@ -63,6 +63,7 @@
             margin-left: 20px;
             width: auto;
             height: auto;
+            
         }
 
         .right-content {
@@ -101,7 +102,7 @@
             }
 
             .btn-trending {
-                width: 220px;
+                width: 220px;   
                 height: 45px;
                 background-color: #2b24ff;
                 border: none;
@@ -110,7 +111,7 @@
                 font-size: 14px;
                 white-space: nowrap;
                 transition: background-color 0.3s ease;
-                margin-right: 8%;
+                margin-right: 5%;
 
                 &:hover {
                     background-color: #1f1fb5;
@@ -125,7 +126,7 @@
     }
 
     .left {
-       
+
         border-radius: 5px;
         width: min-content;
     }
@@ -141,7 +142,7 @@
 
     .course-tabs {
         display: flex;
-        
+
 
         ul {
             li {
@@ -427,7 +428,7 @@
                 right: -17px;
                 width: 25px;
                 height: 25px;
-             
+
                 border-radius: 50%;
                 padding: 2px;
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -550,15 +551,15 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 577px) {
     .our-student {
         .carousel-wrapper {
             .carousel-container {
-                grid-template-columns: repeat(5, minmax(0, 1fr));
-                grid-template-rows: repeat(2, auto);
+                grid-template-columns: repeat(3, 1fr) !important;
+                grid-template-rows: auto;
                 gap: 15px;
                 padding: 0 15px;
-                max-height: 500px;
+                max-height: none;
                 align-items: start;
 
                 .carousel-card {
@@ -596,9 +597,28 @@
             }
         }
 
+        .course-tabs {
+            flex-direction: column !important;
+
+            .left {
+                width: 100% !important;
+                margin-bottom: 20px;
+            }
+        }
+
+        .tab-content {
+            margin-left: 0 !important;
+        }
+
         .cards {
-            padding: 0;
-            // Grid columns are handled by global media queries for stability
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 20px !important;
+            padding: 0 15px !important;
+
+            .card {
+                width: 100% !important;
+                max-width: none !important;
+            }
         }
     }
 
@@ -618,6 +638,64 @@
         .hero-img img {
             max-width: 100%;
             height: auto;
+        }
+    }
+}
+
+/* ===== TABLET: 768px - Placement cards 2 columns, Course cards 2 columns ===== */
+@media (max-width: 900px) and (min-width: 577px) {
+    
+    .our-student {
+        .carousel-wrapper {
+            .carousel-container {
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 20px;
+                padding: 0 15px;
+                max-height: none;
+                animation: none !important; // No auto-scroll on tablet
+
+                .carousel-card {
+                    width: 100%;
+
+                    .card {
+                        .card-body {
+                            padding: 16px;
+                        }
+
+                        img.profile {
+                            width: 75px;
+                            height: 75px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .courses {
+        .course-tabs {
+            flex-direction: column;
+
+            .left {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        .tab-content {
+            margin-left: 0 !important;
+        }
+
+        .cards {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 20px;
+            padding: 0 10px;
+
+            .card {
+                width: 100% !important;
+                max-width: none !important;
+            }
         }
     }
 }
@@ -746,12 +824,14 @@
             .card {
                 max-width: 400px;
                 margin: 0 auto;
+                margin-left: -5%;
             }
         }
 
         .course-head {
             flex-direction: column !important;
             gap: 15px !important;
+            
 
             .left-content {
                 width: 100%;
@@ -812,6 +892,7 @@
         .course-tabs {
             flex-direction: column;
             background-color: transparent;
+            
 
             .left {
                 width: 100%;
@@ -918,7 +999,14 @@ i.ri-rocket-fill {
     }
 }
 
-
+@media (max-width: 576px) {
+    .courses{
+.course-tabs{
+    .left{
+        margin-left: -5%;
+    }
+}
+    }}
 
 .key-services {
     font-family: 'Poppins', sans-serif;
