@@ -51,6 +51,12 @@ export class HeaderComponent implements OnInit {
 
   closeMobileMenu() {
     this.isMobileMenuOpen = false;
+
+    // Blur the active element to clear :focus-within states on desktop/laptop
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
+
     // Remove the 'show' class from the Bootstrap collapse if it exists
     const navbarCollapse = document.getElementById('navlist');
     if (navbarCollapse?.classList.contains('show')) {

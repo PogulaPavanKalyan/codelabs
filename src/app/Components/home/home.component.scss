@@ -101,7 +101,7 @@
             }
 
             .btn-trending {
-                width: 320px;
+                width: 220px;
                 height: 45px;
                 background-color: #2b24ff;
                 border: none;
@@ -110,6 +110,7 @@
                 font-size: 14px;
                 white-space: nowrap;
                 transition: background-color 0.3s ease;
+                margin-right: 8%;
 
                 &:hover {
                     background-color: #1f1fb5;
@@ -124,7 +125,7 @@
     }
 
     .left {
-        background-color: #ffffff;
+       
         border-radius: 5px;
         width: min-content;
     }
@@ -140,6 +141,7 @@
 
     .course-tabs {
         display: flex;
+        
 
         ul {
             li {
@@ -219,7 +221,7 @@
         }
 
         @media (min-width: 1440px) {
-            grid-template-columns: repeat(4, 1fr); // Large desktop
+            grid-template-columns: repeat(3, 1fr); // Large desktop
         }
 
         .card {
@@ -406,12 +408,31 @@
             padding: 20px;
         }
 
-        .profile {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 100%;
+        .profile-wrapper {
+            position: relative;
+            display: inline-block;
             margin-bottom: 10px;
+
+            .profile {
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+                border-radius: 100%;
+                margin-bottom: 0;
+            }
+
+            .linkedin-icon {
+                position: absolute;
+                bottom: 0px;
+                right: -17px;
+                width: 25px;
+                height: 25px;
+             
+                border-radius: 50%;
+                padding: 2px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                z-index: 2;
+            }
         }
 
         .student {
@@ -444,8 +465,13 @@
 }
 
 @keyframes logosScroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 .logos-div {
@@ -678,29 +704,29 @@
     }
 
     .logos-div .logos {
-            display: flex;
-            gap: 12px;
-            padding: 0 10px;
-            overflow: hidden;
+        display: flex;
+        gap: 12px;
+        padding: 0 10px;
+        overflow: hidden;
 
-            /* make the inner images not shrink so they form a horizontal row */
-            img {
-                flex: 0 0 auto;
-                width: 140px;
-                height: auto;
-                object-fit: contain;
-                border-radius: 6px;
-            }
+        /* make the inner images not shrink so they form a horizontal row */
+        img {
+            flex: 0 0 auto;
+            width: 140px;
+            height: auto;
+            object-fit: contain;
+            border-radius: 6px;
+        }
 
-            /* layout should be intrinsic width so animation can translate by percentage */
-            width: max-content;
+        /* layout should be intrinsic width so animation can translate by percentage */
+        width: max-content;
 
-            /* auto-scroll only on mobile: use a -50% translate and duplicated images for seamless loop */
-            animation: logosScroll 18s linear infinite;
+        /* auto-scroll only on mobile: use a -50% translate and duplicated images for seamless loop */
+        animation: logosScroll 18s linear infinite;
 
-            &:hover {
-                animation-play-state: paused;
-            }
+        &:hover {
+            animation-play-state: paused;
+        }
     }
 
     .key-services .service-card {
@@ -745,6 +771,7 @@
 
                     .search-input {
                         width: 100%;
+                        max-width: none !important;
                         height: 42px;
                         font-size: 12px;
                     }
@@ -808,7 +835,7 @@
         height: auto !important;
         padding: 20px !important;
         background-color: var(--blue);
-        background-image: linear-gradient(90deg, rgba(43,36,255,0.9) 0%, rgba(43,36,255,0.45) 30%, rgba(43,36,255,0.08) 55%), url("../../../assets/images/Parthu it - hero image.png");
+        background-image: linear-gradient(90deg, rgba(43, 36, 255, 0.9) 0%, rgba(43, 36, 255, 0.45) 30%, rgba(43, 36, 255, 0.08) 55%), url("../../../assets/images/Parthu it - hero image.png");
         background-repeat: no-repeat;
         background-size: 60% auto;
         background-position: right top;
