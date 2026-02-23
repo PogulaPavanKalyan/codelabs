@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins';
 }
 
 html,
@@ -32,7 +32,7 @@ div {
   position: relative;
   width: 1366px;
   height: 552px;
-  background: url("../../assets/images/About us/Hero image.png") no-repeat center center/cover;
+  background: url("../../assets/images/AboutUs/Hero-image.png") no-repeat center center/cover;
 }
 
 /* Overlay */
@@ -98,6 +98,8 @@ div {
   letter-spacing: 1px;
 
 }
+
+/* 1440px VERSION */
 
 
 /* MOBILE RESPONSIVE */
