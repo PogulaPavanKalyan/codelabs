@@ -411,6 +411,24 @@
     }
 }
 
+@media (min-width:768px) and (max-width:1023px) {
+    .courses .course-head .right-content .btn-trending {
+        margin-right: -3%;
+    }
+
+
+}
+
+@media (min-width:1024px) and (max-width:1388px) {
+    .courses .course-head .right-content .btn-trending {
+        margin-right: -5%;
+    }
+
+    .container-dont {
+        width: 1600px;
+    }
+}
+
 .input-wrapper {
     position: relative;
     width: 250px;
