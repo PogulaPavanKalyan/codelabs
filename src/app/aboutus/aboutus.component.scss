@@ -195,31 +195,34 @@ div {
 
 
 /* ===== Section Background----about--css ===== */
+/* SECTION */
 .about-section {
+  width: 100%;
+  padding: 80px 60px;
   background-color: #ffffff;
-  padding: 60px 8%;
-  font-family: 'Poppins', sans-serif;
-  margin-left: 10%;
+  box-sizing: border-box;
 }
 
-/* ===== Main Title ===== */
+/* TITLE */
 .about-title {
   text-align: center;
-  font-size: 48px;
+  font-size: 36px;
   font-weight: 700;
   margin-bottom: 50px;
-  color: #000;
+  color: #0a0a23;
 }
 
-/* ===== Container ===== */
+/* CONTAINER */
 .about-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* ===== Left Content ===== */
+/* LEFT CONTENT */
 .about-left {
   flex: 1;
 }
@@ -227,239 +230,310 @@ div {
 .about-left h3 {
   font-size: 22px;
   font-weight: 600;
-  margin-bottom: 20px;
-  margin-left: -50px;
-  color: #000000;
-  font-weight: 650;
-  font: normal normal 600 20px/31px Poppins;
+  margin-bottom: 9px;
+  color: #0a0a23;
 }
 
 .about-left p {
-  font-size: 13px;
-  font: normal normal normal 14px/24px Poppins;
+  font-size: 14px;
+   margin-bottom: 8px;
+   left: 14px;
+  letter-spacing: 0px;
   color: #000000;
-  margin-bottom: 20px;
-  margin-left: -50px;
-  font-weight: 400px;
-}
+opacity: 1;
+height: 100px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+ }
 
-/* ===== Right Image ===== */
+/* RIGHT IMAGE */
 .about-right {
   flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .about-right img {
-  width: 533.33px;
-  height: 359.69px;
-  border-radius: 4px;
-  left: 732px;
+  width: 100%;
+   height: auto;
+  object-fit: cover;
+
+ }
+/* ---------------- DEFAULT (DESKTOP) ---------------- */
+/* Your existing code remains same */
+
+
+/* ---------------- TABLET (768px – 1024px) ---------------- */
+@media (max-width: 1024px) {
+
+  .about-section {
+    padding: 60px 40px;
+  }
+
+  .about-title {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+
+  .about-container {
+    gap: 30px;
+  }
+
+  .about-left h3 {
+    font-size: 20px;
+  }
+
+  .about-left p {
+    font-size: 13px;
+    height: auto; /* ✅ remove fixed height */
+  }
 }
 
 
-/* MOBILE RESPONSIVE */
+/* ---------------- MOBILE (≤768px) ---------------- */
 @media (max-width: 768px) {
 
   .about-section {
     padding: 40px 20px;
   }
 
-  /* Title */
   .about-title {
-    font-size: 28px;
+    font-size: 26px;
     margin-bottom: 30px;
   }
 
-  /* Stack layout */
   .about-container {
-    flex-direction: column;
-    gap: 25px;
+    flex-direction: column;   /* ✅ stack layout */
+    gap: 30px;
   }
 
-  /* Left Content */
   .about-left {
-    width: 100%;
+    text-align: center;
   }
 
   .about-left h3 {
     font-size: 18px;
-    line-height: 26px;
-    margin-left: 0;
-    /* remove negative margin */
   }
 
   .about-left p {
-    font-size: 14px;
-    line-height: 22px;
-    margin-left: 0;
-    /* remove negative margin */
-  }
-
-  /* Right Image */
-  .about-right {
-    width: 100%;
+    font-size: 13px;
+    height: auto; /* ✅ important fix */
   }
 
   .about-right img {
     width: 100%;
-    height: auto;
+    max-width: 350px;
   }
 }
+
+
+/* ---------------- LARGE SCREENS (1440px+) ---------------- */
+@media (min-width: 1440px) {
+
+  .about-container {
+    max-width: 1300px;
+    gap: 60px;
+  }
+
+  .about-title {
+    font-size: 42px;
+  }
+
+  .about-left h3 {
+    font-size: 24px;
+  }
+
+  .about-left p {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
 
 // about-end--------------------------
 
 /* ===== ===========Container =============== */
+
+/* ===== CONTAINER ===== */
+
+.all-imag
+{
+  display: flex;
+   gap: 30px;
+    padding: 40px 60px;
+}
+
+
 .middle-images {
   display: flex;
-  gap: 50px;
-  margin-left: 52px;
+  flex-direction: column;   /* ONE COLUMN */
+  gap: 30px;
+  padding: 40px 60px;
+  align-items: center;
 }
 
-/* ===== Image Box ===== */
+/* ===== EACH BOX ===== */
 .image-box {
-  position: relative;
-  width: 395px;
-  /* important */
+  width: 600px;   /* laptop width */
+  max-width: 100%;
 }
 
-/* ===== Image ===== */
-.image-box img {
+/* ===== IMAGE WRAPPER ===== */
+.img-wrapper {
+  position: relative;
   width: 100%;
+  height: 260px;   /* SAME HEIGHT for all */
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+/* ===== IMAGE ===== */
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
-/* ===== Text ON Image ===== */
-.image-box p {
+/* ===== TEXT ON IMAGE (SAME POSITION) ===== */
+.img-wrapper p {
   position: absolute;
-  bottom: 100px;
-  /* place inside image */
-  left: 20px;
+  bottom: 15px;
+  left: 15px;
 
-  color: #fff;
-  padding: 8px 15px;
+  margin: 0;
+  padding: 8px 14px;
+
   font-size: 16px;
   font-weight: 600;
-  margin: 0;
-  /* remove default p margin */
+  color: #fff;
+
+  border-radius: 4px;
+ 
 }
 
-/* ===== Description BELOW Image ===== */
+/* ===== DESCRIPTION ===== */
 .vision-desc {
-  margin-top: 20px;
-  font-size: 14px;
-  font-weight: 150;
-  margin-left: 30px;
+  margin-top: 25px;
+  font-size: 18px;
+  line-height: 15px;
   color: #000000;
-  font: normal normal normal 14px/18px Poppins;
+   font: normal normal normal 16px/18px sen;
+   margin-left: 20px;
 }
-
-
-/* MOBILE RESPONSIVE */
+ 
+/* ================= MOBILE VIEW ================= */
+/* ================= MOBILE VIEW ================= */
 @media (max-width: 768px) {
 
-  .middle-images {
+  /* MAIN CONTAINER */
+  .all-imag {
     flex-direction: column;
-    /* stack images */
-    gap: 25px;
-    margin-left: 0;
+    padding: 20px 15px;
+    gap: 20px;
   }
 
-  /* Image Box */
+  /* INNER CONTAINER */
+  .middle-images {
+    padding: 0;
+    gap: 25px;
+    align-items: stretch;
+  }
+
+  /* EACH BOX */
   .image-box {
     width: 100%;
-    /* full width */
   }
 
-  /* Image */
-  .image-box img {
+  /* IMAGE WRAPPER */
+  .img-wrapper {
+    height: 200px;   /* smaller height for mobile */
+    border-radius: 6px;
+  }
+
+  /* IMAGE */
+  .img-wrapper img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
   }
 
-  /* Text ON Image */
-  .image-box p {
-    left: 15px;
+  /* TEXT ON IMAGE (SAME POSITION) */
+  .img-wrapper p {
+    bottom: 12px;
+    left: 12px;
     font-size: 14px;
     padding: 6px 10px;
   }
 
-  /* Description BELOW Image */
+  /* DESCRIPTION */
   .vision-desc {
     margin-top: 10px;
     font-size: 13px;
     line-height: 18px;
   }
 }
+ 
 
-//---------------------------- what-we-do --------------
+ 
+
+/* ---------------- WHAT WE DO ---------------- */
+
 .what-we-do {
   background: #ffe100;
   text-align: center;
-  padding: 80px 2%;
+  padding: 100px 40px;
   font-family: 'Poppins', sans-serif;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
+/* TITLE */
 .what-we-do h1 {
-  font-size: 60px;
-  font-weight: 700;
-  margin-bottom: 20px;
+  font: normal normal bold 60px/65px Poppins;
   color: #000;
-  font: normal normal bold 50px/47px Poppins;
+  margin-bottom: 20px;
 }
 
+/* SUBTITLE */
 .subtitle {
-  max-width: 750px;
-  margin: 0 auto 70px;
-  font-size: 18px;
-  line-height: 1.6;
-  color: #131921;
+  max-width: 700px;
+  margin: 0 auto 50px;
 }
 
 .subtitle p {
-
+  font: normal normal normal 15px/28px Poppins;
   color: #131921;
-  opacity: 1;
+  font-size: 15px;
 }
 
-
+/* SERVICES ROW */
 .services {
   display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  flex-wrap: wrap;
+  justify-content: center;   /* ✅ center all items */
+  align-items: flex-start;
+  gap: 40px;                 /* ✅ clean spacing */
 }
 
-
-/* ✅ Make each box left aligned */
+/* EACH BOX */
 .service-box {
-  flex: 1;
-  min-width: 200px;
+  width: 220px;              /* ✅ fixed width (important) */
   text-align: left;
-  /* important */
-
 }
 
-/* ✅ Align icon properly */
+/* ICON */
 .icons1 {
-  display: flex;
-  justify-content: flex-start;
-  /* left align */
-  margin-bottom: 15px;
+  margin-bottom: 15px;       /* ✅ only vertical spacing */
 }
 
 .icons1 img {
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
 }
 
-/* ✅ Text alignment */
-.service-box h3 {
-  font-size: 20px;
-  font-weight: 700;
-  color: #000;
-  line-height: 1.4;
+/* TEXT */
+.service-box p {
+  font: normal normal 600 20px/26px Poppins;
+  color: #000000;
 }
-
 
 
 /* TABLET RESPONSIVE */
@@ -610,7 +684,7 @@ div {
 
 .life-gallery-track img {
   width: 32%;
-  border-radius: 6px;
+  
   flex-shrink: 0;
   object-fit: cover;
 }
@@ -731,7 +805,7 @@ div {
 
 /* Logos */
 .logo-row img {
-  max-width: 140px;
+  width: 120px;
   height: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
@@ -776,12 +850,12 @@ div {
 
   /* Logos */
   .logo-row img {
-    max-width: 80px;
+    max-width: 150px;
     /* smaller logos */
   }
 
   .awards-section img {
-    width: 500px;
+    width: 600px;
     height: 100px;
   }
 }
@@ -827,9 +901,9 @@ div {
   position: absolute;
   left: 50%;
   top: 0;
-  width: 3px;
+  width: 5px;
   height: 100%;
-  background: #bfc7d5;
+  background: #3B82F633;
   transform: translateX(-50%);
 }
 
@@ -841,10 +915,7 @@ div {
   box-sizing: border-box;
 }
 
-/* SPACE BETWEEN ITEMS (IMPORTANT FIX) */
-.timeline-item:not(:last-child) {
-  margin-bottom: 60px;
-}
+
 
 /* LEFT SIDE */
 .timeline-item.left {
@@ -860,15 +931,16 @@ div {
 
 /* CONTENT */
 .content h3 {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 600;
   background: 0% 0% no-repeat padding-box;
+  height: 24px;
 }
 
 .content p {
-  font-size: 14px;
+  font-size: 15px;
   color: #000000;
-  line-height: 1.5;
+  line-height: 1.9;
   background: 0% 0% no-repeat padding-box;
 }
 
@@ -880,8 +952,8 @@ div {
   /* attach to center line */
   transform: translate(-50%, -50%);
 
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   background: #1e3cff;
   color: #fff;
   border-radius: 50%;
@@ -890,7 +962,7 @@ div {
   align-items: center;
   justify-content: center;
 
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 600;
   z-index: 3;
 }
@@ -907,22 +979,23 @@ div {
   top: 50%;
   transform: translateY(-50%);
   background: #dfe3ea;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
 
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 /* ICON POSITION */
 .timeline-item.left .icon {
-  right: -100px;
+  right: -150px;
 }
 
 .timeline-item.right .icon {
-  left: -100px;
+  left: -150px;
 }
 
 .icon img {
@@ -1003,6 +1076,7 @@ div {
   .content p {
     font-size: 13px;
     line-height: 1.5;
+    margin-top: 14px;
   }
 
 
@@ -1015,8 +1089,7 @@ div {
 
 
 .featured-section {
-  background: #f3f3f3;
-  padding: 60px 20px;
+   padding: 60px 20px;
   text-align: center;
 }
 
@@ -1028,7 +1101,7 @@ div {
 }
 
 .featured-logos img {
-  margin-right: 90%;
+  margin-left: -60px;
 
 }
 
@@ -1092,10 +1165,10 @@ div {
 .btn-filled {
   padding: 12px 28px;
   border: none;
-  background: #e6e6e6;
+  background: #FFFFFF;
   color: #000;
   border-radius: 25px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
@@ -1110,6 +1183,7 @@ div {
     margin-left: 20px;
   }
 }
+
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 480px) {
@@ -1132,8 +1206,10 @@ div {
   }
 
   .heading-box h1 {
-    margin-top: -90px;
+    margin-top: -120px;
+    font-size: 28px;
   }
+  
 
   /* ===== Featured Section ===== */
   .featured-section {
@@ -1159,6 +1235,7 @@ div {
     max-width: 350px;
     /* responsive logos */
     height: auto;
+    margin-left: -30px;
   }
 
   .services {

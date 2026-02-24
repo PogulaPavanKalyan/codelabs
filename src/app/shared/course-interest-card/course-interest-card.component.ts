@@ -28,7 +28,7 @@ export class CourseInterestCardComponent {
     this.submitError = false;
 
     // Using your unique FormSubmit security ID
-    const formSubmitId = '6edad403cc5480949b1b192d5d6521ea';
+    const formSubmitId = 'codelabsit@gmail.com';
     const formSubmitUrl = `https://formsubmit.co/ajax/${formSubmitId}`;
 
     // Add subject and template for better reliability

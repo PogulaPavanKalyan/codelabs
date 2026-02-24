@@ -24,7 +24,7 @@ export class ContactUsComponent {
   onSubmit() {
     this.isSubmitting = true;
     // Using your unique FormSubmit security ID for better protection
-    const formSubmitId = '6edad403cc5480949b1b192d5d6521ea';
+    const formSubmitId = 'codelabsit@gmail.com';
     const formSubmitUrl = `https://formsubmit.co/ajax/${formSubmitId}`;
 
     // Add subject and template for better reliability
