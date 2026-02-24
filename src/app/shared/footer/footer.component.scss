@@ -35,6 +35,7 @@ b,
         height: 24px;
         cursor: pointer;
         transition: transform 0.2s;
+        filter: grayscale(100%);
 
         &:hover {
             transform: translateY(-3px);
@@ -50,6 +51,14 @@ b,
     gap: 40px;
 
     .items {
+        &.logo-item {
+            margin-top: 20%;
+
+            @media (max-width: 991px) {
+                margin-top: 0;
+            }
+        }
+
         span.text-white {
             font-size: 13px;
             line-height: 1.6;

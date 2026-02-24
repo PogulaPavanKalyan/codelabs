@@ -2,7 +2,7 @@
     <div class="container-fluid py-5 footer">
         <div class="container">
             <div class="foot-list py-3 pb-5">
-                <div class="items d-flex flex-column gap-3" style="margin-top: 20%;">
+                <div class="items logo-item d-flex flex-column gap-3">
                     <a href="#">
                         <img class="text-white" src="../../../assets/images/landingpage/footer logo.svg" alt="" />
                     </a>
@@ -20,25 +20,25 @@
                     <p class="foot-item-title mb-3">Quick Link</p>
                     <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-link p-0 text-white"> About Us</a>
+                            <a routerLink="/aboutus" class="nav-link p-0 text-white"> About Us</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link p-0 text-white"> Join Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link p-0 text-white"> Key Services</a>
+                            <a routerLink="/" fragment="key-services" class="nav-link p-0 text-white"> Key Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link p-0 text-white"> Hire From Us</a>
+                            <a routerLink="hire-from-us" class="nav-link p-0 text-white"> Hire From Us</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link p-0 text-white"> Refund Policy</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link p-0 text-white"> Contact Us</a>
+                            <a routerLink="contact-us" class="nav-link p-0 text-white"> Contact Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link p-0 text-white"> Placement Support</a>
+                            <a routerLink="placements" class="nav-link p-0 text-white"> Placement Support</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link p-0 text-white"> Resources</a>
@@ -105,6 +105,31 @@
                             <a class="nav-link p-0 text-white"> CSM (Certified Scrummaster)</a>
                         </li>
                     </ul>
+                    <div class="d-none d-lg-block pt-1">
+                        <p class="foot-item-title mb-3" style="font-size: 14px;">Cloud Partners</p>
+                        <div class="d-flex gap-3 align-items-center">
+                            <span class="d-flex align-items-center"
+                                style="color: #a8a8a8; font-size: 14px; font-weight: 500;"><svg width="20" height="20"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Microsoft logo"
+                                    class="me-1">
+                                    <!-- Red -->
+                                    <rect x="1" y="1" width="10px" height="10" fill="#F25022" />
+                                    <!-- Green -->
+                                    <rect x="13" y="1" width="10" height="10" fill="#7FBA00" />
+                                    <!-- Blue -->
+                                    <rect x="1" y="13" width="10" height="10" fill="#00A4EF" />
+                                    <!-- Yellow -->
+                                    <rect x="13" y="13" width="10" height="10" fill="#FFB900" />
+                                </svg> Microsoft</span>
+                            <span class="text-warning d-flex align-items-center"><i
+                                    class="fa-brands fa-aws fs-5"></i></span>
+                            <span class="d-flex align-items-center"
+                                style="color: #a8a8a8; font-size: 14px; font-weight: 500;"><img width="35" height="35"
+                                    src="../../../assets/images/landingpage/Footer/google_cloud.png" alt="Google Cloud"
+                                    class="me-1">
+                                GoogleCloud</span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="items">
@@ -133,7 +158,7 @@
                             </div>
                         </div>
 
-                        <div class="col-12 mt-5 pt-3">
+                        <div class="col-12 mt-5 pt-3 d-lg-none">
                             <p class="foot-item-title mb-3" style="font-size: 14px;">Cloud Partners</p>
                             <div class="d-flex gap-3 align-items-center">
                                 <span class="d-flex align-items-center"
