@@ -121,6 +121,18 @@
     }
 }
 
+.line {
+    border-bottom: 2px solid transparent;
+    width: 350px;
+    border-image: linear-gradient(to right, #00c6ff 0%, #00c6ff 20%, #3f51ff 100%) 1;
+}
+
+.line2 {
+    border-bottom: 2px solid #1A47E6;
+    width: 150px;
+
+}
+
 /* Comprehensive Mobile Cleanup */
 @media (max-width: 768px) {
     .hero-bg {

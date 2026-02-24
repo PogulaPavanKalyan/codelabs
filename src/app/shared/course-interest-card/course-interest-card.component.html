@@ -20,22 +20,15 @@
 
       <!-- Mobile Number Input -->
       <div class="mb-3">
-        <div class="input-group">
-          <select class="form-select" style="max-width: 102px" name="countryCode" [(ngModel)]="contactData.countryCode">
-            <option value="+91" selected>+91 IN</option>
-            <option value="+1">+1 US</option>
-            <option value="+44">+44 UK</option>
-            <!-- Add more country codes if needed -->
-          </select>
-          <input type="tel" class="form-control" placeholder="Mobile Number *" name="mobileNumber"
-            [(ngModel)]="contactData.mobileNumber" required />
+        <div class="row">
+          <div class="col-md-3">
+            <input type="text" placeholder="+91" class="form-control">
+          </div>
+          <div class="col-md-9">
+            <input type="tel" class="form-control" placeholder="Mobile Number *" name="mobileNumber"
+              [(ngModel)]="contactData.mobileNumber" required />
+          </div>
         </div>
-      </div>
-
-      <!-- Batches Input -->
-      <div class="mb-3">
-        <input type="text" class="form-control" placeholder="Batches" name="batches" [(ngModel)]="contactData.batches"
-          required />
       </div>
 
       <!-- City Input -->
@@ -44,8 +37,15 @@
           required />
       </div>
 
+      <!-- Batches Input -->
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Batches" name="batches" required />
+      </div>
+
+
+
       <div *ngIf="submitSuccess" class="alert alert-success py-1 mt-2 mb-2" style="font-size: 0.8rem">
-         Thank you for Submiting your request,we will contact you shortly.
+        Thank you for Submiting your request,we will contact you shortly.
       </div>
       <div *ngIf="submitError" class="alert alert-danger py-1 mt-2 mb-2" style="font-size: 0.8rem">
         Error. Please try again.

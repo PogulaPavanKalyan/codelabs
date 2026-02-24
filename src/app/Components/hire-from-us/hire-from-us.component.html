@@ -8,7 +8,7 @@
             HIRE OUR <br class="d-none d-lg-block" />
             TOP TALENTS !
           </h1>
-          <p class="hero-text fs-4 text-white opacity-75">Connect. Collaborate. Excel.</p>
+          <p class="hero-text fs-4 text-white opacity-75" style="margin-left: 10%;">Connect. Collaborate. Excel.</p>
         </div>
       </div>
     </div>
@@ -16,7 +16,7 @@
 
   <!-- Content & Form Section -->
   <div class="container py-5">
-    <div class="row g-5 align-items-start">
+    <div class="row g-5 align-items-start" style="margin-left: 1%;">
       <div class="col-12 col-lg-7 content-side text-center text-lg-start">
         <h2 class="section-title-1 mb-4 fw-bold">
           Hire Fresh Talent Directly From Us.
@@ -26,7 +26,11 @@
             Anything’s Possible When You Have The Talent. Explore our pool of dynamic experts ready to drive innovation
             and success for your team!
           </p>
-          <p class="fs-5 text-muted">
+
+          <p class="fs-4 text-dark mb-3">
+            Explore our pool of dynamic designers ready to drive innovation and success for your team!
+          </p>
+          <p class="fs-5 text-dark" style="width: 550px;">
             Discover the Next Generation of Creative Minds, Fresh from Leading
             Institutes, Offering Exceptional Value for Your Investment. Whether
             You Need Remote, Hybrid, or On-Site Talent, We Have the Perfect Fit
@@ -34,8 +38,8 @@
             Are.
           </p>
         </div>
-        <div class="cta-box py-3 px-4 bg-light rounded-3 d-inline-block">
-          <span class="fs-4 fw-bold text-primary">Get Started Today!</span>
+        <div class="cta-box  rounded-3 d-inline-block">
+          <span class="fs-4 fw-bold text-dark">Get Started Today!</span>
         </div>
       </div>
 
@@ -55,12 +59,12 @@
                 <div class="col-md-6">
                   <label for="firstName" class="form-label small fw-bold mb-1">First Name</label>
                   <input type="text" class="form-control form-control-lg fs-6" id="firstName" name="firstName"
-                    [(ngModel)]="contactData.firstName" required placeholder="John" />
+                    [(ngModel)]="contactData.firstName" required />
                 </div>
                 <div class="col-md-6">
                   <label for="lastName" class="form-label small fw-bold mb-1">Last Name</label>
                   <input type="text" class="form-control form-control-lg fs-6" id="lastName" name="lastName"
-                    [(ngModel)]="contactData.lastName" required placeholder="Doe" />
+                    [(ngModel)]="contactData.lastName" required />
                 </div>
               </div>
 
@@ -68,28 +72,28 @@
               <div class="mb-3">
                 <label for="companyName" class="form-label small fw-bold mb-1">Company Name</label>
                 <input type="text" class="form-control form-control-lg fs-6" id="companyName" name="companyName"
-                  [(ngModel)]="contactData.companyName" required placeholder="Tech Corp" />
+                  [(ngModel)]="contactData.companyName" required />
               </div>
 
               <!-- Designation -->
               <div class="mb-3">
                 <label for="designation" class="form-label small fw-bold mb-1">Your Designation</label>
                 <input type="text" class="form-control form-control-lg fs-6" id="designation" name="designation"
-                  [(ngModel)]="contactData.designation" required placeholder="HR Manager" />
+                  [(ngModel)]="contactData.designation" required />
               </div>
 
               <!-- Email -->
               <div class="mb-3">
                 <label for="email" class="form-label small fw-bold mb-1">Work Email Address</label>
                 <input type="email" class="form-control form-control-lg fs-6" id="email" name="email"
-                  [(ngModel)]="contactData.email" required email placeholder="john@company.com" />
+                  [(ngModel)]="contactData.email" required email />
               </div>
 
               <!-- Phone -->
               <div class="mb-4">
                 <label for="phoneNumber" class="form-label small fw-bold mb-1">Phone Number</label>
                 <input type="tel" class="form-control form-control-lg fs-6" id="phoneNumber" name="phoneNumber"
-                  [(ngModel)]="contactData.phoneNumber" required placeholder="1234567890" />
+                  [(ngModel)]="contactData.phoneNumber" required />
               </div>
 
               <!-- Terms -->
