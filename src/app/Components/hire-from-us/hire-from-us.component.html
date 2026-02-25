@@ -8,7 +8,7 @@
             HIRE OUR <br class="d-none d-lg-block" />
             TOP TALENTS !
           </h1>
-          <p class="hero-text fs-4 text-white opacity-75" style="margin-left: 10%;">Connect. Collaborate. Excel.</p>
+          <p class="hero-text fs-4 text-white opacity-75">Connect. Collaborate. Excel.</p>
         </div>
       </div>
     </div>
@@ -16,7 +16,7 @@
 
   <!-- Content & Form Section -->
   <div class="container py-5">
-    <div class="row g-5 align-items-start" style="margin-left: 1%;">
+    <div class="row g-5 align-items-start">
       <div class="col-12 col-lg-7 content-side text-center text-lg-start">
         <h2 class="section-title-1 mb-4 fw-bold">
           Hire Fresh Talent Directly From Us.
@@ -30,7 +30,7 @@
           <p class="fs-4 text-dark mb-3">
             Explore our pool of dynamic designers ready to drive innovation and success for your team!
           </p>
-          <p class="fs-5 text-dark" style="width: 550px;">
+          <p class="fs-5 text-dark">
             Discover the Next Generation of Creative Minds, Fresh from Leading
             Institutes, Offering Exceptional Value for Your Investment. Whether
             You Need Remote, Hybrid, or On-Site Talent, We Have the Perfect Fit
@@ -53,69 +53,81 @@
               <small class="text-danger">* All fields are mandatory</small>
             </div>
 
-            <form (ngSubmit)="hireForm.form.valid && onSubmit()" #hireForm="ngForm" novalidate>
-              <!-- First Name and Last Name -->
+            <form (ngSubmit)="onSubmit()" #hireForm="ngForm" novalidate>
+
+              <!-- First Name & Last Name -->
               <div class="row g-3 mb-3">
                 <div class="col-md-6">
-                  <label for="firstName" class="form-label small fw-bold mb-1">First Name</label>
-                  <input type="text" class="form-control form-control-lg fs-6" id="firstName" name="firstName"
-                    [(ngModel)]="contactData.firstName" required />
+                  <label class="form-label small fw-bold mb-1">First Name</label>
+                  <input type="text" class="form-control form-control-lg fs-6" name="firstName"
+                    [(ngModel)]="contactData.firstName" required placeholder="John" />
                 </div>
+
                 <div class="col-md-6">
-                  <label for="lastName" class="form-label small fw-bold mb-1">Last Name</label>
-                  <input type="text" class="form-control form-control-lg fs-6" id="lastName" name="lastName"
-                    [(ngModel)]="contactData.lastName" required />
+                  <label class="form-label small fw-bold mb-1">Last Name</label>
+                  <input type="text" class="form-control form-control-lg fs-6" name="lastName"
+                    [(ngModel)]="contactData.lastName" required placeholder="Doe" />
                 </div>
               </div>
 
-              <!-- Company Name -->
+              <!-- Company -->
               <div class="mb-3">
-                <label for="companyName" class="form-label small fw-bold mb-1">Company Name</label>
-                <input type="text" class="form-control form-control-lg fs-6" id="companyName" name="companyName"
+                <label class="form-label small fw-bold mb-1">Company Name</label>
+                <input type="text" class="form-control form-control-lg fs-6" name="companyName"
                   [(ngModel)]="contactData.companyName" required />
               </div>
 
               <!-- Designation -->
               <div class="mb-3">
-                <label for="designation" class="form-label small fw-bold mb-1">Your Designation</label>
-                <input type="text" class="form-control form-control-lg fs-6" id="designation" name="designation"
+                <label class="form-label small fw-bold mb-1">Designation</label>
+                <input type="text" class="form-control form-control-lg fs-6" name="designation"
                   [(ngModel)]="contactData.designation" required />
               </div>
 
               <!-- Email -->
               <div class="mb-3">
-                <label for="email" class="form-label small fw-bold mb-1">Work Email Address</label>
-                <input type="email" class="form-control form-control-lg fs-6" id="email" name="email"
+                <label class="form-label small fw-bold mb-1">Work Email</label>
+                <input type="email" class="form-control form-control-lg fs-6" name="email"
                   [(ngModel)]="contactData.email" required email />
               </div>
 
               <!-- Phone -->
-              <div class="mb-4">
-                <label for="phoneNumber" class="form-label small fw-bold mb-1">Phone Number</label>
-                <input type="tel" class="form-control form-control-lg fs-6" id="phoneNumber" name="phoneNumber"
+              <div class="mb-3">
+                <label class="form-label small fw-bold mb-1">Phone Number</label>
+                <input type="tel" class="form-control form-control-lg fs-6" name="phoneNumber"
                   [(ngModel)]="contactData.phoneNumber" required />
+              </div>
+
+              <!-- Message (✅ REQUIRED FIX) -->
+              <div class="mb-4">
+                <label class="form-label small fw-bold mb-1">Message</label>
+                <textarea class="form-control form-control-lg fs-6" name="message" [(ngModel)]="contactData.message"
+                  rows="4" required placeholder="Tell us your hiring requirements"></textarea>
               </div>
 
               <!-- Terms -->
               <div class="form-check mb-4">
-                <input class="form-check-input" type="checkbox" id="terms" name="terms" [(ngModel)]="contactData.terms"
-                  required />
-                <label class="form-check-label small text-muted" for="terms">
-                  I have read, and I agree to the Terms of Service and Privacy Policy
+                <input class="form-check-input" type="checkbox" name="terms" [(ngModel)]="contactData.terms" required />
+                <label class="form-check-label small text-muted">
+                  I agree to the Terms & Privacy Policy
                 </label>
               </div>
 
+              <!-- Alerts -->
               <div *ngIf="submitSuccess" class="alert alert-success small mb-3">
                 Thank you! Your request has been submitted successfully.
               </div>
+
               <div *ngIf="submitError" class="alert alert-danger small mb-3">
-                Failed to send inquiry. Please check your connection and try again.
+                Failed to send inquiry. Please try again.
               </div>
 
+              <!-- Submit -->
               <button type="submit" class="btn btn-primary btn-lg w-100 py-3 fw-bold"
-                [disabled]="!hireForm.form.valid || isSubmitting">
+                [disabled]="!hireForm.valid || isSubmitting">
                 {{ isSubmitting ? 'Sending...' : 'Submit Request' }}
               </button>
+
             </form>
           </div>
         </div>

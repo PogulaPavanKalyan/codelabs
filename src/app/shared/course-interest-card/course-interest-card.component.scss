@@ -54,3 +54,22 @@
 .btn-primary:hover {
   background-color: #4502aa;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .column {
+    width: 50px;
+    font-size: 12px;
+  }
+
+  .column1 {
+    width: 263px;
+    font-size: 12px;
+    margin-left: 70px;
+    margin-top: -45px;
+  }
+}

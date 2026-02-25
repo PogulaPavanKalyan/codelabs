@@ -14,6 +14,10 @@
       margin-left: 10%;
     }
 
+    .hero-text {
+      margin-left: 10%;
+    }
+
     .container {
       .hero-content {
         position: absolute;
@@ -92,6 +96,20 @@
       margin-top: 2rem;
       margin-left: auto;
       margin-right: auto;
+    }
+  }
+}
+
+@media (min-width:320px) and (max-width:426px) {
+  .hire-from-us-page {
+    .hero-sec {
+      .hero-title {
+        margin-left: -2.5%;
+      }
+
+      .hero-text {
+        margin-left: -10%;
+      }
     }
   }
 }
