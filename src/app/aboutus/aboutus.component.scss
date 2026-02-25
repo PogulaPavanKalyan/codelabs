@@ -1295,4 +1295,10 @@ div {
   }
 }
 
+@media(min-width:1441px) and (max-width:1640px) {
+  .featured-logos img {
+    margin-left: 100px;
+  }
+}
+
 // cta.component.css------end---

@@ -275,3 +275,14 @@ li.last {
         height: 20px;
     }
 }
+
+/* Custom responsiveness for 1441px to 2560px */
+@media (min-width: 1441px) and (max-width: 2560px) {
+    .container {
+        max-width: 85%;
+    }
+    
+    .bottom-foot {
+        padding: 0 7.5%;
+    }
+}

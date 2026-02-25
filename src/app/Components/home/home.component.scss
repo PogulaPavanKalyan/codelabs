@@ -419,13 +419,19 @@
 
 }
 
-@media (min-width:1024px) and (max-width:1388px) {
+@media (max-width:1023px) {
+    .courses .course-head .right-content .btn-trending {
+        margin-right: -2%;
+    }
+}
+
+@media (min-width:1023px) and (max-width:1388px) {
     .courses .course-head .right-content .btn-trending {
         margin-right: -5%;
     }
 
-    .container-dont {
-        width: 1600px;
+    .container-dont .img-fluid {
+        display: none;
     }
 }
 
@@ -1138,13 +1144,13 @@ i.ri-rocket-fill {
 }
 
 .key-services {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
     background-color: #F8F9FA; // Light gray matching mockup
     //    / More breathing room
 
 
     .section-title {
-        font-family: serif; // To match mockup "Serif font"
+        font-family: 'Poppins'; // To match mockup "Serif font"
         color: #1e293b;
         margin: 10px;
     }
@@ -1288,4 +1294,19 @@ i.ri-rocket-fill {
 
 .h-100 {
     height: 450px;
+}
+
+/* Large laptops */
+@media (min-width: 1441px) and (max-width: 1640px) {
+    .container {
+        max-width: 85%;
+    }
+
+    .courses .course-head .right-content .btn-trending {
+        margin-right: -5%;
+    }
+
+    .our-student {
+        max-width: 100%;
+    }
 }
