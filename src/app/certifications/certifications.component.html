@@ -311,12 +311,18 @@
     </p>
 
     <div class="faq__list">
+   
 
       <div class="faq__item" *ngFor="let faq of faqs; let i = index" [class.active]="activeIndex === i"
         (click)="toggleFAQ(i)">
+        
         <div class="faq__question">
           <div class="faq__left">
-            <span class="faq__icon"></span>
+<div class="faq__icon">
+  <img src="../../../assets/images/Certification/book.jpeg" alt="">
+  
+
+</div>
             <span class="faq__text">{{ faq.question }}</span>
           </div>
           <span class="faq__arrow"></span>

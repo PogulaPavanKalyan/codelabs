@@ -60,13 +60,13 @@
                 <div class="col-md-6">
                   <label class="form-label small fw-bold mb-1">First Name</label>
                   <input type="text" class="form-control form-control-lg fs-6" name="firstName"
-                    [(ngModel)]="contactData.firstName" required placeholder="John" />
+                    [(ngModel)]="contactData.firstName" required placeholder="" />
                 </div>
 
                 <div class="col-md-6">
                   <label class="form-label small fw-bold mb-1">Last Name</label>
                   <input type="text" class="form-control form-control-lg fs-6" name="lastName"
-                    [(ngModel)]="contactData.lastName" required placeholder="Doe" />
+                    [(ngModel)]="contactData.lastName" required placeholder="" />
                 </div>
               </div>
 
@@ -79,37 +79,31 @@
 
               <!-- Designation -->
               <div class="mb-3">
-                <label class="form-label small fw-bold mb-1">Designation</label>
+                <label class="form-label small fw-bold mb-1"> Your Designation</label>
                 <input type="text" class="form-control form-control-lg fs-6" name="designation"
                   [(ngModel)]="contactData.designation" required />
               </div>
 
               <!-- Email -->
               <div class="mb-3">
-                <label class="form-label small fw-bold mb-1">Work Email</label>
+                <label class="form-label small fw-bold mb-1">Work Email Address</label>
                 <input type="email" class="form-control form-control-lg fs-6" name="email"
                   [(ngModel)]="contactData.email" required email />
               </div>
 
               <!-- Phone -->
               <div class="mb-3">
-                <label class="form-label small fw-bold mb-1">Phone Number</label>
+                <label class="form-label small fw-bold mb-1">Phone Number </label>
                 <input type="tel" class="form-control form-control-lg fs-6" name="phoneNumber"
                   [(ngModel)]="contactData.phoneNumber" required />
               </div>
 
-              <!-- Message (✅ REQUIRED FIX) -->
-              <div class="mb-4">
-                <label class="form-label small fw-bold mb-1">Message</label>
-                <textarea class="form-control form-control-lg fs-6" name="message" [(ngModel)]="contactData.message"
-                  rows="4" required placeholder="Tell us your hiring requirements"></textarea>
-              </div>
 
               <!-- Terms -->
               <div class="form-check mb-4">
                 <input class="form-check-input" type="checkbox" name="terms" [(ngModel)]="contactData.terms" required />
                 <label class="form-check-label small text-muted">
-                  I agree to the Terms & Privacy Policy
+                 I have read,and I agree to the Terms & Privacy Policy
                 </label>
               </div>
 

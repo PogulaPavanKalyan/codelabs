@@ -42,12 +42,12 @@
     .contact-title {
         font-size: clamp(45px, 5vw, 55px);
         font-weight: bold;
-        margin-left: 107px;
+       
     }
 
     .contact-text {
         font-size: clamp(16px, 5vw, 18px);
-        margin-left: 107px;
+        
         font: normal normal 300 18px/30px Poppins;
     }
 }
@@ -99,7 +99,7 @@
 }
 
 .form-container {
-    max-width: 492px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 28px 70px;
     background: #fff;
@@ -202,3 +202,13 @@
         }
     }
 }
+
+ @media (min-width: 1024px) {
+
+    .contact-title {
+        margin-left: 1px;
+    }
+    .contact-text {
+        margin-left: 1px;
+    }
+ }

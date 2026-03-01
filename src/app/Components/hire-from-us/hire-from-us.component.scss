@@ -8,14 +8,14 @@
     object-fit: cover;
 
     .hero-title {
-      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-size: 60px;
       line-height: 1.1;
       letter-spacing: -2px;
-      margin-left: 10%;
+    
     }
 
     .hero-text {
-      margin-left: 10%;
+     
     }
 
     .container {
@@ -86,6 +86,10 @@
 }
 
 @media (max-width: 991px) {
+
+
+
+ 
   .hire-from-us-page {
     .hero-sec {
       text-align: center;
@@ -112,4 +116,57 @@
       }
     }
   }
+}
+
+  @media (min-width: 1024px) and (max-width: 1440px) {
+    .hire-from-us-page {
+
+      .hero-sec
+ .hero-title{
+    margin-left: 5%;
+
+  } 
+  .hero-text{
+    margin-left: 5%;
+  }
+}
+}
+
+
+
+
+
+  /* 1440px+: ~60px margins */
+  @media (min-width: 1440px) {
+
+
+
+    
+ .hire-from-us-page {
+ 
+
+      .hero-sec 
+
+      .hero-content{
+         max-width: 1320px;
+      }
+      .hero-title{
+   
+    margin-left: 25%;
+
+  } 
+  .hero-text{
+    margin-left: 25%;
+  }
+
+
+
+
+    .container {
+      max-width: 1320px;
+      margin-left: auto; 
+      margin-right: auto;
+    }
+  }
+
 }

@@ -16,7 +16,7 @@ export class HireFromUsComponent {
     designation: '',
     email: '',
     phoneNumber: '',
-    message: '',
+   
     terms: false
   };
 
@@ -51,7 +51,7 @@ export class HireFromUsComponent {
         designation: this.contactData.designation,
         email: this.contactData.email,
         phoneNumber: this.contactData.phoneNumber,
-        message: this.contactData.message,
+       
         _subject: 'Hire Request from CodeLabs',
         _template: 'table',
         _captcha: 'false'
@@ -76,7 +76,7 @@ export class HireFromUsComponent {
           designation: '',
           email: '',
           phoneNumber: '',
-          message: '',
+        
           terms: false
         };
       },

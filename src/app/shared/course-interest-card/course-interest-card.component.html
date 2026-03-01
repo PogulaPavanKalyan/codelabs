@@ -4,6 +4,13 @@
     <p class="text-center text-dark">Learn from the Real-Time Experts</p>
 
     <!-- Form Starts Here -->
+     <div *ngIf="submitSuccess" class="alert alert-success py-1 mt-2 mb-2" style="font-size: 0.8rem">
+        Thank you for Submiting your request,we will contact you shortly.
+      </div>
+      <div *ngIf="submitError" class="alert alert-danger py-1 mt-2 mb-2" style="font-size: 0.8rem">
+        Error. Please try again.
+      </div>
+      
     <form (ngSubmit)="enrollForm.form.valid && onSubmit()" #enrollForm="ngForm" novalidate>
       <!-- Full Name Input -->
       <div class="mb-3">
@@ -44,12 +51,7 @@
 
 
 
-      <div *ngIf="submitSuccess" class="alert alert-success py-1 mt-2 mb-2" style="font-size: 0.8rem">
-        Thank you for Submiting your request,we will contact you shortly.
-      </div>
-      <div *ngIf="submitError" class="alert alert-danger py-1 mt-2 mb-2" style="font-size: 0.8rem">
-        Error. Please try again.
-      </div>
+      
 
       <!-- Submit Button -->
       <div class="d-grid">

@@ -10,6 +10,7 @@
             line-height: 1.2;
             margin-bottom: 20px;
             margin-left: 50px;
+            font-size: clamp(40px, 5vw, 65px);
         }
 
         .hero-text {
@@ -29,34 +30,79 @@
         }
     }
 
-    .career-div {
-        .icon-box {
-            width: 70px;
-            height: 70px;
-            background: #07be00;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            margin-bottom: 1.5rem;
+   /* Remove Bootstrap Card Look Completely */
+.career-div .card {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  transition: none !important;
+}
 
-            i {
-                color: white;
-                font-size: 32px;
-            }
-        }
+.career-div .card:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
 
-        .card {
-            background: #fff;
-            border-radius: 16px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Remove extra padding if needed */
+.career-div .card-body {
+  padding: 0 !important;
+}
 
-            &:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
-            }
-        }
-    }
+/* Icon Circle Style */
+.career-div .icon-box {
+  width: 70px;
+  height: 70px;
+  background:green; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.career-div .icon-box i {
+  font-size: 30px;
+  color: white;
+}
+
+/* Title Styling */
+.career-div h5 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+}
+
+/* Description Styling */
+.career-div p {
+  font-size: 14px;
+  color: #6c757d;
+  max-width: 260px;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .career-div {
+    padding: 50px 0;
+  }
+
+  .career-div .icon-box {
+    width: 60px;
+    height: 60px;
+  }
+
+  .career-div .icon-box i {
+    font-size: 26px;
+  }
+
+  .career-div h5 {
+    font-size: 16px;
+  }
+
+  .career-div p {
+    font-size: 13px;
+  }
+}
 
     .bg-gray {
         background-color: #f8f9fa;
@@ -128,8 +174,8 @@
             }
         }
     }
-
-    /* Section Background */
+/* Section Background */
+   /* Section Background */
     .getready-section {
         background: #ffe600;
         padding: 70px 0;
@@ -225,7 +271,7 @@
     .getready-img-col img {
         max-height: 450px;
         object-fit: contain;
-        margin-bottom: -3.3%;
+        margin-bottom: -9%;
     }
 
     .btn-getready {
@@ -241,16 +287,15 @@
         }
     }
 
-
     /* Section */
     .career-section {
         padding: 60px 20px;
     }
 
-    .container {
-        max-width: 1500px;
-        margin: auto;
-    }
+    // .container {
+    //     max-width: 1500px;
+    //     margin: auto;
+    // }
 
     /* Main Heading */
     .main-heading {
@@ -453,6 +498,8 @@
         padding: 12px 30px;
         border-radius: 8px;
         font-weight: 700;
+        margin-top: -20%;
+        margin-left: 70%;
 
         &:hover {
             background: #00af00;
@@ -467,8 +514,9 @@
     }
 
     .container {
-        max-width: 1500px;
+        max-width: 1320px;
         margin: auto;
+        
     }
 
     /* Main Heading */
@@ -582,24 +630,7 @@
     /* ============================= */
 
     /* 4K Screens */
-    @media (min-width: 1800px) {
-        .container {
-            max-width: 1700px;
-        }
-
-        .main-heading {
-            font-size: 60px;
-        }
-
-        .card-content h2 {
-            font-size: 32px;
-        }
-
-        .card-content p {
-            font-size: 18px;
-        }
-    }
-
+  
     /* Laptop */
     @media (max-width: 1200px) {
         .card-wrapper {
@@ -1165,3 +1196,303 @@
         }
     }
 }
+
+@media (min-width: 1440px) {
+    .placements-page {
+        .container {
+            max-width: 1320px;
+            margin-left: auto;      /* Centers it */
+            margin-right: auto;     /* Centers it */
+            padding-left: 20px;
+            padding-right: 20px;
+            height: auto;
+        }
+
+        /* Remove all left margins inside container */
+        .hero-sec {
+            .hero-title {
+                margin-left: 0;     /* was 50px */
+            }
+            .hero-text {
+                margin-left: 0;     /* was 50px */
+            }
+        }
+
+        .main-heading {
+            margin-left: 0;         /* was 50px */
+        }
+
+        .getready-title {
+            margin-left: 0;         /* was 60px */
+        }
+
+        .getready-text {
+            margin-left: 0;         /* was 60px */
+        }
+
+        .getready-line {
+            margin-left: 0;         /* was 60px */
+        }
+
+        .getready-partner {
+        
+            margin-left: 0;         /* was 60px */
+        }
+
+        .partner-info {
+            margin-left: 0;         /* was -50px */
+        }
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1439px) {
+    .placements-page {
+        .container {
+            max-width: calc(100% - 64px);
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 32px;
+            padding-right: 32px;
+            height: auto;
+        }
+
+        .hero-sec {
+            .hero-title { margin-left: 0; }
+            .hero-text { margin-left: 0; }
+        }
+
+        .main-heading { margin-left: 0; }
+
+        .getready-section {
+            .getready-title { margin-left: 0; }
+            .getready-text { margin-left: 0; }
+            .getready-line { margin-left: 0; }
+            .getready-partner { margin-left: 0; }
+            .partner-info { margin-left: 0; }
+        }
+
+        .career-section {
+            .main-heading { margin-left: 0; }
+        }
+    }
+}
+
+
+/* =====================================================
+   GET READY SECTION – CLEAN FINAL VERSION
+===================================================== */
+
+.getready-section {
+  background: #ffe600;
+  padding: 90px 0;
+  
+  overflow: hidden;
+}
+
+/* Title */
+.getready-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 20px;
+  margin-left: 0 !important;
+}
+
+/* Paragraph */
+.getready-text {
+  font-size: 16px;
+  color: #111;
+  line-height: 1.8;
+  max-width: 540px;
+  margin-left: 0 !important;
+}
+
+/* Green Line */
+.getready-line {
+  width: 280px;
+  height: 4px;
+  background: #1dbf3a;
+  margin: 30px 0;
+  margin-left: 0 !important;
+}
+
+/* Partner + Button Row */
+.getready-partner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-left: 0 !important;
+}
+
+/* Badge + Text */
+.partner-info {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-left: 0 !important;
+}
+
+/* Badge Image */
+.partner-info img {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+}
+
+/* Partner Title */
+.partner-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+  color: #000;
+}
+
+/* Subtitle */
+.partner-subtitle {
+  font-size: 15px;
+  margin: 4px 0 0;
+  color: #222;
+}
+
+/* Button */
+.btn-getready {
+  background: #1dbf3a;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.3s ease;
+  margin: 0 !important;
+}
+
+.btn-getready:hover {
+  background: #159c2e;
+  color: #fff;
+}
+
+/* Right Side Image */
+.getready-img-col img {
+  max-height: 520px;
+  width: 100%;
+  object-fit: contain;
+}
+
+/* =====================================================
+   1440px Optimized Desktop
+===================================================== */
+
+@media (min-width: 1440px) {
+
+  .placements-page .container {
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+
+  .getready-title {
+    font-size: 52px;
+  }
+
+  .getready-text {
+    font-size: 17px;
+  }
+
+  .getready-img-col img {
+    max-height: 560px;
+  }
+}
+
+/* =====================================================
+   2K Monitor Optimization (1920px+)
+===================================================== */
+
+@media (min-width: 1920px) {
+
+  .placements-page .container {
+    max-width: 1400px;
+  }
+
+  .getready-title {
+    font-size: 58px;
+  }
+
+  .getready-text {
+    font-size: 18px;
+  }
+
+  .getready-img-col img {
+    max-height: 600px;
+  }
+}
+
+/* =====================================================
+   Tablet
+===================================================== */
+
+@media (max-width: 992px) {
+
+  .getready-section {
+    padding: 60px 0;
+    text-align: center;
+  }
+
+  .getready-text {
+    margin: 0 auto;
+  }
+
+  .getready-line {
+    margin: 25px auto;
+  }
+
+  .getready-partner {
+    justify-content: center;
+  }
+
+  .partner-info {
+    justify-content: center;
+  }
+
+  .btn-getready {
+    margin-top: 15px;
+  }
+
+  .getready-img-col img {
+    max-height: 420px;
+  }
+}
+
+/* =====================================================
+   Mobile
+===================================================== */
+
+@media (max-width: 576px) {
+
+  .getready-title {
+    font-size: 32px;
+  }
+
+  .getready-text {
+    font-size: 14px;
+  }
+
+  .partner-info img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .partner-title {
+    font-size: 20px;
+  }
+
+  .btn-getready {
+    width: 100%;
+  }
+
+  .getready-img-col img {
+    max-height: 300px;
+  }
+}
+
+
