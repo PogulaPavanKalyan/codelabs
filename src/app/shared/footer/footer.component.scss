@@ -114,6 +114,28 @@ b,
     /* Slightly subdued divider line matching mockup */
 }
 
+
+@media (min-width: 1440px) {
+
+  .bottom-foot {
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    p {
+      font-size: 14px;
+    }
+
+    a {
+      font-size: 14px;
+    }
+  }
+
+}
+
+
 .bottom-foot {
     display: flex;
     justify-content: space-between;

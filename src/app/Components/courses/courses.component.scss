@@ -276,6 +276,66 @@
 }
 
 
+
+
+@media (min-width: 1440px) {
+
+  .container-dont {
+    padding: 0;               /* remove side padding */
+  }
+
+  .container-dont::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  /* Create inner centered wrapper effect */
+  .container-dont > * {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* But keep flex layout working */
+  .container-dont {
+    display: flex;
+    justify-content: center;
+  }
+
+  .container-dont .girl-img-sec,
+  .container-dont .banner-title,
+  .container-dont .brochure-sec {
+    max-width: unset;
+  }
+
+  /* Create fixed width inner flex */
+  .container-dont {
+    > .girl-img-sec,
+    > .banner-title,
+    > .brochure-sec {
+      flex: unset;
+    }
+  }
+
+  .container-dont {
+     width: 100%;
+  }
+
+  /* Create centered flex box */
+  .container-dont {
+    justify-content: center;
+  }
+
+  .container-dont {
+    > div {
+      max-width: 1320px;
+    }
+  }
+
+}
+
 .bg-gray {
   background-color: #F8F8F8;
 }
@@ -674,3 +734,5 @@
     width: 100% !important;
   }
 }
+
+

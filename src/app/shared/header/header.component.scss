@@ -35,10 +35,11 @@ header {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
     .logo-div img {
-      transform: scale(0.9);
-      transform-origin: left center;
+   max-width: 200px;
+  transition: $transition-smooth;
+  transform-origin: left center;
     }
-
+   
     .navbar-nav .nav-link:not(.btn-premium-cta) {
       color: $text-dark;
     }
@@ -392,15 +393,33 @@ header {
   }
 }
 
-/* Custom responsiveness for 1441px to 2560px */
-// @media (min-width: 1441px) and (max-width: 2560px) {
-//   .container-xl {
-//     max-width: 85%;
-//   }
-// }
+
 @media (min-width: 1441px) {
- .logo-div img {
-    scale: .9;
-    margin-left: -60%;
+
+  .navbar-wrapper {
+
+    .custom-navbar {
+      padding: 0; // remove side padding
+    }
+
+    .container-fluid {
+      max-width: 1320px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    /* Push logo slightly outside container */
+    .logo-div {
+  position: fixed;
+  top: 18px;
+  left: 40px;
+  z-index: 1100;
+}
+
   }
+
+}
+.navbar-wrapper.is-sticky ~ .logo-div img,
+.navbar-wrapper.is-sticky .logo-div img {
+  transform: scale(0.9);
 }

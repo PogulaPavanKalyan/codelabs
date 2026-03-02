@@ -195,8 +195,8 @@
     }
 
     .form-control {
-        width: 100%;
-        max-width: 243px;
+        width: 75%;
+        // max-width: 243px;
         height: 45px;
         // margin-left: 74px;
     }
@@ -440,9 +440,7 @@
         margin-right: -5%;
     }
 
-    .container-dont .img-fluid {
-        display: none;
-    }
+   
 }
 
 .input-wrapper {
@@ -507,7 +505,7 @@
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             gap: 20px;
-            padding: 0 20px;
+            padding: 10 20px;
             max-height: 600px;
 
             .carousel-card {
@@ -627,6 +625,7 @@
 
 .learn-text {
     font-size: 11px;
+    margin: 10px;
 }
 
 .learn-free {
@@ -637,13 +636,16 @@
         align-items: center;
         justify-content: center;
         gap: 30px;
+
     }
+      
 
     .people-text {
         display: flex;
         flex-direction: column;
         justify-content: center;
         color: white;
+        margin: 10px;
 
         .start-btn {
             background-color: rgb(50, 244, 6);
@@ -653,8 +655,8 @@
 
 @media (min-width: 1024px) {
     .container {
-        width: 90%;
-        max-width: 1200px;
+        // width: 90%;
+        // max-width: 1200px;
         margin: auto;
         position: relative;
         z-index: 2;
@@ -958,9 +960,10 @@
             gap: 20px;
 
             .card {
-                max-width: 400px;
+                // max-width: 400px;
                 margin: 0 auto;
-                margin-left: -5%;
+                margin-left: -1%;
+                width: 90%;
             }
         }
 
@@ -1355,6 +1358,29 @@ i.ri-rocket-fill {
     }
 }
 
+@media (min-width:375px) and (max-width:425px) {
+
+
+
+     .form-control {
+      
+        max-width: 300px;
+    
+        
+    }
+}
+
+@media (min-width:320px) and (max-width:426px){
+    .accordion-item{
+    width: 90%;
+    margin-left: 15px;
+}
+.accordion+span{
+    width: 95%;
+    margin-left: 10px;
+}
+}
+
 @media (min-width:375px) and (max-width:423px) {
     i.ri-history-line {
         position: absolute;
@@ -1368,6 +1394,8 @@ i.ri-rocket-fill {
     .text {
         font-size: 10px;
     }
+
+    
 }
 
 
@@ -1403,14 +1431,33 @@ i.ri-rocket-fill {
 
 @media (max-width:1024px) {
     img.img-fluid {
-        display: none;
+        // display: none;
     }
 
     .gy-4 {
         gap: 0;
     }
 
-    .col-lg-3 {
-        width: 50%;
-    }
+    
 }
+
+
+
+@media (min-width:1440px){
+    // .px-lg-5
+    // {
+    //     margin-left: -50px;
+    // }
+    // .img-fluid
+    // {
+    //     margin-left: 30px;
+    // }
+    .left 
+    {
+        margin-left: -20px;
+    }
+    .course-head
+    {
+        margin-left: -15px;
+    } 
+ }
