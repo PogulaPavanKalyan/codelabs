@@ -1,16 +1,18 @@
-<div class="card p-2">
-  <div class="card-body">
-    <h3 class="card-title mb-2 fw-bold">I'm Interested</h3>
-    <p class="text-center text-dark">Learn from the Real-Time Experts</p>
+<div class="card">
+  <div class="card-body ">
+    <h3 class="card-title sect">I'm Interested</h3>
+    <p class="text-center ">Learn from the Real-Time Experts</p>
 
     <!-- Form Starts Here -->
-     <div *ngIf="submitSuccess" class="alert alert-success py-1 mt-2 mb-2" style="font-size: 0.8rem">
-        Thank you for Submiting your request,we will contact you shortly.
-      </div>
-      <div *ngIf="submitError" class="alert alert-danger py-1 mt-2 mb-2" style="font-size: 0.8rem">
-        Error. Please try again.
-      </div>
-      
+    <div *ngIf="submitSuccess" class="alert alert-success py-2 mt-2 mb-3 shadow-sm" style="font-size: 0.85rem">
+      <i class="ri-checkbox-circle-line me-2"></i>
+      Thank you for submitting your request. We will contact you shortly.
+    </div>
+    <div *ngIf="submitError" class="alert alert-danger py-2 mt-2 mb-3 shadow-sm" style="font-size: 0.85rem">
+      <i class="ri-error-warning-line me-2"></i>
+      Something went wrong. Please try again.
+    </div>
+
     <form (ngSubmit)="enrollForm.form.valid && onSubmit()" #enrollForm="ngForm" novalidate>
       <!-- Full Name Input -->
       <div class="mb-3">
@@ -20,20 +22,19 @@
 
       <!-- Email Input -->
       <div class="mb-3">
-        <input type="email" class="form-control" placeholder="Email *" name="email" [(ngModel)]="contactData.email"
-          required email />
-
+        <input type="email" class="form-control" placeholder="Email Address *" name="email"
+          [(ngModel)]="contactData.email" required email />
       </div>
 
       <!-- Mobile Number Input -->
       <div class="mb-3">
-        <div class="row">
-          <div class="col-md-3">
-            <input value="+91" class="form-control bg-white column" disabled>
+        <div class="row g-0">
+          <div class="col-3">
+            <input value="+91" class="form-control column" disabled>
           </div>
-          <div class="col-md-9">
+          <div class="col-9">
             <input type="tel" class="form-control column1" placeholder="Mobile Number *" name="mobileNumber"
-              [(ngModel)]="contactData.mobileNumber" required />
+              [(ngModel)]="contactData.mobileNumber" required maxlength="10" pattern="[0-9]{10}" />
           </div>
         </div>
       </div>
@@ -45,28 +46,26 @@
       </div>
 
       <!-- Batches Input -->
-      <div class="mb-3">
-        <input type="text" class="form-control" placeholder="Batches" name="batches" required />
+      <div class="mb-4">
+        <input type="text" class="form-control" placeholder="Batches Offered" name="batches" required />
       </div>
-
-
-
-      
 
       <!-- Submit Button -->
       <div class="d-grid">
-        <button type="submit" class="btn btn-primary" [disabled]="!enrollForm.form.valid || isSubmitting">
+        <button type="submit" class="btn btn-primary shadow-sm" [disabled]="!enrollForm.form.valid || isSubmitting">
           {{ isSubmitting ? 'Processing...' : 'Enroll Now' }}
         </button>
       </div>
     </form>
 
     <!-- Terms and Privacy Notice -->
-    <p class="mt-3" style="font-size: 0.8rem">
-      By proceeding, you agree to
-      <a style="text-decoration: underline">Terms & Conditions</a>
-      and
-      <a style="text-decoration: underline">Privacy Policy</a>
-    </p>
+    <div class="mt-4 text-center">
+      <p class="text-white-50 m-0" style="font-size: 0.75rem">
+        By proceeding, you agree to our
+        <a href="javascript:void(0)" class="text-white text-decoration-underline">Terms</a>
+        &
+        <a href="javascript:void(0)" class="text-white text-decoration-underline">Privacy</a>
+      </p>
+    </div>
   </div>
 </div>

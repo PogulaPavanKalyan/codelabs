@@ -1,3 +1,34 @@
+.internships {
+    .tag-cloud {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+
+        .tag {
+            background-color: #2a2a2a;
+            color: #b3b3b3;
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+
+            &:hover {
+                background-color: #383838;
+                transform: translateY(-2px);
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+.foot-sub-title {
+    font-size: 13px;
+    color: #b3b3b3;
+    margin-top: -4px;
+}
+
 footer {
     background-color: #202020;
 }
@@ -68,7 +99,7 @@ b,
 
         .foot-item-title {
             font-size: 16px;
-            font-weight: 600;
+            font-weight: 525;
             color: #ffffff;
             margin-bottom: 20px;
         }
@@ -76,7 +107,7 @@ b,
         .nav {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            // gap: 12px;
 
             li {
                 cursor: pointer;
@@ -117,21 +148,21 @@ b,
 
 @media (min-width: 1440px) {
 
-  .bottom-foot {
-    max-width: 1320px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    .bottom-foot {
+        max-width: 1320px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
 
-    p {
-      font-size: 14px;
-    }
+        p {
+            font-size: 14px;
+        }
 
-    a {
-      font-size: 14px;
+        a {
+            font-size: 14px;
+        }
     }
-  }
 
 }
 
@@ -299,3 +330,13 @@ li.last {
 }
 
 /* Custom responsiveness for 1441px to 2560px */
+.fa-1 {
+    font-size: 20px;
+}
+
+@media (min-width:1441px) {
+
+    .foot-item-title .nav {
+        margin-left: -30%;
+    }
+}

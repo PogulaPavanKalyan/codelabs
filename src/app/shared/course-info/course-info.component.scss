@@ -41,6 +41,7 @@
     width: 2px;
     background: #2a305e;
     height: 60px;
+    opacity: 50%;
 
     @media (max-width: 768px) {
       width: 100%;
@@ -50,8 +51,8 @@
 
   .sec {
     .label {
-      font-size: 22px;
-      font-weight: 600;
+      font-size: 20px;
+      font-weight: 500;
 
       @media (max-width: 768px) {
         font-size: 18px;
@@ -59,6 +60,8 @@
     }
 
     .label-name {
+      font-size: 16px;
+      font-weight: 400;
       @media (max-width: 768px) {
         font-size: 14px;
       }

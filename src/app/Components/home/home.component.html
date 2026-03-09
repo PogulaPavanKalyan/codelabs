@@ -2,7 +2,7 @@
   <div class="container-fluid hero-sec">
     <div class="container hero-sec">
       <div class="hero-content">
-        <h1 class="hero-title display-1">Be Future - Proof</h1>
+        <h1 class="hero-title display-1" style="font-weight: 601;">Be Future - Proof</h1>
         <p class="hero-text display-Passion6">
           Build Your Career in Tech for <br />
           Limitless Opportunities.
@@ -13,21 +13,22 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid courses bg-white pt-4">
+  <div class="container-fluid height-cont courses bg-white pt-4">
     <div class="container">
       <div class="course-head mb-5 d-flex justify-content-between align-items-end flex-wrap gap-3">
         <div class="left-content">
-          <h2 class="section-title fw-bold mb-0" style="font-size: 55px;">Popular Courses</h2>
-          <p class="text m-0" style="font-size: 18px;">Discover our courses — Explore a new career path</p>
+          <h2 class="sect">Featured Courses</h2>
+          <!-- <p class="text m-0" style="font-size: 18px;">Discover our courses — Explore a new career path</p> -->
         </div>
         <div class="right-content d-flex align-items-center gap-3" style="margin-right: 20px;">
-          <div class="search-box position-relative">
+          <!-- <div class="search-box position-relative">
             <i class="ri-search-line position-absolute text-muted"></i>
-            <input type="search" class="form-control search-input" placeholder="Looking for your course ?">
+            <input type="search" class="form-control search-input" placeholder="Looking for your course ?"
+              [(ngModel)]="searchTerm" (input)="onInteraction()">
           </div>
           <button class="btn btn-trending text-white">
             Trending Courses
-          </button>
+          </button> -->
         </div>
       </div>
       <div class="course-tabs">
@@ -37,175 +38,71 @@
         <div class="left py-3 mt-3 bg-light secondry rounded-3">
           <div class="input-wrapper position-relative" style="width: 335px; margin-left: 10px; margin-bottom: 20px;">
             <input style="margin-left: -1px;" type="text"
-              class="form-control browse-category-input shadow-none text-muted" placeholder="Browse By Category">
-            <i class="ri-history-line position-absolute"
-              style="right: 65px; top: 50%; transform: translateY(-50%); font-size: 18px; color: #a0a0a0;"></i>
+              class="form-control browse-category-input shadow-none text-muted" placeholder="Browse By Category"
+              [(ngModel)]="categorySearchTerm" (input)="onInteraction()">
+            <i class="ri-history-line position-absolute" (click)="resetFilters()"
+              style="right: 65px; top: 50%; transform: translateY(-50%); font-size: 18px; color: #a0a0a0; cursor: pointer;"></i>
           </div>
 
           <ul class="nav nav-pills d-flex flex-column justify-content-end gap-3 mt-4 mb-4" id="pills-tab">
-            <li class="nav-item" role="presentation">
-              <button class="w-80 nav-link active" id="pills-Datascience-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-Datascience" type="button" role="tab" aria-controls="pills-Datascience"
-                aria-selected="true">
-                Data Science <i class="ri-arrow-right-wide-line fs-5"></i>
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="w-80 nav-link text-start" id="pills-web-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-web" type="button" role="tab" aria-controls="pills-web" aria-selected="false">
-                Web Devlopment <i class="ri-arrow-right-wide-line fs-5"></i>
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="w-80 nav-link text-start" id="pills-Business-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-Business" type="button" role="tab" aria-controls="pills-Business"
-                aria-selected="false">
-                Business Analysis <i class="ri-arrow-right-wide-line fs-5"></i>
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="w-80 nav-link text-start" id="pills-Artificial-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-Artificial" type="button" role="tab" aria-controls="pills-Artificial"
-                aria-selected="false">
-                Artificial Intelligence
-                <i class="ri-arrow-right-wide-line fs-5"></i>
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="w-80 nav-link text-start" id="pills-Data-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-Data" type="button" role="tab" aria-controls="pills-Data" aria-selected="false">
-                UX/UI Design<i class="ri-arrow-right-wide-line fs-5"></i>
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="w-80 nav-link text-start" id="pills-App-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-App" type="button" role="tab" aria-controls="pills-App" aria-selected="false">
-                App Devlopment <i class="ri-arrow-right-wide-line fs-5"></i>
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-
-              <button class="w-80 nav-link text-start" id="pills-Digital-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-Digital" type="button" role="tab" aria-controls="pills-Digital"
-                aria-selected="false">
-
-                Digital Marketing <i class="ri-arrow-right-wide-line fs-5"></i>
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="w-80 nav-link text-start" id="pills-Data-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-Data" type="button" role="tab" aria-controls="pills-Data" aria-selected="false">
-                Cybersecurity <i class="ri-arrow-right-wide-line fs-5"></i>
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-
-              <button class="w-80 nav-link text-start" id="pills-Cloud-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-Cloud" type="button" role="tab" aria-controls="pills-Cloud"
-                aria-selected="false">
-
-                Cloud Engineer/Architect
-                <i class="ri-arrow-right-wide-line fs-5"></i>
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-
-              <button class="w-80 nav-link text-start" id="pills-Blockchain-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-Blockchain" type="button" role="tab" aria-controls="pills-Blockchain"
-                aria-selected="false">
-
-                Blockchain Engineer
-                <i class="ri-arrow-right-wide-line fs-5"></i>
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-
-              <button class="w-80 nav-link text-start" id="pills-Mulesoft-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-Mulesoft" type="button" role="tab" aria-controls="pills-Mulesoft"
-                aria-selected="false">
-
-                Mulesoft <i class="ri-arrow-right-wide-line fs-5"></i>
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="w-80 nav-link text-start" id="pills-SAP-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-SAP" type="button" role="tab" aria-controls="pills-SAP" aria-selected="false">
-                SAP FICO <i class="ri-arrow-right-wide-line fs-5"></i>
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="w-80 nav-link text-start" id="pills-Data-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-Data" type="button" role="tab" aria-controls="pills-Data" aria-selected="false">
-                Software Development <i class="ri-arrow-right-wide-line fs-5"></i>
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="w-80 nav-link text-start" id="pills-Data-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-Data" type="button" role="tab" aria-controls="pills-Data" aria-selected="false">
-                Data Science <i class="ri-arrow-right-wide-line fs-5"></i>
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="w-80 nav-link text-start" id="pills-Data-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-Data" type="button" role="tab" aria-controls="pills-Data" aria-selected="false">
-                Devops <i class="ri-arrow-right-wide-line fs-5"></i>
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="w-80 nav-link text-start" id="pills-Data-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-Data" type="button" role="tab" aria-controls="pills-Data" aria-selected="false">
-                AI & Machine Learning <i class="ri-arrow-right-wide-line fs-5"></i>
+            <li class="nav-item" role="presentation"
+              *ngFor="let category of filteredCategories; let i = index; trackBy: trackByCategory">
+              <button class="w-80 nav-link text-start" [class.active]="activeCategoryId === category.id"
+                [id]="'pills-' + category.id + '-tab'" type="button" role="tab" (click)="selectCategory(category.id)"
+                [attr.aria-controls]="'pills-' + category.id" [attr.aria-selected]="activeCategoryId === category.id">
+                {{ category.name }} <i class="ri-arrow-right-wide-line fs-5"></i>
               </button>
             </li>
           </ul>
         </div>
-        <!-- </div> -->
-        <!-- <div class="col-9 col-xxl-10 p-0"> -->
         <div class="tab-content" id="pills-tabContent">
-          <div class="tab-pane fade show active" id="pills-UX/UI" role="tabpanel" aria-labelledby="pills-UX/UI-tab"
+          <div *ngIf="filteredCategories.length === 0" class="text-center py-5">
+            <h3 class="text-muted">No results found</h3>
+            <p *ngIf="searchTerm && categorySearchTerm">No courses matching "{{ searchTerm }}" found in categories
+              matching "{{ categorySearchTerm }}".</p>
+            <p *ngIf="searchTerm && !categorySearchTerm">No courses found matching "{{ searchTerm }}".</p>
+            <p *ngIf="!searchTerm && categorySearchTerm">No categories found matching "{{ categorySearchTerm }}".</p>
+          </div>
+          <div class="tab-pane fade"
+            *ngFor="let category of filteredCategories; let i = index; trackBy: trackByCategory"
+            [class.show]="activeCategoryId === category.id" [class.active]="activeCategoryId === category.id"
+            [id]="'pills-' + category.id" role="tabpanel" [attr.aria-labelledby]="'pills-' + category.id + '-tab'"
             tabindex="0">
+            <h3 class="category-header mb-4 px-3" *ngIf="category.courses.length > 0">
+              {{ category.name === 'All Courses' ? 'Featured Courses' : category.name }} ({{ category.courses.length }})
+            </h3>
             <div class="cards container-fluid">
-              <!-- <div class="row"> -->
-              <!-- <div class="col-lg-4 mb-4 col-xxl-3 "> -->
-              <div class="card">
+              <div class="card"
+                *ngFor="let course of (category.id === 'all' && !isExploreMore ? category.courses.slice(0, 6) : category.courses)">
                 <div class="card-img-wrapper">
-                  <img alt="home images" src="../../../assets/images/python.png" class="card-img-top" />
-                  <img class="popular-badge" src="../../../assets/images/PopularCourses/popular.png" alt="">
+                  <img alt="home images" [src]="course.image" class="card-img-top" />
+                  <!-- <img *ngIf="course.isPopular" class="popular-badge"
+                    src="../../../assets/images/PopularCourses/popular.png" alt=""> -->
                 </div>
                 <div class="card-body py-3">
                   <div class="card-head mb-2">
-                    <h3 class="card-title">Python Fullstack</h3>
+                    <h3 class="card-title sect">{{ course.title }}</h3>
                   </div>
                   <div>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Mode of Training.svg" alt="Mode of Training" />
-                      <strong>Mode of Training :</strong> Classroom
+                      <strong>Mode of Training :</strong> {{ course.mode }}
                     </p>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Duration.svg" alt="Duration" />
-                      <strong>Duration :</strong> 04 Month | 1.5 hours/day
+                      <strong>Duration :</strong> {{ course.duration }}
                     </p>
                     <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Start From.svg" alt="Start From" />
-                      <strong>Start From :</strong> 25 Apr,2025
+                      <strong>Start From :</strong> {{ course.startDate }}
                     </p>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Lecture Videos.svg" alt="Lecture Videos" />
-                      <strong>Lecture Videos :</strong> Yes
-                    </p>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Real & Live Projects.svg"
-                        alt="Real & Live Projects" />
-                      Real & Live Projects
-                    </p>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      Internship & Live Projects
-                    </p>
+                    <div class="course-features d-flex flex-wrap gap-2 mb-3 mt-3">
+                      <span class="feature-tag" *ngIf="course.lectureVideos === 'Yes'">Lecture Videos</span>
+                      <span class="feature-tag" *ngIf="course.projects === 'Yes'">Real & Live Projects</span>
+                      <span class="feature-tag" *ngIf="course.internship === 'Yes'">100% Internship & Placement</span>
+                    </div>
                   </div>
                   <div class="card-price-section">
                     <div class="price-info">
-                      <span class="original-price">From :<del>₹25,000.00</del></span>
-                      <span class="discounted-price">₹ 15,000.00</span>
+                      <span class="original-price">From :<del>₹{{ course.originalPrice }}</del></span>
+                      <span class="discounted-price">₹ {{ course.discountedPrice }}</span>
                     </div>
                     <button class="btn know-more-btn">
                       Know more <i class="ri-arrow-right-up-line"></i>
@@ -213,268 +110,15 @@
                   </div>
                 </div>
               </div>
-              <!-- </div> -->
-              <!-- <div class="col-lg-4 mb-4 col-xxl-3 "> -->
-              <div class="card">
-                <div class="card-img-wrapper">
-                  <img alt="home images" src="../../../assets/images/landingpage/Course/UI Technologies.png"
-                    class="card-img-top" />
 
-                </div>
-                <div class="card-body py-3">
-                  <div class="card-head mb-2">
-                    <h3 class="card-title">UI Technologies</h3>
-                  </div>
-                  <div>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Mode of Training.svg" alt="Mode of Training" />
-                      <strong>Mode of Training :</strong> Classroom
-                    </p>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Duration.svg" alt="Duration" />
-                      <strong>Duration :</strong> 04 Month | 1.5 hours/day
-                    </p>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Start From.svg" alt="Start From" />
-                      <strong>Start From :</strong> 25 Apr,2025
-                    </p>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Lecture Videos.svg" alt="Lecture Videos" />
-                      <strong>Lecture Videos :</strong> Yes
-                    </p>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Real & Live Projects.svg"
-                        alt="Real & Live Projects" />
-                      Real & Live Projects
-                    </p>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      Internship & Live Projects
-                    </p>
-                  </div>
-                  <div class="card-price-section">
-                    <div class="price-info">
-                      <span class="original-price">From :<del>₹20,000.00</del></span>
-                      <span class="discounted-price">₹ 10,000.00</span>
-                    </div>
-                    <button class="btn know-more-btn">
-                      Know more <i class="ri-arrow-right-up-line"></i>
-                    </button>
-                  </div>
-                </div>
+              <!-- View More Courses button inside the scrolling grid, spanning all columns -->
+              <div class="view-more-container d-flex justify-content-center py-4"
+                *ngIf="category.id !== 'all' && category.courses.length > 6"
+                style="grid-column: 1 / -1; background-color: #fafcff; border-radius: 8px;">
+                <button class="btn view-more-courses-btn">View more courses</button>
               </div>
-              <!-- </div> -->
-              <!-- <div class="col-lg-4 mb-4 col-xxl-3 "> -->
-              <div class="card">
-                <div class="card-img-wrapper">
-                  <img alt="home images" src="../../../assets/images/landingpage/Course/Selenium.png"
-                    class="card-img-top" />
 
-                </div>
-                <div class="card-body py-3">
-                  <div class="card-head mb-2">
-                    <h3 class="card-title">Selenium</h3>
-                  </div>
-                  <div>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Mode of Training.svg" alt="Mode of Training" />
-                      <strong>Mode of Training :</strong> Classroom
-                    </p>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Duration.svg" alt="Duration" />
-                      <strong>Duration :</strong> 04 Month | 1.5 hours/day
-                    </p>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Start From.svg" alt="Start From" />
-                      <strong>Start From :</strong> 25 Apr,2025
-                    </p>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Lecture Videos.svg" alt="Lecture Videos" />
-                      <strong>Lecture Videos :</strong> Yes
-                    </p>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Real & Live Projects.svg"
-                        alt="Real & Live Projects" />
-                      Real & Live Projects
-                    </p>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      Internship & Live Projects
-                    </p>
-                  </div>
-                  <div class="card-price-section">
-                    <div class="price-info">
-                      <span class="original-price">From :<del>₹12,000.00</del></span>
-                      <span class="discounted-price">₹ 6,500.00</span>
-                    </div>
-                    <button class="btn know-more-btn">
-                      Know more <i class="ri-arrow-right-up-line"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <!-- </div> -->
-              <!-- <div class="col-lg-4 mb-4 col-xxl-3 "> -->
-              <div class="card">
-                <div class="card-img-wrapper">
-                  <img alt="home images" src="../../../assets/images/landingpage/Course/Android Native.png"
-                    class="card-img-top" />
-
-                </div>
-                <div class="card-body py-3">
-                  <div class="card-head mb-2">
-                    <h3 class="card-title">Android Native</h3>
-                  </div>
-                  <div>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Mode of Training.svg" alt="Mode of Training" />
-                      <strong>Mode of Training :</strong> Classroom
-                    </p>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Duration.svg" alt="Duration" />
-                      <strong>Duration :</strong> 04 Month | 1.5 hours/day
-                    </p>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Start From.svg" alt="Start From" />
-                      <strong>Start From :</strong> 25 Apr,2025
-                    </p>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Lecture Videos.svg" alt="Lecture Videos" />
-                      <strong>Lecture Videos :</strong> Yes
-                    </p>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Real & Live Projects.svg"
-                        alt="Real & Live Projects" />
-                      Real & Live Projects
-                    </p>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      Internship & Live Projects
-                    </p>
-                  </div>
-                  <div class="card-price-section">
-                    <div class="price-info">
-                      <span class="original-price">From :<del>₹40,000.00</del></span>
-                      <span class="discounted-price">₹ 25,000.00</span>
-                    </div>
-                    <button class="btn know-more-btn">
-                      Know more <i class="ri-arrow-right-up-line"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <!-- </div> -->
-              <!-- <div class="col-lg-4 mb-4 col-xxl-3 "> -->
-              <div class="card">
-                <div class="card-img-wrapper">
-                  <img alt="home images" src="../../../assets/images/landingpage/Course/Mac Native Swift.png"
-                    class="card-img-top" />
-
-                </div>
-                <div class="card-body py-3">
-                  <div class="card-head mb-2">
-                    <h3 class="card-title">Mac Native Swift</h3>
-                  </div>
-                  <div>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Mode of Training.svg" alt="Mode of Training" />
-                      <strong>Mode of Training :</strong> Classroom
-                    </p>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Duration.svg" alt="Duration" />
-                      <strong>Duration :</strong> 04 Month | 1.5 hours/day
-                    </p>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Start From.svg" alt="Start From" />
-                      <strong>Start From :</strong> 25 Apr,2025
-                    </p>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Lecture Videos.svg" alt="Lecture Videos" />
-                      <strong>Lecture Videos :</strong> Yes
-                    </p>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Real & Live Projects.svg"
-                        alt="Real & Live Projects" />
-                      Real & Live Projects
-                    </p>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      Internship & Live Projects
-                    </p>
-                  </div>
-                  <div class="card-price-section">
-                    <div class="price-info">
-                      <span class="original-price">From :<del>₹40,000.00</del></span>
-                      <span class="discounted-price">₹ 25,000.00</span>
-                    </div>
-                    <button class="btn know-more-btn">
-                      Know more <i class="ri-arrow-right-up-line"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <!-- </div> -->
-              <!-- <div class="col-lg-4 mb-4 col-xxl-3 "> -->
-              <div class="card">
-                <div class="card-img-wrapper">
-                  <img alt="home images" src="../../../assets/images/landingpage/Course/Flutter.png"
-                    class="card-img-top" />
-
-                </div>
-                <div class="card-body py-3">
-                  <div class="card-head mb-2">
-                    <h3 class="card-title">Flutter</h3>
-                  </div>
-                  <div>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Mode of Training.svg" alt="Mode of Training" />
-                      <strong>Mode of Training :</strong> Classroom
-                    </p>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Duration.svg" alt="Duration" />
-                      <strong>Duration :</strong> 04 Month | 1.5 hours/day
-                    </p>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Start From.svg" alt="Start From" />
-                      <strong>Start From :</strong> 25 Apr,2025
-                    </p>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Lecture Videos.svg" alt="Lecture Videos" />
-                      <strong>Lecture Videos :</strong> Yes
-                    </p>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      <img src="../../../assets/images/PopularCourses/Real & Live Projects.svg"
-                        alt="Real & Live Projects" />
-                      Real & Live Projects
-                    </p>
-                    <p class="detail d-flex align-items-center gap-2 mb-2">
-                      Internship & Live Projects
-                    </p>
-                  </div>
-                  <div class="card-price-section">
-                    <div class="price-info">
-                      <span class="original-price">From :<del>₹40,000.00</del></span>
-                      <span class="discounted-price">₹ 25,000.00</span>
-                    </div>
-                    <button class="btn know-more-btn">
-                      Know more <i class="ri-arrow-right-up-line"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <!-- </div> -->
-              <!-- </div> -->
             </div>
-          </div>
-          <div class="tab-pane fade" id="pills-web" role="tabpanel" aria-labelledby="pills-web-tab" tabindex="0">
-            ...
-          </div>
-          <div class="tab-pane fade" id="pills-Business" role="tabpanel" aria-labelledby="pills-Business-tab"
-            tabindex="0">
-            ...
-          </div>
-          <div class="tab-pane fade" id="pills-Artificial" role="tabpanel" aria-labelledby="pills-Artificial-tab"
-            tabindex="0">
-            ...
-          </div>
-          <div class="tab-pane fade" id="pills-Data" role="tabpanel" aria-labelledby="pills-Data-tab" tabindex="0">
-            ...
           </div>
         </div>
 
@@ -482,9 +126,10 @@
                 </div> -->
         <!-- </div> -->
       </div>
-      <div class="d-flex justify-content-center py-5">
-        <button class="btn view-more-btn">Explore more courses</button>
+      <div class="d-flex justify-content-center py-5" *ngIf="activeCategoryId === 'all' && !isExploreMore">
+        <button class="btn view-more-btn" (click)="exploreMoreCourses()">Explore Featured courses</button>
       </div>
+
     </div>
   </div>
   <!-- <div class="container-fluid bg-gray pt-5">
@@ -532,12 +177,13 @@
       </div>
     </div>
   </div> -->
-  <div class="container-fluid our-student">
+  <div class="container-fluid our-student height-cont1">
     <div class="container w-100 py-5">
-      <h2 class="section-title mb-1 text-center">
+      <h2 class="sect mb-1 text-center">
         Placement Offers from Leading Companies
       </h2>
-      <p class="text-center fw-bold ">Our students have secured top roles across global organizations Lets - Learn
+      <p class="text-center" style="font-weight: 450;">Our students have secured top roles across global organizations
+        Lets - Learn
         Build.
         Get Hired</p>
       <div class="container-fluid">
@@ -728,9 +374,10 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid accor">
+  <div class="container-fluid accor height-cont2">
     <div class="container py-5 accordion-div">
-      <h2 class="section-title fw-bold mb-4" style="margin-left: 40px;">Why Learn with CodeLabs it ?</h2>
+      <h2 class=" mb-4 sect" style="margin-left: 40px; font-weight: 600; font-size: 45px;">Why Learn with CodeLabs ?
+      </h2>
       <div class="row gy-4">
         <div class="col-12 col-lg-6 d-none d-lg-block">
           <img style="height: 650px;margin-left: 40px; margin-top: -10%;"
@@ -750,15 +397,10 @@
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>This is the first item's accordion body.</strong> It
-                  is shown by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
+                  Gain hands-on experience through guided exercises, practical assignments, and real industry tools.
+                  Our training focuses on learning by doing so that students build strong practical skills instead of
+                  only theoretical knowledge.
+
                 </div>
               </div>
             </div>
@@ -767,22 +409,17 @@
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                   <div>
-                    <img src="../../../assets/images/WhyLearnwithParthuit/Group 2647.svg" alt="" />
+                    <img style="width: 30px;" src="../../../assets/images/WhyLearnwithParthuit/Group 2647.svg" alt="" />
                     Real & Live Projects
                   </div>
                 </button>
               </h2>
               <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>This is the second item's accordion body.</strong> It
-                  is hidden by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
+                  Work on real-time industry projects during the course. These projects help you understand real
+                  client requirements, improve problem-solving skills, and build a strong portfolio for job
+                  opportunities.
+
                 </div>
               </div>
             </div>
@@ -798,15 +435,8 @@
               </h2>
               <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>This is the third item's accordion body.</strong> It
-                  is hidden by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
+                  Access classes from anywhere through our flexible learning options. Students can attend online
+                  sessions, access recorded lessons, and practice assignments at their own pace.
                 </div>
               </div>
             </div>
@@ -815,22 +445,16 @@
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                   <div>
-                    <img src="../../../assets/images/WhyLearnwithParthuit/noun-curriculum-6758149.svg" alt="" />
+                    <img style="width: 30px;"
+                      src="../../../assets/images/WhyLearnwithParthuit/noun-curriculum-6758149.svg" alt="" />
                     World-Class Cirriculum
                   </div>
                 </button>
               </h2>
               <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>This is the third item's accordion body.</strong> It
-                  is hidden by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
+                  Our curriculum is designed according to current industry standards. It is regularly updated to
+                  include the latest tools, technologies, and best practices used by professionals worldwide.
                 </div>
               </div>
             </div>
@@ -839,22 +463,15 @@
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                   <div>
-                    <img src="../../../assets/images/WhyLearnwithParthuit/Group 2652.svg" alt="" />
+                    <img style="width: 28px;" src="../../../assets/images/WhyLearnwithParthuit/Group 2652.svg" alt="" />
                     1:1 Mentoring & Support
                   </div>
                 </button>
               </h2>
               <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>This is the third item's accordion body.</strong> It
-                  is hidden by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
+                  Get personalized guidance from experienced mentors. Students receive one-on-one support for
+                  doubts, project feedback, career guidance, and skill improvement.
                 </div>
               </div>
             </div>
@@ -863,7 +480,8 @@
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                   <div>
-                    <img src="../../../assets/images/WhyLearnwithParthuit/noun-certification-7271292.svg"
+                    <img style="width: 30px"
+                      src="../../../assets/images/WhyLearnwithParthuit/noun-certification-7271292.svg"
                       alt="Global Certification" />
                     Global Certification
                   </div>
@@ -871,15 +489,9 @@
               </h2>
               <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>This is the third item's accordion body.</strong> It
-                  is hidden by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
+                  After completing the course, students receive an industry-recognized certification that validates
+                  their skills and enhances their professional credibility.
+
                 </div>
               </div>
             </div>
@@ -896,15 +508,8 @@
               </h2>
               <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>This is the third item's accordion body.</strong> It
-                  is hidden by default, until the collapse plugin adds the
-                  appropriate classes that we use to style each element. These
-                  classes control the overall appearance, as well as the showing
-                  and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also
-                  worth noting that just about any HTML can go within the
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
+                  Receive career guidance including resume building, interview preparation, portfolio review, and job
+                  placement support to help you start or grow your professional career.
                 </div>
               </div>
             </div>
@@ -916,9 +521,9 @@
     </div>
   </div>
 
-  <div class="container-fluid key-services py-5 px-3 px-lg-5" id="key-services">
-    <div class="container">
-      <h2 class="section-title fw-bold mb-5">Key Services We Offer</h2>
+  <div class="container-fluid key-services py-5 px-3 px-lg-5 height-cont3" id="key-services">
+    <div class="container pad">
+      <h2 class=" mb-5 sect" style="font-weight: 600; ">Key Services We Offer</h2>
       <div class="row">
         <!-- Consulting -->
         <div class="col-lg-3 col-md-6 mb-4">
@@ -927,12 +532,12 @@
               <h3 class="m-0">Consulting</h3>
             </div>
             <div class="card-body">
-              <p style=" font-size: 13px;">
+              <p>
                 We'll guide your business from end-to-end with consultation and
                 scoping through to practical implementation such as in-person
                 coaching.
               </p>
-              <button class="btn learn-more-btn">Learn more</button>
+              <button class="btn learn-more-btn">Learn more <i class="ri-arrow-right-line"></i></button>
             </div>
           </div>
         </div>
@@ -944,12 +549,12 @@
               <h3 class="m-0">Skill Diagnostics</h3>
             </div>
             <div class="card-body">
-              <p style=" font-size: 13px;">
+              <p>
                 Skills Dx is a data-driven diagnostic tool that eliminates the
                 guesswork, uncovering the strengths and gaps for tailored growth
                 plans.
               </p>
-              <button class="btn learn-more-btn">Learn more</button>
+              <button class="btn learn-more-btn">Learn more <i class="ri-arrow-right-line"></i></button>
             </div>
           </div>
         </div>
@@ -961,12 +566,12 @@
               <h3 class="m-0">Training</h3>
             </div>
             <div class="card-body">
-              <p style=" font-size: 13px;">
+              <p>
                 With our suite of world-class courses, we'll give your people
                 the training they need to meaningfully grow and create
                 measurable improvements for your business.
               </p>
-              <button class="btn learn-more-btn">Learn more</button>
+              <button class="btn learn-more-btn">Learn more <i class="ri-arrow-right-line"></i></button>
             </div>
           </div>
         </div>
@@ -978,11 +583,12 @@
               <h3 class="m-0">Certifications</h3>
             </div>
             <div class="card-body">
-              <p style=" font-size: 13px;">
+              <p>
                 Whether your people want to reframe their careers, upskill or
                 reskill, they'll earn credentials that are recognised globally.
               </p>
-              <button routerLink="/certifications" class="btn learn-more-btn">Learn more</button>
+              <button routerLink="/certifications" class="btn learn-more-btn">Learn more <i
+                  class="ri-arrow-right-line"></i></button>
             </div>
           </div>
         </div>
@@ -990,17 +596,26 @@
     </div>
   </div>
 
-  <div class="container py-5 logos-div">
-    <h2 class="section-title fw-bold mb-4 text-center">
+  <div class="container-fluid py-5 logos-div height-cont4">
+    <h2 class=" mb-4 text-center sect" style="font-weight: 600;">
       Our Learners are Working with
     </h2>
-    <div class="logos">
-      <img src="../../../assets/images/OurLearnersareWorkingwith/Cognizant.svg" alt="" />
-      <img src="../../../assets/images/OurLearnersareWorkingwith/HCL.svg" alt="" />
-      <img src="../../../assets/images/OurLearnersareWorkingwith/Freshworks-vector-logo.svg" alt="" />
-      <img src="../../../assets/images/OurLearnersareWorkingwith/Group 77369.svg" alt="" />
-      <img src="../../../assets/images/OurLearnersareWorkingwith/Capgemini.svg" alt="" />
-      <img src="../../../assets/images/OurLearnersareWorkingwith/EY.svg" alt="" />
+    <div class="logos-wrapper">
+      <div class="logos">
+        <img src="../../../assets/images/OurLearnersareWorkingwith/Cognizant.svg" alt="" />
+        <img src="../../../assets/images/OurLearnersareWorkingwith/HCL.svg" alt="" />
+        <img src="../../../assets/images/OurLearnersareWorkingwith/Freshworks-vector-logo.svg" alt="" />
+        <img src="../../../assets/images/OurLearnersareWorkingwith/Group 77369.svg" alt="" />
+        <img src="../../../assets/images/OurLearnersareWorkingwith/Capgemini.svg" alt="" />
+        <img src="../../../assets/images/OurLearnersareWorkingwith/EY.svg" alt="" />
+        <!-- Duplicated for infinite scroll -->
+        <img src="../../../assets/images/OurLearnersareWorkingwith/Cognizant.svg" alt="" />
+        <img src="../../../assets/images/OurLearnersareWorkingwith/HCL.svg" alt="" />
+        <img src="../../../assets/images/OurLearnersareWorkingwith/Freshworks-vector-logo.svg" alt="" />
+        <img src="../../../assets/images/OurLearnersareWorkingwith/Group 77369.svg" alt="" />
+        <img src="../../../assets/images/OurLearnersareWorkingwith/Capgemini.svg" alt="" />
+        <img src="../../../assets/images/OurLearnersareWorkingwith/EY.svg" alt="" />
+      </div>
     </div>
   </div>
   <div class="container-fluid learn-free py-5">
@@ -1008,14 +623,13 @@
       <div class="row align-items-center gy-5">
         <div class="col-12 col-md-6 mb-4">
           <div class="peoples">
-            <img src="../../../assets/images/landingpage/Services/upskill.jpeg" class="img-fluid"
-              alt="service image" />
+            <img src="../../../assets/images/landingpage/Services/upskill.jpeg" class="img-fluid" alt="service image" />
 
           </div>
         </div>
         <div class="col-12 col-md-6 pe-0">
           <div class="people-text h-100">
-            <h3 class="m-0 fw-bold" style="line-height: 50px">
+            <h3 class="m-0 sec" style="line-height: 50px;font-weight: 600;">
               Are you future ready? <br />
               Upskill for tommorow...
             </h3>
@@ -1026,7 +640,7 @@
             </span> -->
             <p class="d-flex align-items-center gap-2 learn-text">Learn. Build. Innovate. Succeed.
 
-              <button routerLink="/contact-us" style="max-width: fit-content;color: #fff;font-size: 16px;"
+              <button routerLink="/contact-us" style="max-width: fit-content;color: #ffffff;font-size: 16px;"
                 class="shadow-none btn start-btn">
                 Talk to our Advisor!
               </button>
@@ -1037,5 +651,3 @@
     </div>
   </div>
 </div>
-
-

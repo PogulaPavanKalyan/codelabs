@@ -19,21 +19,67 @@
           <div class="collapse navbar-collapse" id="navlist">
             <ul class="navbar-nav d-flex align-items-center gap-md-4 ms-auto">
               <!-- Courses Dropdown -->
-              <li class="nav-item custom-dropdown">
-                <a class="nav-link dropdown-toggle-link" tabindex="0">
+              <li style="border: 1px solid blue; border-radius: 8px; color: blue;" class="nav-item custom-dropdown mega-dropdown" (mouseenter)="onMouseEnter()"
+                (mouseleave)="onMouseLeave()" [class.is-open]="isMegaMenuOpen">
+                <a style="color: blue;" routerLinkActive="active" #rla="routerLinkActive"
+                  [style.border]="rla.isActive ? '1px solid blue' : 'none'"
+                  [style.border-radius]="rla.isActive ? '8px' : '0'" class="nav-link dropdown-toggle-link" tabindex="0"
+                  (click)="toggleMegaMenu(); $event.preventDefault(); $event.stopPropagation()">
                   Courses <i class="fa-solid fa-chevron-down ms-1 small-icon"></i>
                 </a>
-                <ul class="custom-dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" routerLink="/courses" routerLinkActive="active"
-                      (click)="closeMobileMenu()">
-                      <div class="dropdown-item-content">
-                        <i class="fa-solid fa-book-open text-primary me-2"></i>
-                        <span>All Courses</span>
+                <div class="mega-menu-container" style="margin-top: 10px;">
+                  <!-- Desktop Layout -->
+                  <div class="desktop-mega-layout">
+                    <div class="categories-list">
+                      <div class="category-item" *ngFor="let category of courseCategories"
+                        [class.active]="selectedCategory === category" (mouseenter)="selectCategory(category)">
+                        <div class="category-info">
+                          <div class="category-title">{{ category.title }}</div>
+                          <div class="category-subtext">{{ category.subtext }}</div>
+                        </div>
+                        <i class="fa-solid fa-chevron-right chevron-right-icon"></i>
                       </div>
-                    </a>
-                  </li>
-                </ul>
+                    </div>
+                    <div class="category-details">
+                      <div class="items-grid" *ngIf="selectedCategory">
+                        <div class="course-card" *ngFor="let item of selectedCategory.items"
+                          [routerLink]="item.route || null" [class.clickable]="item.route"
+                          (click)="item.route ? closeMobileMenu() : null">
+                          <div class="course-icon" [style.color]="item.color">
+                            <i [class]="item.icon"></i>
+                          </div>
+                          <div class="course-name">{{ item.name }}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Mobile Layout (Accordion) -->
+                  <div class="mobile-mega-layout">
+                    <div class="mobile-category-item" *ngFor="let category of courseCategories">
+                      <div class="mobile-category-header" (click)="toggleCategory(category)"
+                        [class.active]="expandedCategory === category">
+                        <div class="category-info">
+                          <div class="category-title">{{ category.title }}</div>
+                          <div class="category-subtext">{{ category.subtext }}</div>
+                        </div>
+                        <i class="fa-solid fa-chevron-down toggle-icon"
+                          [class.rotated]="expandedCategory === category"></i>
+                      </div>
+
+                      <div class="mobile-items-container" [class.show]="expandedCategory === category">
+                        <div class="mobile-course-item" *ngFor="let item of category.items"
+                          [routerLink]="item.route || null" [class.clickable]="item.route"
+                          (click)="item.route ? closeMobileMenu() : null">
+                          <div class="course-icon" [style.color]="item.color">
+                            <i [class]="item.icon"></i>
+                          </div>
+                          <div class="course-name">{{ item.name }}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </li>
 
               <li class="nav-item">
@@ -58,7 +104,7 @@
                     <a class="dropdown-item" routerLink="/aboutus" routerLinkActive="active"
                       (click)="closeMobileMenu()">
                       <div class="dropdown-item-content">
-                        <i class="fa-solid fa-info-circle text-primary me-2"></i>
+                        <!-- <i class="fa-solid fa-info-circle text-primary me-2"></i> -->
                         <span>About Us</span>
                       </div>
                     </a>
@@ -67,7 +113,7 @@
                     <a class="dropdown-item" routerLink="/contact-us" routerLinkActive="active"
                       (click)="closeMobileMenu()">
                       <div class="dropdown-item-content">
-                        <i class="fa-solid fa-envelope text-primary me-2"></i>
+                        <!-- <i class="fa-solid fa-envelope text-primary me-2"></i> -->
                         <span>Get In Touch</span>
                       </div>
                     </a>

@@ -18,128 +18,154 @@
 
   <div class="container py-5">
     <div class="row gy-5">
-      <div class="col-12 col-md-5">
-        <h6 class="section-title mb-4 line">Address</h6>
-
-
-        <div class="location-details">
-          <div class="detail mb-4">
-
-            <!-- <i class="ri-phone-fill round"></i>
+      <div class="container py-5">
+        <div class="row gy-5">
+          <div class="col-12 col-md-5">
+            <h6 class="sect mb-4 ">Our Locations</h6>
+            <div class="location-details">
+              <div class="detail mb-4">
+                <i class="ri-map-pin-line round"></i>
+                <!-- <i class="ri-phone-fill round"></i>
             <i class="ri-phone-fill"></i> -->
-            <div class="right">
-              <h6 class="fw-bold mb-0 det-title">CodeLabs</h6>
-              <small class="det-text">
-                101, Shashi Nilayam, Prime Hospital, Lane,<br />
-                Opposite Balaji Towers, Ameerpet <br />
-                Hyderabad, Telangana 500016
-              </small>
-            </div>
-          </div>
-          <div class="detail mb-4">
-            <!-- <i class="ri-map-pin-line round"></i> -->
-
-            <div class="right">
-              <h6 class="fw-bold mb-0 det-title">Phone</h6>
-              <h6 class="fw-bold mb-0 det-title">+91 9966350011</h6>
-              <small class="det-text">
-                Monday to Saturday7:30am to 7:30pm IST
-              </small>
-            </div>
-          </div>
-          <div class="detail mb-4">
-
-            <div class="right">
-              <h6 class="fw-bold mb-0 det-title">Email</h6>
-              <h6 class="fw-bold mb-0 det-title">codelabsit@gmail.com</h6>
-              <small class="det-text">
-                Please email us with your questions
-              </small>
-            </div>
-
-          </div>
-          <div class="detail mb-4">
-
-            <div class="right">
-              <h6 class="fw-bold mb-0 det-title">Office Hours</h6>
-              <h6 class="fw-bold mb-0 det-title">Monday 8:30 am – Friday 7.30pm</h6>
-              <small class="det-text">
-                Saturday - Sunday and closed on the weekends and officials national holidays
-              </small>
-            </div>
-
-          </div>
-
-          <!-- <app-llocation-detail [text]=""></app-llocation-detail> -->
-        </div>
-      </div>
-      <div class="col-12 col-md-7 col-lg-6">
-        <div class="form-container">
-          <h6 class="fw-bold mb-3 form-title">Have Questions?</h6>
-          <p class="text-muted mb-4 fs-12">
-            If you have any questions and or need immediate assistance We're here to help you .
-          </p>
-          <hr class="my-2" />
-          <form (ngSubmit)="contactForm.form.valid && onSubmit()" #contactForm="ngForm">
-            <div class="row">
-              <div class="col-12 col-sm-6 mb-3">
-                <label for="first-name" class="form-label fw-bold mb-2">First Name <span
-                    class="text-danger">*</span></label>
-                <input type="text" id="first-name" name="firstName" class="form-control" placeholder="First name"
-                  [(ngModel)]="contactData.firstName" required />
+                <div class="right">
+                  <h6 class=" mb-0 det-title" style="font-weight: 600;">Codelabs - Ameerpet</h6>
+                  <small class="det-text">
+                    201, Shashi Nilayam, Prime Hospital, Lane,<br />
+                    Opposite Balaji Towers, Ameerpet <br />
+                    Hyderabad, Telangana 500016
+                  </small>
+                </div>
               </div>
-              <div class="col-12 col-sm-6 mb-3">
-                <label for="last-name" class="form-label fw-bold mb-2">Last Name <span
-                    class="text-danger">*</span></label>
-                <input type="text" id="last-name" name="lastName" class="form-control" placeholder="Last name"
-                  [(ngModel)]="contactData.lastName" required />
+              <div class="detail mb-4">
+                <!-- <i class="ri-map-pin-line round"></i> -->
+                <i class="ri-phone-fill round"></i>
+                <div class="right">
+                  <h6 class=" mb-0 det-title" style="font-weight: 600;">+91 99663 50011</h6>
+                  <small class="det-text">
+                    Monday to Saturday7:30am to 7:30pm IST
+                  </small>
+                </div>
               </div>
+              <div class="detail mb-4">
+                <i class="ri-mail-line round"></i>
+                <div class="right">
+                  <h6 class=" mb-0 det-title" style="font-weight: 600;">codelabsit@gmail.com</h6>
+                  <small class="det-text">
+                    Please email us with your questions
+                  </small>
+                </div>
+              </div>
+
+              <!-- <app-llocation-detail [text]=""></app-llocation-detail> -->
             </div>
-            <div class="mb-3">
-              <label for="email" class="form-label fw-bold mb-3 ">Email <span class="text-danger"> *
-                </span></label>
-              <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email address"
-                [(ngModel)]="contactData.email" required email />
+            <hr class="my-5" />
+            <div class="location-details">
+              <div class="detail mb-4">
+                <i class="ri-map-pin-line round"></i>
+                <div class="right">
+                  <h6 class=" mb-0 det-title" style="font-weight: 600;">
+                    Codelabs - Hitech City
+                  </h6>
+                  <small class="det-text">
+                    201, Shashi Nilayam, Prime Hospital, Lane, <br />
+                    Opposite Balaji Towers, Ameerpet <br />
+                    Hyderabad, Telangana 500016
+                  </small>
+                </div>
+              </div>
+              <div class="detail mb-4">
+                <i class="ri-phone-fill round"></i>
+                <div class="right">
+                  <h6 class=" mb-0 det-title" style="font-weight: 600;">+91 99663 50011</h6>
+                  <small class="det-text">
+                    Monday to Saturday7:30am to 7:30pm IST
+                  </small>
+                </div>
+              </div>
+              <div class="detail mb-4">
+                <i class="ri-mail-line round"></i>
+                <div class="right">
+                  <h6 class=" mb-0 det-title" style="font-weight: 600;">codelabsit@gmail.com</h6>
+                  <small class="det-text">
+                    Please email us with your questions
+                  </small>
+                </div>
+              </div>
+
+              <!-- <app-llocation-detail [text]=""></app-llocation-detail> -->
             </div>
-            <div class="mb-3">
-              <label for="phone" class="form-label fw-bold mb-3 ">Phone <span class="text-danger"> *
-                </span></label>
-              <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter your phone number"
-                [(ngModel)]="contactData.phone" required />
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label fw-bold mb-3 ">How can we help you?</label>
-              <textarea id="message" name="message" class="form-control" rows="4" placeholder="Your message"
-                [(ngModel)]="contactData.message"></textarea>
-            </div>
-            <div class="form-footer mb-4">
-              <p>
-                By submitting this form, you agree to receive SMS communications
-                related to courses at CodeLabs. I have read and acknowledge
-                CodeLabs's
-                <a href="#">Privacy Policy</a> and
-                <a href="#">Terms of Service</a>.
+          </div>
+
+
+          <div class="col-12 col-md-7">
+            <div class="form-container">
+              <h6 class="mb-3 form-title sect" style="font-weight: 600;">Have Questions?</h6>
+              <p class="text-muted mb-4 fs-12">
+                If you have any questions and or need immediate assistance We're here to help you .
               </p>
-            </div>
+              <hr class="my-2" />
+              <form (ngSubmit)="contactForm.form.valid && onSubmit()" #contactForm="ngForm">
+                <div class="row">
+                  <div class="col-12 col-sm-6 mb-3">
+                    <label for="first-name" class="form-label  mb-2">First Name <span
+                        class="text-danger">*</span></label>
+                    <input type="text" id="first-name" name="firstName" class="form-control" placeholder="First name"
+                      [(ngModel)]="contactData.firstName" required />
+                  </div>
+                  <div class="col-12 col-sm-6 mb-3">
+                    <label for="last-name" class="form-label  mb-2">Last Name <span class="text-danger">*</span></label>
+                    <input type="text" id="last-name" name="lastName" class="form-control" placeholder="Last name"
+                      [(ngModel)]="contactData.lastName" required />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label  mb-3 ">Email <span class="text-danger"> *
+                    </span></label>
+                  <input type="email" id="email" name="email" class="form-control"
+                    placeholder="Enter your email address" [(ngModel)]="contactData.email" required email />
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="form-label  mb-3 ">Phone <span class="text-danger"> *
+                    </span></label>
+                  <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter your phone number"
+                    [(ngModel)]="contactData.phone" required />
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label  mb-3 ">How can we help you?</label>
+                  <textarea id="message" name="message" class="form-control" rows="4" placeholder="Your message"
+                    [(ngModel)]="contactData.message"></textarea>
+                </div>
+                <div class="form-footer mb-4">
+                  <p>
+                    By submitting this form, you agree to receive SMS communications
+                    related to courses at CodeLabs. I have read and acknowledge
+                    CodeLabs's
+                    <a href="#">Privacy Policy</a> and
+                    <a href="#">Terms of Service</a>.
+                  </p>
+                </div>
 
-            <div *ngIf="submitSuccess" class="alert alert-success mb-3">
-              Thank you for Submiting your request,we will contact you shortly.
-            </div>
-            <div *ngIf="submitError" class="alert alert-danger mb-3">
-              Something went wrong. Please try again or contact us directly.
-            </div>
+                <div *ngIf="submitSuccess" class="alert alert-success mb-3">
+                  Thank you for Submiting your request,we will contact you shortly.
+                </div>
+                <div *ngIf="submitError" class="alert alert-danger mb-3">
+                  Something went wrong. Please try again or contact us directly.
+                </div>
 
-            <button type="submit" class="btn btn-primary rounded-0 fw-medium w-100"
-              [disabled]="!contactForm.form.valid || isSubmitting">
-              {{ isSubmitting ? 'Sending...' : 'Submit' }}
-            </button>
-          </form>
+                <button type="submit" class="btn rounded-0 fw-medium w-100"
+                  [ngClass]="contactForm.form.valid ? 'btn-primary' : 'btn-secondary'"
+                  [disabled]="!contactForm.form.valid || isSubmitting">
+                  {{ isSubmitting ? 'Sending...' : 'Submit' }}
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <iframe
-    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3806.4454404836033!2d78.44325567516606!3d17.438381483457523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDI2JzE4LjIiTiA3OMKwMjYnNDUuMCJF!5e0!3m2!1sen!2sin!4v1771509543256!5m2!1sen!2sin"
-    width="100%" height="400" style="border: 0" allowfullscreen="" loading="lazy"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.447088734689!2d78.4457748!3d17.4383025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9168c50aa3a7%3A0xadbc29d5584d558e!2sStar%20ui%20ux%20Design%20Institute!5e0!3m2!1sen!2sin!4v1772864652024!5m2!1sen!2sin"
+    width="100%" height="400" style="border: 0;margin-top: -40px;" allowfullscreen="" loading="lazy"
     referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>

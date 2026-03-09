@@ -5,10 +5,10 @@
       <div class="row">
         <div class="col-12 col-lg-8 hero-content text-lg-start text-center">
           <h1 class="hero-title fw-bold text-white mb-3">
-            HIRE OUR <br class="d-none d-lg-block" />
-            TOP TALENTS !
+            Hire Our <br class="d-none d-lg-block" />
+            Top Talents !
           </h1>
-          <p class="hero-text fs-4 text-white opacity-75">Connect. Collaborate. Excel.</p>
+          <p class="hero-text text-white opacity-75">Connect. Collaborate. Excel.</p>
         </div>
       </div>
     </div>
@@ -18,19 +18,19 @@
   <div class="container py-5">
     <div class="row g-5 align-items-start">
       <div class="col-12 col-lg-7 content-side text-center text-lg-start">
-        <h2 class="section-title-1 mb-4 fw-bold">
+        <h2 class="cls mb-4" >
           Hire Fresh Talent Directly From Us.
         </h2>
         <div class="main-text mb-4">
-          <p class="fs-4 text-dark mb-3">
+          <p class="text-dark mb-3" >
             Anything’s Possible When You Have The Talent. Explore our pool of dynamic experts ready to drive innovation
             and success for your team!
           </p>
 
-          <p class="fs-4 text-dark mb-3">
+          <p class=" text-dark mb-3">
             Explore our pool of dynamic designers ready to drive innovation and success for your team!
           </p>
-          <p class="fs-5 text-dark">
+          <p class=" text-dark">
             Discover the Next Generation of Creative Minds, Fresh from Leading
             Institutes, Offering Exceptional Value for Your Investment. Whether
             You Need Remote, Hybrid, or On-Site Talent, We Have the Perfect Fit
@@ -39,91 +39,91 @@
           </p>
         </div>
         <div class="cta-box  rounded-3 d-inline-block">
-          <span class="fs-4 fw-bold text-dark">Get Started Today!</span>
+          <span class=" text-dark" style="font-size: 16px; font-weight: 600;" >Get Started Today!</span>
         </div>
       </div>
 
       <div class="col-12 col-lg-5">
-        <div class="card form-card shadow-lg border-0 rounded-4 mx-auto">
-          <div class="card-body p-4 p-md-5">
-            <div class="mb-4 text-center text-lg-start">
-              <h3 class="form-title fs-4 mb-2 fw-bold">
-                Connect and hire with us!
-              </h3>
-              <small class="text-danger">* All fields are mandatory</small>
+        <div class="form-container">
+          <div class="mb-4 text-center text-lg-start">
+            <h3 class="form-title fs-4 mb-2" style="font-weight: 600;">
+              Connect and hire with us!
+            </h3>
+            <small class="text-danger">* All fields are mandatory</small>
+          </div>
+
+          <form (ngSubmit)="onSubmit()" #hireForm="ngForm" novalidate>
+            <!-- First Name & Last Name -->
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label class="form-label small  mb-1" style="font-weight: 480;">First Name</label>
+                <input type="text" class="form-control form-control-lg fs-6" name="firstName"
+                  [(ngModel)]="contactData.firstName" required placeholder="" />
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label small mb-1" style="font-weight: 480;">Last Name</label>
+                <input type="text" class="form-control form-control-lg fs-6" name="lastName"
+                  [(ngModel)]="contactData.lastName" required placeholder="" />
+              </div>
             </div>
 
-            <form (ngSubmit)="onSubmit()" #hireForm="ngForm" novalidate>
+            <!-- Company -->
+            <div class="mb-3">
+              <label class="form-label small  mb-1" style="font-weight: 480;">Company Name</label>
+              <input type="text" class="form-control form-control-lg fs-6" name="companyName"
+                [(ngModel)]="contactData.companyName" required />
+            </div>
 
-              <!-- First Name & Last Name -->
-              <div class="row g-3 mb-3">
-                <div class="col-md-6">
-                  <label class="form-label small fw-bold mb-1">First Name</label>
-                  <input type="text" class="form-control form-control-lg fs-6" name="firstName"
-                    [(ngModel)]="contactData.firstName" required placeholder="" />
-                </div>
+            <!-- Designation -->
+            <div class="mb-3">
+              <label class="form-label small mb-1" style="font-weight: 480;"> Your Designation</label>
+              <input type="text" class="form-control form-control-lg fs-6" name="designation"
+                [(ngModel)]="contactData.designation" required />
+            </div>
 
-                <div class="col-md-6">
-                  <label class="form-label small fw-bold mb-1">Last Name</label>
-                  <input type="text" class="form-control form-control-lg fs-6" name="lastName"
-                    [(ngModel)]="contactData.lastName" required placeholder="" />
-                </div>
-              </div>
+            <!-- Email -->
+            <div class="mb-3">
+              <label class="form-label small mb-1" style="font-weight: 480;">Work Email Address</label>
+              <input type="email" class="form-control form-control-lg fs-6" name="email" [(ngModel)]="contactData.email"
+                required email />
+            </div>
 
-              <!-- Company -->
-              <div class="mb-3">
-                <label class="form-label small fw-bold mb-1">Company Name</label>
-                <input type="text" class="form-control form-control-lg fs-6" name="companyName"
-                  [(ngModel)]="contactData.companyName" required />
-              </div>
+            <!-- Phone -->
+            <div class="mb-3">
+              <label class="form-label small mb-1" style="font-weight: 480;">Phone Number </label>
+              <input type="tel" class="form-control form-control-lg fs-6" name="phoneNumber"
+                [(ngModel)]="contactData.phoneNumber" required />
+            </div>
 
-              <!-- Designation -->
-              <div class="mb-3">
-                <label class="form-label small fw-bold mb-1"> Your Designation</label>
-                <input type="text" class="form-control form-control-lg fs-6" name="designation"
-                  [(ngModel)]="contactData.designation" required />
-              </div>
+            <!-- Terms -->
+            <div class="form-check mb-4">
+              <input class="form-check-input" type="checkbox" name="terms" [(ngModel)]="contactData.terms" required />
+              <label class="form-check-label small text-muted">
+                I have read,and I agree to the Terms & Privacy Policy
+              </label>
+            </div>
 
-              <!-- Email -->
-              <div class="mb-3">
-                <label class="form-label small fw-bold mb-1">Work Email Address</label>
-                <input type="email" class="form-control form-control-lg fs-6" name="email"
-                  [(ngModel)]="contactData.email" required email />
-              </div>
+            <!-- Alerts -->
+            <div *ngIf="submitSuccess" class="alert alert-success small mb-3">
+              Thank you! Your request has been submitted successfully.
+            </div>
 
-              <!-- Phone -->
-              <div class="mb-3">
-                <label class="form-label small fw-bold mb-1">Phone Number </label>
-                <input type="tel" class="form-control form-control-lg fs-6" name="phoneNumber"
-                  [(ngModel)]="contactData.phoneNumber" required />
-              </div>
+            <div *ngIf="submitError" class="alert alert-danger small mb-3">
+              Failed to send inquiry. Please try again.
+            </div>
 
-
-              <!-- Terms -->
-              <div class="form-check mb-4">
-                <input class="form-check-input" type="checkbox" name="terms" [(ngModel)]="contactData.terms" required />
-                <label class="form-check-label small text-muted">
-                 I have read,and I agree to the Terms & Privacy Policy
-                </label>
-              </div>
-
-              <!-- Alerts -->
-              <div *ngIf="submitSuccess" class="alert alert-success small mb-3">
-                Thank you! Your request has been submitted successfully.
-              </div>
-
-              <div *ngIf="submitError" class="alert alert-danger small mb-3">
-                Failed to send inquiry. Please try again.
-              </div>
-
-              <!-- Submit -->
-              <button type="submit" class="btn btn-primary btn-lg w-100 py-3 fw-bold"
-                [disabled]="!hireForm.valid || isSubmitting">
-                {{ isSubmitting ? 'Sending...' : 'Submit Request' }}
-              </button>
-
-            </form>
-          </div>
+            <!-- Submit -->
+           <button
+  type="submit"
+  class="btn btn-lg w-100 py-3 fw-bold"
+  [class.btn-primary]="hireForm.valid"
+  [class.btn-secondary]="!hireForm.valid"
+  [disabled]="!hireForm.valid || isSubmitting"
+>
+  {{ isSubmitting ? 'Sending...' : 'Submit Request' }}
+</button>
+          </form>
         </div>
       </div>
     </div>
@@ -131,7 +131,7 @@
 
   <!-- Trusted By Section -->
   <div class="container logo-section py-5">
-    <h2 class="fs-3 fw-bold mb-5 text-center">Trusted by Top Companies</h2>
+    <h2 class="fs-3  mb-5 text-center" style="font-weight: 600;">Trusted by Top Companies</h2>
     <div class="logo-wrapper">
       <div class="logo-grid d-flex flex-wrap justify-content-center align-items-center gap-4 gap-md-5">
         <img src="../../../assets/images/Hire/Amazon.svg" alt="Amazon" />

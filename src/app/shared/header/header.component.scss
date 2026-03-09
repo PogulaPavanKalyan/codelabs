@@ -35,11 +35,11 @@ header {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
     .logo-div img {
-   max-width: 200px;
-  transition: $transition-smooth;
-  transform-origin: left center;
+      max-width: 200px;
+      transition: $transition-smooth;
+      transform-origin: left center;
     }
-   
+
     .navbar-nav .nav-link:not(.btn-premium-cta) {
       color: $text-dark;
     }
@@ -64,7 +64,7 @@ header {
 // Navigation Links
 .navbar-nav {
   .nav-item {
-    font-weight: 500;
+    font-weight: 450;
     font-size: 1.05rem;
     margin: 0 4px;
 
@@ -74,6 +74,7 @@ header {
       transition: $transition-smooth;
       position: relative;
       cursor: pointer;
+      font-size: 16px;
 
       &:hover,
       &.active {
@@ -128,6 +129,194 @@ header {
       transform: rotate(180deg);
     }
   }
+
+
+  /* Mega Dropdown Specific Styles */
+  &.mega-dropdown {
+    position: static; // Keep within container context for full width if needed, or relative for local positioning
+
+    &.is-open {
+      .mega-menu-container {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, 0);
+        pointer-events: auto;
+      }
+    }
+  }
+}
+
+.mega-menu-container {
+  position: absolute;
+  top: calc(100% - 10px);
+  left: 50%;
+  transform: translate(-50%, 15px);
+  width: 1000px;
+  max-width: 95vw;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+
+  .desktop-mega-layout {
+    display: flex;
+    width: 100%;
+
+    .categories-list {
+      width: 350px;
+      padding: 15px 0;
+      border-right: 1px solid #f0f0f0;
+      background: #fff;
+      flex-shrink: 0;
+      max-height: 500px;
+      overflow-y: auto;
+
+      // Custom Scrollbar for better UI
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #f7fafc;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #cbd5e0;
+        border-radius: 10px;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background: #a0aec0;
+      }
+
+      .category-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 24px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 3px;
+          height: 0;
+          transition: height 0.3s ease;
+        }
+
+        .category-info {
+          .category-title {
+            font-weight: 550;
+            font-size: 1.05rem;
+            color: #1a202c;
+            margin-bottom: 2px;
+          }
+
+          .category-subtext {
+            font-size: 0.85rem;
+            color: #718096;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 250px;
+          }
+        }
+
+        .chevron-right-icon {
+          font-size: 0.8rem;
+          color: #000000;
+          transition: transform 0.2s ease, color 0.2s ease;
+        }
+
+        &:hover,
+        &.active {
+          background: #f7fafc;
+
+          .category-title {
+            color: var(--blue, $primary);
+          }
+
+          .chevron-right-icon {
+            transform: translateX(4px);
+          }
+
+          &::after {
+            height: 70%;
+          }
+        }
+      }
+    }
+
+    .category-details {
+      flex: 1;
+      background: #f8f9fa;
+      padding: 30px;
+      min-height: 450px;
+
+      .items-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 20px;
+      }
+
+      .course-card {
+        background: white;
+        padding: 20px 24px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        border: 1px solid rgba(132, 117, 117, 0.02);
+        cursor: default;
+        transition: all 0.3s ease;
+
+        &.clickable {
+          cursor: pointer;
+
+          &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+            border-color: rgba(0, 86, 179, 0.1);
+          }
+        }
+
+        .course-icon {
+          width: 50px;
+          height: 50px;
+          border-radius: 12px;
+          background: rgba(255, 255, 255, 1);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.4rem;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .course-name {
+          font-weight: 600;
+          color: #2d3748;
+          font-size: 1.05rem;
+        }
+      }
+    }
+  }
+
+  .mobile-mega-layout {
+    display: none; // Hidden on desktop
+  }
 }
 
 .custom-dropdown-menu {
@@ -172,7 +361,8 @@ header {
       padding: 10px 15px;
       border-radius: 8px;
       color: $text-light;
-      font-weight: 500;
+      font-size: 16px;
+      font-weight: 450;
       transition: all 0.2s ease;
       background: transparent;
 
@@ -356,12 +546,154 @@ header {
 
     &:focus-within .custom-dropdown-menu,
     &:hover .custom-dropdown-menu,
-    &.active .custom-dropdown-menu {
+    &.active .custom-dropdown-menu,
+    &.is-open .custom-dropdown-menu {
       display: block;
       opacity: 1;
       visibility: visible;
       pointer-events: auto;
       animation: slideDownFade 0.3s ease forwards;
+    }
+
+    // Mega menu mobile adjustment
+    &.mega-dropdown {
+      .mega-menu-container {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        background: transparent;
+        display: none; // Hidden by default on mobile
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        .desktop-mega-layout {
+          display: none; // Hide desktop layout
+        }
+
+        .mobile-mega-layout {
+          display: block; // Show mobile layout
+          padding: 10px 0;
+
+          .mobile-category-item {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            margin-bottom: 5px;
+
+            &:last-child {
+              border-bottom: none;
+            }
+
+            .mobile-category-header {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding: 12px 15px;
+              cursor: pointer;
+              background: #fff;
+              border-radius: 8px;
+              transition: background 0.2s ease;
+
+              &.active {
+                background: #f8f9fa;
+
+                .category-title {
+                  color: var(--blue, $primary);
+                }
+              }
+
+              .category-info {
+                .category-title {
+                  font-weight: 600;
+                  font-size: 1rem;
+                  color: #1a202c;
+                }
+
+                .category-subtext {
+                  font-size: 0.8rem;
+                  color: #718096;
+                }
+              }
+
+              .toggle-icon {
+                font-size: 0.8rem;
+                color: #cbd5e0;
+                transition: transform 0.3s ease;
+
+                &.rotated {
+                  transform: rotate(180deg);
+                }
+              }
+            }
+
+            .mobile-items-container {
+              max-height: 0;
+              overflow: hidden;
+              transition: max-height 0.3s ease-out;
+              background: #fdfdfd;
+
+              &.show {
+                max-height: 1000px; // Large enough but allows animation
+                padding: 10px 15px;
+              }
+
+              .mobile-course-item {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                padding: 10px;
+                border-radius: 8px;
+                transition: background 0.2s ease;
+                margin-bottom: 5px;
+
+                &.clickable {
+                  cursor: pointer;
+
+                  &:active {
+                    background: #f0f0f0;
+                  }
+                }
+
+                .course-icon {
+                  width: 35px;
+                  height: 35px;
+                  border-radius: 8px;
+                  background: white;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-size: 1rem;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+                }
+
+                .course-name {
+                  font-size: 0.95rem;
+                  font-weight: 450;
+                  color: #2d3748;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // Essential state override for mobile and desktop
+      &.is-open {
+        .mega-menu-container {
+          display: block !important;
+          opacity: 1 !important;
+          visibility: visible !important;
+          pointer-events: auto !important;
+          animation: slideDownFade 0.3s ease forwards;
+        }
+
+        .small-icon {
+          transform: rotate(180deg);
+        }
+      }
     }
   }
 
@@ -410,16 +742,50 @@ header {
 
     /* Push logo slightly outside container */
     .logo-div {
-  position: fixed;
-  top: 18px;
-  left: 40px;
-  z-index: 1100;
-}
+      position: fixed;
+      top: 18px;
+      left: 40px;
+      z-index: 1100;
+    }
 
   }
 
 }
-.navbar-wrapper.is-sticky ~ .logo-div img,
+
+.navbar-wrapper.is-sticky~.logo-div img,
+.navbar-wrapper.is-sticky .logo-div img {
+  transform: scale(0.9);
+}
+
+
+
+@media (min-width: 1800px) {
+
+  .navbar-wrapper {
+
+    .custom-navbar {
+      padding: 0; // remove side padding
+    }
+
+    .container-fluid {
+      max-width: 1320px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    /* Push logo slightly outside container */
+    .logo-div {
+      position: fixed;
+      top: 18px;
+      left: 340px;
+      z-index: 1100;
+    }
+
+  }
+
+}
+
+.navbar-wrapper.is-sticky~.logo-div img,
 .navbar-wrapper.is-sticky .logo-div img {
   transform: scale(0.9);
 }

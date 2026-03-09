@@ -99,5 +99,23 @@
   },
   "cli": {
     "analytics": "e5fe34ab-be96-446b-a961-07f8ad44ad1e"
-  }
+  },
+ "serve": {
+  "builder": "@angular-devkit/build-angular:dev-server",
+  "options": {
+    "host": "0.0.0.0",
+    "port": 4200
+  },
+  "configurations": {
+    "production": {
+      "browserTarget": "star-design-2:build:production"
+    },
+    "development": {
+      "browserTarget": "star-design-2:build:development"
+    }
+  },
+  "defaultConfiguration": "development"
+}
+
+
 }

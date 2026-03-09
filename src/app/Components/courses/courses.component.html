@@ -15,8 +15,8 @@
   </div>
   <div class="container pt-5 course-sec">
     <div class="mb-4">
-      <h2 class="section-title fw-bold">Course Overview</h2>
-      <p class="section-text mb-0">
+      <h2 class="sect " style="font-weight: 600;">Course Overview</h2>
+      <p class="section-text mb-0" style="font-size: 16px;">
         This course will cover the design, prototyping, and evaluation of user
         interfaces for applications. For students, the goal of this course is to
         learn how to design, prototype, and evaluate user interfaces using a
@@ -32,7 +32,7 @@
       </p>
     </div>
     <div class="mb-4">
-      <h2 class="section-title fw-bold">What will you learn?</h2>
+      <h2 class="sect" style="font-weight: 600;">What will you learn?</h2>
 
       <div class="container-fluid p-0 course-content">
         <div class="row g-4">
@@ -305,8 +305,9 @@
   </div>
   <div class="container pt-5 tools-learn">
     <div class="mb-4">
-      <h2 class="section-title mb-4 fw-bold">Tools you will learn</h2>
-      <p class="text-dark fw-bold mb-3">Master industry-standard tools used by top digital marketers worldwide</p>
+      <h2 class=" mb-4 sect" style="font-weight: 600;">Tools you will learn</h2>
+      <p class="text-dark mb-3" style="font-weight: 400;">Master industry-standard tools used by top digital marketers
+        worldwide</p>
       <div class="tools-grid">
         <div class="grid">
           <img class="mx-auto" src="../../../assets/images/course/learn-tools/meta ads.svg" alt="" />
@@ -322,7 +323,7 @@
         </div>
         <div class="grid">
           <img class="mx-auto" src="../../../assets/images/course/learn-tools/Google_Analytics.svg" alt="" />
-          <span class="mx-auto">Google Anaytics</span>
+          <span class="mx-auto">Google Analytics</span>
         </div>
         <div class="grid">
           <img class="mx-auto" src="../../../assets/images/course/learn-tools/Google Ads.svg" alt="" />
@@ -386,8 +387,9 @@
 
   <div class="container pt-5 Hands-con">
     <div class="mb-4">
-      <h2 class="section-title mb-3 fw-bold">Hands-on Activities</h2>
-      <p class="text-dark fw-bold mb-3">Apply your learning through practical projects and real-world scenarios</p>
+      <h2 class=" mb-3 sect" style="font-weight: 600;">Hands-on Activities</h2>
+      <p class="text-dark mb-3" style="font-weight: 400;">Apply your learning through practical projects and real-world
+        scenarios</p>
       <div class="hands-grid">
         <div class="grid">
           <img src="../../../assets/images/course/hands-0n/Google Ads Campaign.svg" alt="" />
@@ -446,7 +448,7 @@
     <div class="container py-5">
       <div class="mb-4">
         <span class="section-sub-title">CERTIFICATION PARTNERS</span>
-        <h2 class="section-title mb-4 fw-bold">
+        <h2 class=" mb-4 sect" style="font-weight: 600;">
           Globally Recognized Certifications
         </h2>
         <div class="Global-grid">
@@ -473,7 +475,7 @@
         <div class="col-12 col-md-7">
           <div class="mb-4 left h-100">
             <span class="section-sub-title text-uppercase">READY TO START YOUR JOURNEY?</span>
-            <h2 class="section-title mb-4 fw-bold journey-title">
+            <h2 class=" mb-4 journey-title sect" style="font-weight: 600;">
               Become The Top 1% Digital Marketer With Industry Leader.
             </h2>
             <span class="journey-desc">
@@ -494,7 +496,7 @@
   <div class="container py-5 learner-con">
     <div class="mb-4">
       <span class="section-sub-title">LEARNER TESTIMONIALS</span>
-      <h2 class="section-title mb-4 fw-bold">Student Success Stories</h2>
+      <h2 class=" mb-4 sect" style="font-weight: 600;">Student Success Stories</h2>
     </div>
     <div class="student-grid">
       <div class="container-fluid p-0">
@@ -630,43 +632,44 @@
     </div>
   </div>
 
-  <div class="frequent container py-5 text-center text-lg-start">
-    <h2 class="section-title mb-4">Frequently Asked Questions</h2>
-    <div class="accordion text-start" id="courseAccordion">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapsesample" aria-expanded="false" aria-controls="collapsesample">
-            <span class="position-relative me-3"><i class="ri-bookmark-line"></i><i class="ri-bookmark-fill"></i></span>
-            What will I learn in this course?
-          </button>
-        </h2>
-        <div id="collapsesample" class="accordion-collapse collapse" aria-labelledby="headingOne"
-          data-bs-parent="#courseAccordion">
-          <div class="accordion-body">
-            <!-- Content for Introduction -->
-            <ul>
-              <li>Overview of Digital Marketing</li>
-              <li>Key Concepts</li>
-              <li>Introduction to Tools</li>
-              <li>Getting Started</li>
-            </ul>
+  <div class="frequent container py-5">
+    <div class="faq-container mx-auto">
+      <h2 class="text-center mb-4 sect" style="font-weight: 600;">Frequently Asked Questions</h2>
+      <div class="accordion text-start" id="faqAccordion">
+        <div class="accordion-item" *ngFor="let faq of faqs; let i = index">
+          <h2 class="accordion-header" id="faqHeading{{i}}">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              [attr.data-bs-target]="'#faqCollapse' + i" aria-expanded="false" [attr.aria-controls]="'faqCollapse' + i">
+              <span class="position-relative me-3"><i class="ri-bookmark-line"></i><i
+                  class="ri-bookmark-fill"></i></span>
+              {{ faq.question }}
+            </button>
+          </h2>
+          <div [id]="'faqCollapse' + i" class="accordion-collapse collapse" [attr.aria-labelledby]="'faqHeading' + i"
+            data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              <ul>
+                <li *ngFor="let item of faq.answer">{{ item }}</li>
+              </ul>
+            </div>
           </div>
         </div>
-
+        <div class="faq__view">
+          <a href="#">View all FAQs →</a>
+        </div>
       </div>
-      <div class="dontimg">
+      <div class="dontimg" style="margin-bottom: -50px;">
         <div class="container-dont mt-5">
-        <div class="girl-img-sec">
-          <img src="../../../assets/images/digital-marketing-girl.png" alt="Marketing professional" class="girl-img">
+          <div class="girl-img-sec">
+            <img src="../../../assets/images/digital-marketing-girl.png" alt="Marketing professional" class="girl-img">
+          </div>
+          <p class="banner-title text-white" style="font-weight: 400;">
+            Don't wait... boost your digital <br> Marketing skills with us .
+          </p>
+          <div class="brochure-sec">
+            <img class="img1 brochure-img" src="../../../assets/images/download-pdf.jpeg" alt="Download Brochure">
+          </div>
         </div>
-        <h2 class="banner-title fw-bold text-white">
-          Don't wait... boost your digital <br> Marketing skills with us .
-        </h2>
-        <div class="brochure-sec">
-          <img class="img1 brochure-img" src="../../../assets/images/download-pdf.jpeg" alt="Download Brochure">
-        </div>
-      </div></div>
+      </div>
     </div>
   </div>
-</div>

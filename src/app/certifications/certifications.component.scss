@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,600;1,600&display=swap');
 .hero {
   position: relative;
   min-height: 600px;
@@ -61,15 +62,16 @@
 }
 
 .hero__title {
-  font-size: 54px;
-  font-weight: 650;
+  font-size: 60px;
+  font-weight: 600;
   line-height: 1.1;
+  font-family: "Wix Madefor display", sans-serif;
   margin-bottom: 25px;
   text-transform: capitalize;
 }
 
 .hero__subtitle {
-  font-size: 24px;
+  font-size: 20px;
   color: #e0e0e0;
   line-height: 1.5;
   font-weight: 400;
@@ -186,7 +188,7 @@
 .certifications-section .section-subtitle {
   color: gray;
   margin-top: 10px;
-  font-size: 17px;
+  font-size: 16px;
   padding: 0 20px;
 }
 
@@ -262,9 +264,30 @@
 
 
 
+// .category-filter__btn {
+//   background: #ffffff;
+//   border: 1px solid;
+//   padding: 10px 24px;
+//   font-size: 14px;
+//   font-weight: 600;
+//   color: #555;
+//   cursor: pointer;
+//   transition: all 0.3s ease;
+//   white-space: nowrap;
+//   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+// }
+
+
+// .category-filter__btn:hover,
+// .category-filter__btn.active {
+//   background: #1A47E6;
+//   color: #ffffff;
+//   box-shadow: 0 4px 12px rgba(26, 71, 230, 0.25);
+//   transform: translateY(-1px);
+// }
 .category-filter__btn {
   background: #ffffff;
-  border: none;
+  border: 1px solid #e0e0e0;
   padding: 10px 24px;
   font-size: 14px;
   font-weight: 600;
@@ -275,13 +298,28 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
+/* hover */
+.category-filter__btn:hover {
+  background: #1A47E6;
+  color: #ffffff;
+  border-color: #1A47E6;
+  box-shadow: 0 4px 12px rgba(26, 71, 230, 0.25);
+  transform: translateY(-1px);
+}
 
-.category-filter__btn:hover,
+/* active */
 .category-filter__btn.active {
   background: #1A47E6;
   color: #ffffff;
+  border-color: #1A47E6;
   box-shadow: 0 4px 12px rgba(26, 71, 230, 0.25);
-  transform: translateY(-1px);
+}
+.category-filter__btn:first-child {
+  border-radius: 6px 0 0 6px;
+}
+
+.category-filter__btn:last-child {
+  border-radius: 0 6px 6px 0;
 }
 
 
@@ -520,7 +558,7 @@
   }
 
   .hero__content {
-    margin: 0 auto;
+    // margin: 0 auto;
   }
 
   .certifications-section .section-title {
@@ -579,7 +617,7 @@
 
     h2 {
 
-      font-size: 46px;
+      font-size: 32px;
       font-weight: 700;
       margin-bottom: 15px;
       color: #000000;
@@ -621,7 +659,7 @@
 
     h3 {
       text-align: center;
-      font: normal normal bold 16px/29px Montserrat;
+      font: normal normal 600 16px/29px Poppins;
       color: #000000;
       opacity: 1;
       font-size: 16px;
@@ -634,7 +672,7 @@
       font-size: 13px;
       font-style: Montserrat, SemiBold;
       text-align: center;
-      font: normal normal 600 12px/28px Montserrat;
+      font: normal normal 500 16px/29px Poppins;
       letter-spacing: 0px;
       color: #000000;
       opacity: 1;
@@ -644,7 +682,7 @@
       font-size: 12px;
       line-height: 1.6;
       text-align: center;
-      font: normal normal normal 12px/20px Sen;
+      font: normal normal normal 12px/20px Poppins;
       color: #000000;
       opacity: 1;
     }
@@ -817,11 +855,11 @@
   }
 
   &__title {
-    font-size: 50px;
+    font-size: 32px;
     margin-bottom: 20px;
     color: #000000;
-    font: normal normal bold 50px/60px Poppins;
-
+    font: normal normal 32px Poppins;
+    font-weight: 600;
   }
 
   &__subtitle {
@@ -829,7 +867,7 @@
     color: #000000;
     margin: 0 auto 60px;
     line-height: 1.6;
-    font: normal normal normal 18px/35px Sen;
+    font: normal normal normal 16px/35px Poppins;
 
 
   }
@@ -957,8 +995,8 @@
 }
 
 .steps__header h2 {
-  font-size: 50px;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: 650;
   line-height: 60px;
   margin-bottom: 15px;
   color: #ffffff;
@@ -1012,7 +1050,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 18px;
   margin-bottom: 25px;
 }
@@ -1246,8 +1284,8 @@
 
 .faq__title {
   text-align: center;
-  font-size: 48px;
-  font-weight: 700;
+  font-size: 32px;
+  font-weight: 600;
   margin-bottom: 20px;
 }
 
@@ -1270,7 +1308,7 @@
 
 .faq__item {
   background: white;             
-  border: 1px solid #707070;       
+  border: .1px solid #e3e3e3;       
   border-radius: 0;                
  
   cursor: pointer;
@@ -1560,8 +1598,8 @@ background-color: white;
 }
 
 .help__content h2 {
-  font-size: 45px;
-  font-weight: 800;
+  font-size: 32px;
+  font-weight: 650;
   color: #000;
   line-height: 1.1;
   margin: 0 0 15px 0;
@@ -1572,6 +1610,7 @@ background-color: white;
   line-height: 28px;
   color: #000;
   margin: 0;
+  font-weight: 340;
 }
 
 /* ================= BUTTON ================= */
@@ -1717,4 +1756,11 @@ background-color: white;
     padding: 10px 20px;
     font-size: 12px;
   }
+}
+.hero-container{
+  width: 90%;
+}
+.sect{
+     font-family: "Wix Madefor display", sans-serif;
+     font-weight: 650;
 }

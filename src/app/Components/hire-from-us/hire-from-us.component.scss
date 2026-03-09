@@ -1,11 +1,11 @@
 // 
-
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,600;1,600&display=swap');
 .hire-from-us-page {
 
   .hero-sec {
     position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-      url("../../../assets/images/Hire/hire.jpeg");
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../../../assets/images/Hire/hire.jpeg") center/cover no-repeat;
+
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -13,12 +13,15 @@
     object-fit: cover;
 
     .hero-title {
-      font-size: 60px;
+      font-size: 70px;
       line-height: 1.1;
       letter-spacing: -2px;
+       font-family: "Wix Madefor display", sans-serif;
+    }
+    .hero-text{
+      font-size: 20px;
     }
 
-    .hero-text {}
 
     .container {
       .hero-content {
@@ -28,6 +31,7 @@
         width: 100%;
         padding-left: 15px;
         padding-right: 15px;
+        margin-bottom: 4%;
       }
     }
   }
@@ -35,7 +39,7 @@
   .content-side {
     .section-title-1 {
       color: #000000;
-      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-size: 32px;
     }
   }
 
@@ -71,16 +75,23 @@
       }
     }
   }
+  .text-dark{
+    font-size: 16px;
+  }
 
-  .form-card {
-    max-width: 500px;
+  .form-container {
+    max-width: 426px;
+    height: 728px;
     margin-left: auto;
-    background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    // background: #f8f9fa;
+    padding: 2.5rem;
+    // border-radius: 1rem;
+    border: 1px solid black;
 
     .form-control {
-      border: 1.5px solid #eee;
+      border: 1.5px solid #e0e0e0;
       padding: 0.75rem 1rem;
+      background-color: #ffffff;
 
       &:focus {
         border-color: #0d6efd;
@@ -105,7 +116,7 @@
       }
     }
 
-    .form-card {
+    .form-container {
       margin-top: 2rem;
       margin-left: auto;
       margin-right: auto;
@@ -120,9 +131,14 @@
     .hero-sec {
       .hero-title {
         margin-left: -2.5%;
+        font-size: 34px;
       }
+
       .hero-text {
         margin-left: -10%;
+      }
+      .form-container{
+        height: auto;
       }
     }
   }
@@ -136,6 +152,7 @@
       .hero-title {
         margin-left: 5%;
       }
+
       .hero-text {
         margin-left: 5%;
       }
@@ -164,7 +181,8 @@
 
       .hero-title,
       .hero-text {
-        margin-left: 0; /* No shifting above 1440 */
+        margin-left: 0;
+        /* No shifting above 1440 */
       }
     }
 
@@ -173,6 +191,12 @@
       margin-left: auto;
       margin-right: auto;
     }
+    .cls{
+  font-weight: 600;
+}
 
   }
+}
+.form-label{
+  font-weight: 600;
 }

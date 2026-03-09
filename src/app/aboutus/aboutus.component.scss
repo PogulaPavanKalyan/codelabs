@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,600;1,600&display=swap');
 
 * {
   margin: 0;
@@ -69,6 +70,7 @@ div {
   line-height: 75px;
   font-weight: 600;
   color: #ffffff;
+   font-family: "Wix Madefor display", sans-serif;
 }
 
 .heading-box span {
@@ -104,7 +106,7 @@ div {
   .top-box {
     top: 40px;
     left: 60px;
-    font-size: 28px;
+    font-size: 20px;
     line-height: 30px;
   }
 
@@ -114,7 +116,7 @@ div {
   }
 
   .heading-box h1 {
-    font-size: 76px;
+    font-size: 70px;
     line-height: 82px;
   }
 
@@ -124,7 +126,7 @@ div {
   }
 
   .desc-box p {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.7;
   }
 }
@@ -230,7 +232,7 @@ div {
 .about-title {
   text-align: center;
   font-size: 36px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 50px;
   color: #0a0a23;
 }
@@ -367,11 +369,11 @@ div {
   }
 
   .about-left h3 {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .about-left p {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 24px;
   }
 }
@@ -519,9 +521,10 @@ div {
 
 /* TITLE */
 .what-we-do h1 {
-  font: normal normal bold 60px/65px Poppins;
+  font: normal normal 45px Poppins;
   color: #000;
   margin-bottom: 20px;
+  font-weight: 600;
 }
 
 /* SUBTITLE */
@@ -534,6 +537,7 @@ div {
   font: normal normal normal 15px/28px Poppins;
   color: #131921;
   font-size: 15px;
+  
 }
 
 /* SERVICES ROW */
@@ -566,7 +570,7 @@ div {
 
 /* TEXT */
 .service-box p {
-  font: normal normal 600 20px/26px Poppins;
+  font: normal normal 500 20px/26px Poppins;
   color: #000000;
 }
 
@@ -685,9 +689,9 @@ div {
 /* ===== Main Heading ===== */
 .life-section h1 {
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 20px;
-  font: normal normal bold 50px/60px Poppins;
+  font: normal normal 50px/60px Poppins;
   color: #000;
 }
 
@@ -810,10 +814,10 @@ div {
 /* Heading */
 .accreditation-section h1 {
   font-size: 42px;
-  font-weight: 700;
+  font-weight: 600;
   color: #000000;
   margin-bottom: 20px;
-  font: normal normal bold 50px/60px Poppins;
+  font: normal normal 50px/60px Poppins;
 }
 
 /* Subtitle */
@@ -914,8 +918,8 @@ div {
 
 .timeline-section h1 {
   font-size: 36px;
-  font-weight: 700;
-  font: normal normal bold 50px/60px Poppins;
+  font-weight: 600;
+  font: normal normal 50px/60px Poppins;
 }
 
 .timeline-subtitle {
@@ -1131,7 +1135,7 @@ div {
 
 .featured-heading {
   font-size: 40px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 50px;
   color: #000;
 }
@@ -1451,6 +1455,18 @@ div {
   max-width: 100%;
   height: auto;
   display: block;
+}
+}
+.sect{
+     font-family: "Wix Madefor display", sans-serif;
+     font-weight: 650;
+}
+@media (min-width:1440px) {
+  .heading-box h1{
+  margin-top: -10%;
+}
+.desc-box p{
+  margin-top: -25%;
 }
 }
 

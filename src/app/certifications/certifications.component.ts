@@ -11,40 +11,40 @@ export class CertificationsComponent {
 
   faqs = [
     {
-      question: 'Which AWS Certification is right for me?',
-      answer: 'It depends on your experience level and career goals. Associate certifications are ideal for beginners, while Professional and Specialty certifications suit experienced professionals.'
+      question: 'Who can enroll in these certification programs?',
+      answer: 'These certification programs are designed for students, IT professionals, beginners, and working professionals who want to upgrade their skills or switch to high-demand technology careers.'
     },
     {
-      question: 'What is the best way for me to prepare for my exam?',
-      answer: 'You can prepare through official AWS training, practice exams, hands-on labs, and real-world project experience.'
+      question: 'Do I need prior experience to join a certification course?',
+      answer: 'Some certifications recommend basic knowledge in IT or programming, but many courses include beginner-friendly modules to help you start from scratch.'
     },
     {
-      question: 'How do I register for an AWS Certification exam?',
-      answer: 'You can register through the AWS Training & Certification portal and schedule your exam online.'
+      question: 'Are these certifications recognized internationally?',
+      answer: 'Yes. Certifications such as AWS, PMP, Cisco, SAP, and Cyber Security are globally recognized and valued by top companies across industries.'
     },
     {
-      question: 'I am a minor. Am I eligible to take an AWS Certification exam?',
-      answer: 'Yes, minors aged 13–17 can take exams with parental consent.'
+      question: 'How long does it take to complete a certification program?',
+      answer: 'Most certification programs can be completed within 4 to 12 weeks depending on the certification level and the learner’s pace.'
     },
     {
-      question: 'How long are the certifications valid?',
-      answer: 'Most AWS certifications are valid for 3 years.'
+      question: 'Will I get hands-on training during the program?',
+      answer: 'Yes. Our certification programs include practical labs, real-world projects, and case studies to help you gain hands-on experience.'
     },
     {
-      question: 'What are the prerequisites for enrolling?',
-      answer: 'There are no strict prerequisites, but basic cloud knowledge is recommended.'
+      question: 'Do you provide exam preparation support?',
+      answer: 'Yes. We provide exam preparation materials, mock tests, study guides, and expert mentorship to help you pass the certification exam.'
     },
     {
-      question: 'What is the cost of certification programs?',
-      answer: 'Costs vary depending on certification level, typically between $100–$300.'
+      question: 'Will I receive a certificate after completing the course?',
+      answer: 'Yes. After completing the training and passing the certification exam, you will receive a certification from the respective certification authority.'
     },
     {
-      question: 'How much time commitment is required?',
-      answer: 'Preparation time varies but usually ranges from 4–12 weeks.'
+      question: 'What career opportunities are available after certification?',
+      answer: 'Certified professionals can pursue roles such as Cloud Engineer, Data Scientist, Network Engineer, Cyber Security Analyst, Project Manager, and SAP Consultant.'
     },
     {
-      question: 'What support is provided during the program?',
-      answer: 'You will receive instructor guidance, study materials, and exam preparation resources.'
+      question: 'How do I choose the right certification for my career?',
+      answer: 'Choosing the right certification depends on your career goals. For example, AWS is ideal for cloud careers, PMP for project management, Cisco for networking, and Cyber Security certifications for security roles.'
     }
   ];
 
