@@ -111,11 +111,10 @@
                 </div>
               </div>
 
-              <!-- View More Courses button inside the scrolling grid, spanning all columns -->
-              <div class="view-more-container d-flex justify-content-center py-4"
-                *ngIf="category.id !== 'all' && category.courses.length > 6"
-                style="grid-column: 1 / -1; background-color: #fafcff; border-radius: 8px;">
-                <button class="btn view-more-courses-btn">View more courses</button>
+              <!-- View More Courses button positioned above the last two cards -->
+              <div class="view-more-container"
+                *ngIf="category.id !== 'all' && category.courses.length > 6 && !isExploreMore">
+                <button class="btn view-more-courses-btn" (click)="exploreMoreCourses()">View more courses</button>
               </div>
 
             </div>
